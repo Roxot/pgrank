@@ -12,6 +12,7 @@ class MNISTEnvironment:
         self.observation_space = spaces.Box(low=0, high=255, shape=(784,))
 
     def step(self, label):
+        # TODO we need to work with tensors I think
         reward = self.POS_REWARD if label == self.current_label else self.NEG_REWARD
         new_observation = self.dataset.train.next_batch(1)
         self.current_label = new_observation[1]

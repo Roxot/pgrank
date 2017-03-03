@@ -4,7 +4,7 @@ from tensorflow.contrib.layers import regularizers
 
 import tensorflow as tf
 
-class MLP:
+class PolicyNet:
 
     def __init__(self, n_hidden = [100], n_classes = 10, is_training = tf.constant(True),
                  activation_fn = tf.nn.relu, dropout_rate = 0.0,
@@ -50,11 +50,12 @@ class MLP:
         tf.histogram_summary(layer_name + "/pre_activations", pre_activations)
         return pre_activations
 
-    def loss(self, logits, labels):
+    def loss(self, logits, rewards):
+        # TODO we need the correct loss function
         with tf.name_scope("cross_entropy_loss"):
           cross_entropy = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits, labels), name="cross-entropy")
           reg_loss = tf.reduce_sum(tf.get_collection(tf.GraphKeys.REGULARIZATION_LOSSES))
-          loss = cross_entropy + reg_loss
+          loss = (cross_entropy + reg_loss) * rewards
           tf.scalar_summary("cross_entropy", cross_entropy)
           tf.scalar_summary("reg_loss", reg_loss)
           tf.scalar_summary("total_loss", loss)
