@@ -1,4 +1,5 @@
 from gym import spaces
+import numpy as np
 from tensorflow.examples.tutorials.mnist import input_data
 
 class MNISTEnvironment:
@@ -11,14 +12,18 @@ class MNISTEnvironment:
         self.action_space = spaces.Discrete(10)
         self.observation_space = spaces.Box(low=0, high=255, shape=(784,))
 
+    def _observe(self):
+        batch = self.dataset.train.next_batch(1)
+        observation = batch[0]
+        label_onehot = batch[1][0]
+        label = np.where(label_onehot == 1)[0][0]
+        return observation, label
+
     def step(self, label):
-        # TODO we need to work with tensors I think
         reward = self.POS_REWARD if label == self.current_label else self.NEG_REWARD
-        new_observation = self.dataset.train.next_batch(1)
-        self.current_label = new_observation[1]
-        return new_observation[0], reward
+        new_observation, self.current_label = self._observe()
+        return new_observation, reward
 
     def reset(self):
-        observation = dataset.train.next_batch(1)
-        self.current_label = observation[1]
-        return observation[0]
+        observation, self.current_label = self._observe()
+        return observation
