@@ -27,16 +27,17 @@ class MNISTEnvironment:
         return observation, label
 
     def _reward(self, predicted_label):
-        # if predicted_label == 3 and self.current_label == 5:
-        #     return 0.5
-        # elif predicted_label == 5 and self.current_label == 3:
-        #     return 0.5
-        # elif predicted_label == 7 and self.current_label == 1:
-        #     return 0.5
-        # elif predicted_label == 1 and self.current_label == 7:
-        #     return 0.5
-        # else:
-        return self.POS_REWARD if predicted_label == self.current_label else self.NEG_REWARD
+        if predicted_label == 3 and self.current_label == 5:
+            return 0.5
+        elif predicted_label == 5 and self.current_label == 3:
+            return 0.5
+        elif predicted_label == 7 and self.current_label == 1:
+            return 0.5
+        elif predicted_label == 1 and self.current_label == 7:
+            return 0.5
+        else:
+            return self.POS_REWARD if predicted_label == self.current_label else self.NEG_REWARD
+
 
     def step(self, label):
         reward = self._reward(label)
