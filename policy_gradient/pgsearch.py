@@ -27,7 +27,16 @@ class MNISTEnvironment:
         return observation, label
 
     def _reward(self, predicted_label):
-       return self.POS_REWARD if predicted_label == self.current_label else self.NEG_REWARD
+        # if predicted_label == 3 and self.current_label == 5:
+        #     return 0.5
+        # elif predicted_label == 5 and self.current_label == 3:
+        #     return 0.5
+        # elif predicted_label == 7 and self.current_label == 1:
+        #     return 0.5
+        # elif predicted_label == 1 and self.current_label == 7:
+        #     return 0.5
+        # else:
+        return self.POS_REWARD if predicted_label == self.current_label else self.NEG_REWARD
 
     def step(self, label):
         reward = self._reward(label)
@@ -50,7 +59,11 @@ num_actions = 10
 print_freq = 100
 test_freq = 1000
 
-# Hyperparameters_reward(label)0
+# Hyperparameters
+learning_rate = 1e-3
+decay = 0.9
+max_steps = 10000
+epsilon = 0
 epsilon_decay = epsilon / max_steps
 num_hidden = 128
 weight_reg_strength = 1e-3
