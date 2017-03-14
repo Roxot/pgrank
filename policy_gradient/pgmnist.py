@@ -31,6 +31,10 @@ class MNISTEnvironment:
         #     return -10
         # elif predicted_label == 5 and self.current_label == 5:
         #     return 10
+        # if predicted_label == 8 and self.current_label == 5:
+        #     return self.NEG_REWARD * 10
+        # elif predicted_label == 5 and self.current_label == 5:
+        #     return self.POS_REWARD * 10
         # else:
         return self.POS_REWARD if predicted_label == self.current_label else self.NEG_REWARD
 
@@ -59,7 +63,7 @@ test_freq = 1000
 # Hyperparameters
 learning_rate = 1e-3
 decay = 0.9
-max_steps = 10000
+max_steps = 5000
 epsilon = 0
 epsilon_decay = epsilon / max_steps
 num_hidden = 128
