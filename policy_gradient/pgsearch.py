@@ -13,7 +13,7 @@ class MNISTEnvironment:
 
     POS_REWARD = 1
     NEG_REWARD = -1
-    NUM_IMAGES = 5
+    NUM_IMAGES = 2
 
     def __init__(self):
         self.dataset = input_data.read_data_sets("MNIST_data/", one_hot=True)
@@ -21,9 +21,10 @@ class MNISTEnvironment:
     def _observe(self):
         batch = self.dataset.train.next_batch(self.NUM_IMAGES)
         label = np.random.randint(self.NUM_IMAGES)
-        observation = (batch[0], batch[1][label])
-        # label_onehot = batch[1][0]
-        # label = np.where(label_onehot == 1)[0][0]
+        # observation = (batch[0], batch[1][label])
+        query_onehot = batch[1][0]
+        query = np.where(query_onehot == 1)[0][0]
+        observation = [np.append(batch_elem, query) for batch_elem in batch[0]]
         return observation, label
 
     def _reward(self, predicted_label):
@@ -43,7 +44,7 @@ class MNISTEnvironment:
 
 # Dataset parameters
 classes = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-input_dim = 784     # number of observations
+input_dim = 785     # number of observations
 num_actions = 10
 
 # Run settings
@@ -61,34 +62,33 @@ weight_reg_strength = 1e-3
 bias_init = 0.1
 optimizer = tf.train.RMSPropOptimizer(learning_rate, decay=decay);
 
-# # Setup graph
-# epx = tf.placeholder(tf.float32, [None, input_dim], name="epx")
-# epy = tf.placeholder(tf.float32, [None, num_actions], name="epy")
-# epr = tf.placeholder(tf.float32, name="epr")
+# Setup graph
+epx = tf.placeholder(tf.float32, [1, input_dim], name="epx")
+epy = tf.placeholder(tf.float32, [1, num_actions], name="epy")
+epr = tf.placeholder(tf.float32, name="epr")
 
-# # Create a single hidden layer neural net
-# input_dim = epx.get_shape()[1]
-# W = tf.get_variable("weights_1", shape=([input_dim, num_hidden]),
-#                   initializer=initializers.xavier_initializer(),
-#                   regularizer=regularizers.l2_regularizer(weight_reg_strength))
-# b = tf.get_variable("biases_1", shape=([num_hidden]), \
-#                   initializer=tf.constant_initializer(bias_init),
-#                   regularizer=regularizers.l2_regularizer(weight_reg_strength))
-# W2 = tf.get_variable("weights_2", shape=([num_hidden, num_actions]),
-#                   initializer=initializers.xavier_initializer(),
-#                   regularizer=regularizers.l2_regularizer(weight_reg_strength))
-# b2 = tf.get_variable("biases_2", shape=([num_actions]), \
-#                   initializer=tf.constant_initializer(bias_init),
-#                   regularizer=regularizers.l2_regularizer(weight_reg_strength))
-# h = tf.matmul(epx, W) + b
-# h = tf.nn.relu(h)
-# logits = tf.matmul(h, W2) + b2
-# action_probs = tf.nn.softmax(logits)
+# Create a single hidden layer neural net
+input_dim = epx.get_shape()[1]
+W = tf.get_variable("weights_1", shape=([input_dim, num_hidden]),
+                  initializer=initializers.xavier_initializer(),
+                  regularizer=regularizers.l2_regularizer(weight_reg_strength))
+b = tf.get_variable("biases_1", shape=([num_hidden]), \
+                  initializer=tf.constant_initializer(bias_init),
+                  regularizer=regularizers.l2_regularizer(weight_reg_strength))
+W2 = tf.get_variable("weights_2", shape=([num_hidden, num_actions]),
+                  initializer=initializers.xavier_initializer(),
+                  regularizer=regularizers.l2_regularizer(weight_reg_strength))
+b2 = tf.get_variable("biases_2", shape=([num_actions]), \
+                  initializer=tf.constant_initializer(bias_init),
+                  regularizer=regularizers.l2_regularizer(weight_reg_strength))
+h = tf.matmul(epx, W) + b
+h = tf.nn.relu(h)
+logits = tf.matmul(h, W2) + b2
 
-# # Promote actions we already took, then multiply it with the rewards,
-# # such that we only really promote actions that yielded good reward.
-# loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits, epy)) * epr
-# train_step = optimizer.minimize(loss)
+# Promote actions we already took, then multiply it with the rewards,
+# such that we only really promote actions that yielded good reward.
+loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits, epy)) * epr
+train_step = optimizer.minimize(loss)
 
 # # Accuracy
 # true_labels = tf.placeholder(tf.float32, [None, num_actions], name="true_labels")
