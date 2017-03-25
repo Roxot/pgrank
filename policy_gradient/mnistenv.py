@@ -7,38 +7,25 @@ class MNISTEnvironment:
     POS_REWARD = 1
     NEG_REWARD = -1
 
-    def __init__(self):
-        self.dataset = input_data.read_data_sets("MNIST_data/", one_hot=True)
-        # self.action_space = spaces.Discrete(10)
-        # self.observation_space = spaces.Box(low=0, high=255, shape=(784,))
+    def __init__(self, batch_size):
+        self.dataset = input_data.read_data_sets("MNIST_data/", one_hot=False)
+        self.batch_size = batch_size
 
     def _observe(self):
-        batch = self.dataset.train.next_batch(1)
-        observation = batch[0]
-        label_onehot = batch[1][0]
-        label = np.where(label_onehot == 1)[0][0]
-        return observation, label
+        return self.dataset.train.next_batch(self.batch_size)
 
-    def _reward(self, predicted_label):
-        # if predicted_label == 3 and self.current_label == 5:
-        #     return -10
-        # elif predicted_label == 5 and self.current_label == 5:
-        #     return 10
-        # if predicted_label == 8 and self.current_label == 5:
-        #     return self.NEG_REWARD * 10
-        # elif predicted_label == 5 and self.current_label == 5:
-        #     return self.POS_REWARD * 10
-        # else:
-        return self.POS_REWARD if predicted_label == self.current_label else self.NEG_REWARD
+    def _reward(self, predicted_labels):
+        rewards = np.full(self.current_labels.shape, self.NEG_REWARD, dtype=np.float)
+        rewards[self.current_labels == predicted_labels] = self.POS_REWARD
+        return rewards
 
-
-    def step(self, label):
-        reward = self._reward(label)
-        new_observation, self.current_label = self._observe()
-        return new_observation, reward
+    def step(self, labels):
+        rewards = self._reward(labels)
+        new_observation, self.current_labels = self._observe()
+        return new_observation, rewards
 
     def reset(self):
-        observation, self.current_label = self._observe()
+        observation, self.current_labels = self._observe()
         return observation
 
     def test_set(self):

@@ -20,12 +20,12 @@ test_freq = 1000
 
 # Hyperparameters
 learning_rate = 1e-3
-batch_size = 128
+batch_size = 1
 decay = 0.9
 max_steps = 1000
 epsilon = 0
 epsilon_decay = epsilon / max_steps
-num_hidden = 128
+num_hidden = 2
 weight_reg_strength = 1e-3
 bias_init = 0.1
 optimizer = tf.train.RMSPropOptimizer(learning_rate, decay=decay);
@@ -60,74 +60,60 @@ loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits, epy) * tf.
 train_step = optimizer.minimize(loss)
 
 # Accuracy
-true_labels = tf.placeholder(tf.float32, [None, num_actions], name="true_labels")
+true_labels = tf.placeholder(tf.int64, [None, 1], name="true_labels")
 y_pred = tf.argmax(logits, 1)
-y_true = tf.argmax(true_labels, 1)
-accuracy = tf.reduce_mean(tf.cast(tf.equal(y_pred, y_true), tf.float32))
+accuracy = tf.reduce_mean(tf.cast(tf.equal(y_pred, true_labels), tf.float32))
 
 # Run the session
 total_reward = 0
 running_reward = None
 with tf.Session() as sess:
     sess.run(tf.initialize_all_variables())
-    env = MNISTEnvironment()
+    env = MNISTEnvironment(batch_size)
     observation = env.reset()
 
     # Train for max_steps batches
     for iteration in range(max_steps):
 
-        xs = []
-        ys = []
-        rs = []
-        for _ in range(batch_size):
+        # Sample random actions
+        aprobs = sess.run(action_probs, feed_dict={epx: observation})
+        actions = [np.random.choice(num_actions, p=aprob_i) for aprob_i in aprobs]
 
-            # With probability epsilon take a random action, otherwise sample an action
-            # from the action probabilities
-            action = None
-            aprobs = sess.run(action_probs, feed_dict={epx: observation})[0]
-            if np.random.uniform() < epsilon:
-                action = np.random.randint(num_actions)
-            else:
-                action = np.random.choice(num_actions, p=aprobs)
-            fake_label = np.zeros_like(aprobs)
-            fake_label[action] = 1
+        # Create fake labels
+        ys = np.zeros((batch_size, num_actions))
+        ys[np.arange(batch_size), actions] = 1.
 
-            # Use the old observation and the fake label as training data
-            xs.append(observation[0])
-            ys.append(fake_label)
+        # Observe rewards
+        observation, rs = env.step(actions)
 
-            # Take the action, observe the direct reward and a new observation
-            observation, reward = env.step(action)
-            rs.append(reward)
-
-        xs = np.vstack(xs)
-        ys = np.vstack(ys)
+        # Prepare training data
         rs = np.vstack(rs)
+        xs = observation
 
         # Train on the batch
         _ = sess.run([train_step], feed_dict={epx: xs, epy: ys, epr: rs})
 
         # Update epsilon and some statistics
         epsilon -= epsilon_decay
-        total_reward += reward
-        running_reward = reward if running_reward is None else running_reward * 0.999 + reward * 0.001
+        total_reward += np.sum(rs)
+        running_reward = np.sum(rs) / batch_size if running_reward is None else running_reward * 0.999 + np.sum(rs) / batch_size * 0.001
 
         if iteration % print_freq == 0 or iteration == max_steps - 1:
             train_loss, logs = sess.run([loss, logits], feed_dict={epx: xs, epy: ys, epr: rs})
-            average_reward = total_reward / float(iteration + 1)
+            average_reward = total_reward / (batch_size * float(iteration + 1))
             print("Iteration %s/%s: Train Loss = %.6f, Running Reward = %.2f, Average Reward = %.2f" % \
                     (iteration, max_steps, train_loss, running_reward, average_reward))
 
         if iteration % test_freq == 0 or iteration == max_steps - 1:
             test_images, test_labels = env.test_set()
-            test_acc = sess.run([accuracy], feed_dict={epx: test_images, true_labels: test_labels})
+            test_acc = sess.run([accuracy], feed_dict={epx: test_images, true_labels: np.vstack(test_labels)})
             print("Iteration %s/%s: Test Accuracy = %s" % (iteration, max_steps, test_acc))
 
         # Plot the confusion matrix
         if iteration == max_steps - 1:
             test_images, test_labels = env.test_set()
-            true_labels, predictions = sess.run([y_true, y_pred], feed_dict={epx: test_images, \
-                    true_labels: test_labels})
+            true_labels, predictions = sess.run([true_labels, y_pred], feed_dict={epx: test_images, \
+                    true_labels: np.vstack(test_labels)})
             cnf_matrix = confusion_matrix(true_labels, predictions)
             # plt.figure()
             # plot_confusion_matrix(cnf_matrix, classes=classes,
