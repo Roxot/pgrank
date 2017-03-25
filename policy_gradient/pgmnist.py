@@ -20,6 +20,7 @@ test_freq = 1000
 
 # Hyperparameters
 learning_rate = 1e-3
+batch_size = 128
 decay = 0.9
 max_steps = 1000
 epsilon = 0
@@ -32,7 +33,7 @@ optimizer = tf.train.RMSPropOptimizer(learning_rate, decay=decay);
 # Setup graph
 epx = tf.placeholder(tf.float32, [None, input_dim], name="epx")
 epy = tf.placeholder(tf.float32, [None, num_actions], name="epy")
-epr = tf.placeholder(tf.float32, name="epr")
+epr = tf.placeholder(tf.float32, [None, 1], name="epr")
 
 # Create a single hidden layer neural net
 input_dim = epx.get_shape()[1]
@@ -55,7 +56,7 @@ action_probs = tf.nn.softmax(logits)
 
 # Promote actions we already took, then multiply it with the rewards,
 # such that we only really promote actions that yielded good reward.
-loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits, epy)) * epr
+loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits, epy) * tf.transpose(epr))
 train_step = optimizer.minimize(loss)
 
 # Accuracy
@@ -75,27 +76,36 @@ with tf.Session() as sess:
     # Train for max_steps batches
     for iteration in range(max_steps):
 
-        # With probability epsilon take a random action, otherwise sample an action
-        # from the action probabilities
-        action = None
-        aprobs = sess.run(action_probs, feed_dict={epx: observation})[0]
-        if np.random.uniform() < epsilon:
-            action = np.random.randint(num_actions)
-        else:
-            action = np.random.choice(num_actions, p=aprobs)
-        fake_label = np.zeros_like(aprobs)
-        fake_label[action] = 1
+        xs = []
+        ys = []
+        rs = []
+        for _ in range(batch_size):
 
-        # Use the old observation and the fake label as training data
-        x = observation
-        y = np.vstack([fake_label])
+            # With probability epsilon take a random action, otherwise sample an action
+            # from the action probabilities
+            action = None
+            aprobs = sess.run(action_probs, feed_dict={epx: observation})[0]
+            if np.random.uniform() < epsilon:
+                action = np.random.randint(num_actions)
+            else:
+                action = np.random.choice(num_actions, p=aprobs)
+            fake_label = np.zeros_like(aprobs)
+            fake_label[action] = 1
 
-        # Take the action, observe the direct reward and a new observation
-        observation, reward = env.step(action)
+            # Use the old observation and the fake label as training data
+            xs.append(observation[0])
+            ys.append(fake_label)
 
-        # Train on the sample, also take into account the reward, prepare
-        # the data for being fed to the network
-        _ = sess.run([train_step], feed_dict={epx: x, epy: y, epr: reward})
+            # Take the action, observe the direct reward and a new observation
+            observation, reward = env.step(action)
+            rs.append(reward)
+
+        xs = np.vstack(xs)
+        ys = np.vstack(ys)
+        rs = np.vstack(rs)
+
+        # Train on the batch
+        _ = sess.run([train_step], feed_dict={epx: xs, epy: ys, epr: rs})
 
         # Update epsilon and some statistics
         epsilon -= epsilon_decay
@@ -103,7 +113,7 @@ with tf.Session() as sess:
         running_reward = reward if running_reward is None else running_reward * 0.999 + reward * 0.001
 
         if iteration % print_freq == 0 or iteration == max_steps - 1:
-            train_loss, logs = sess.run([loss, logits], feed_dict={epx: x, epy: y, epr: reward})
+            train_loss, logs = sess.run([loss, logits], feed_dict={epx: xs, epy: ys, epr: rs})
             average_reward = total_reward / float(iteration + 1)
             print("Iteration %s/%s: Train Loss = %.6f, Running Reward = %.2f, Average Reward = %.2f" % \
                     (iteration, max_steps, train_loss, running_reward, average_reward))
@@ -119,7 +129,7 @@ with tf.Session() as sess:
             true_labels, predictions = sess.run([y_true, y_pred], feed_dict={epx: test_images, \
                     true_labels: test_labels})
             cnf_matrix = confusion_matrix(true_labels, predictions)
-            plt.figure()
-            plot_confusion_matrix(cnf_matrix, classes=classes,
-                title="confusion matrix on test dataset", cmap=plt.cm.Oranges)
-            plt.show()
+            # plt.figure()
+            # plot_confusion_matrix(cnf_matrix, classes=classes,
+                # title="confusion matrix on test dataset", cmap=plt.cm.Oranges)
+            # plt.show()
