@@ -21,7 +21,7 @@ test_freq = 1000
 # Hyperparameters
 learning_rate = 1e-3
 decay = 0.9
-max_steps = 5000
+max_steps = 1000
 epsilon = 0
 epsilon_decay = epsilon / max_steps
 num_hidden = 128
