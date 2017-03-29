@@ -22,7 +22,7 @@ test_freq = 1000
 learning_rate = 1e-3
 batch_size = 128
 decay = 0.9
-max_steps = 300
+max_steps = 1000
 epsilon = 0
 epsilon_decay = epsilon / max_steps
 num_hidden = 128
@@ -69,38 +69,25 @@ total_reward = 0
 running_reward = None
 with tf.Session() as sess:
     sess.run(tf.initialize_all_variables())
-    env = MNISTEnvironment(1)
+    env = MNISTEnvironment(batch_size)
     observation = env.reset()
 
     # Train for max_steps batches
     for iteration in range(max_steps):
 
-        xs = []
-        ys = []
-        rs = []
-        for _ in range(batch_size):
+        # Sample random actions
+        aprobs = sess.run(action_probs, feed_dict={epx: observation})
+        actions = [np.random.choice(num_actions, p=aprob_i) for aprob_i in aprobs]
 
-            # With probability epsilon take a random action, otherwise sample an action
-            # from the action probabilities
-            action = None
-            aprobs = sess.run(action_probs, feed_dict={epx: observation})[0]
-            if np.random.uniform() < epsilon:
-                action = np.random.randint(num_actions)
-            else:
-                action = np.random.choice(num_actions, p=aprobs)
-            fake_label = np.zeros_like(aprobs)
-            fake_label[action] = 1
+        # Create fake labels
+        ys = np.zeros((batch_size, num_actions))
+        ys[np.arange(batch_size), actions] = 1.
 
-            # Use the old observation and the fake label as training data
-            xs.append(observation[0])
-            ys.append(fake_label)
+        # Observe rewards, save the last observation for training
+        xs = observation
+        observation, rs = env.step(actions)
 
-            # Take the action, observe the direct reward and a new observation
-            observation, reward = env.step(action)
-            rs.append(reward)
-
-        xs = np.vstack(xs)
-        ys = np.vstack(ys)
+        # Prepare training data
         rs = np.vstack(rs)
 
         # Train on the batch
@@ -108,12 +95,12 @@ with tf.Session() as sess:
 
         # Update epsilon and some statistics
         epsilon -= epsilon_decay
-        total_reward += reward
-        running_reward = reward if running_reward is None else running_reward * 0.999 + reward * 0.001
+        total_reward += np.sum(rs)
+        running_reward = np.sum(rs) / batch_size if running_reward is None else running_reward * 0.999 + np.sum(rs) / batch_size * 0.001
 
         if iteration % print_freq == 0 or iteration == max_steps - 1:
             train_loss, logs = sess.run([loss, logits], feed_dict={epx: xs, epy: ys, epr: rs})
-            average_reward = total_reward / float(iteration + 1)
+            average_reward = total_reward / (batch_size * float(iteration + 1))
             print("Iteration %s/%s: Train Loss = %.6f, Running Reward = %.2f, Average Reward = %.2f" % \
                     (iteration, max_steps, train_loss, running_reward, average_reward))
 
@@ -121,7 +108,6 @@ with tf.Session() as sess:
             test_images, test_labels = env.test_set()
             test_acc = sess.run([accuracy], feed_dict={epx: test_images, true_labels: test_labels})
             print("Iteration %s/%s: Test Accuracy = %s" % (iteration, max_steps, test_acc))
-            print(sess.run([true_labels, y_pred], {epx: test_images, true_labels: test_labels}))
 
         # Plot the confusion matrix
         if iteration == max_steps - 1:
@@ -129,7 +115,7 @@ with tf.Session() as sess:
             true_labels, predictions = sess.run([true_labels, y_pred], feed_dict={epx: test_images, \
                     true_labels: test_labels})
             cnf_matrix = confusion_matrix(true_labels, predictions)
-            # plt.figure()
-            # plot_confusion_matrix(cnf_matrix, classes=classes,
-                # title="confusion matrix on test dataset", cmap=plt.cm.Oranges)
-            # plt.show()
+            plt.figure()
+            plot_confusion_matrix(cnf_matrix, classes=classes,
+                title="confusion matrix on test dataset", cmap=plt.cm.Oranges)
+            plt.show()
