@@ -25,7 +25,7 @@ decay = 0.9
 max_steps = 1000
 epsilon = 0
 epsilon_decay = epsilon / max_steps
-num_hidden = 2
+num_hidden = 128
 weight_reg_strength = 1e-3
 bias_init = 0.1
 optimizer = tf.train.RMSPropOptimizer(learning_rate, decay=decay);
@@ -115,7 +115,7 @@ with tf.Session() as sess:
             true_labels, predictions = sess.run([true_labels, y_pred], feed_dict={epx: test_images, \
                     true_labels: test_labels})
             cnf_matrix = confusion_matrix(true_labels, predictions)
-            # plt.figure()
-            # plot_confusion_matrix(cnf_matrix, classes=classes,
-                # title="confusion matrix on test dataset", cmap=plt.cm.Oranges)
-            # plt.show()
+            plt.figure()
+            plot_confusion_matrix(cnf_matrix, classes=classes,
+                title="confusion matrix on test dataset", cmap=plt.cm.Oranges)
+            plt.show()
