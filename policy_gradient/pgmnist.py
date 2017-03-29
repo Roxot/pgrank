@@ -20,7 +20,7 @@ test_freq = 1000
 
 # Hyperparameters
 learning_rate = 1e-3
-batch_size = 1
+batch_size = 128
 decay = 0.9
 max_steps = 1000
 epsilon = 0
