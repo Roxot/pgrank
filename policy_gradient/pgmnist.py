@@ -22,7 +22,7 @@ test_freq = 1000
 learning_rate = 1e-3
 batch_size = 128
 decay = 0.9
-max_steps = 1000
+max_steps = 300
 epsilon = 0
 epsilon_decay = epsilon / max_steps
 num_hidden = 128
@@ -60,17 +60,16 @@ loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits, epy) * tf.
 train_step = optimizer.minimize(loss)
 
 # Accuracy
-true_labels = tf.placeholder(tf.float32, [None, num_actions], name="true_labels")
+true_labels = tf.placeholder(tf.int64, [None], name="true_labels")
 y_pred = tf.argmax(logits, 1)
-y_true = tf.argmax(true_labels, 1)
-accuracy = tf.reduce_mean(tf.cast(tf.equal(y_pred, y_true), tf.float32))
+accuracy = tf.reduce_mean(tf.cast(tf.equal(y_pred, true_labels), tf.float32))
 
 # Run the session
 total_reward = 0
 running_reward = None
 with tf.Session() as sess:
     sess.run(tf.initialize_all_variables())
-    env = MNISTEnvironment()
+    env = MNISTEnvironment(1)
     observation = env.reset()
 
     # Train for max_steps batches
@@ -122,11 +121,12 @@ with tf.Session() as sess:
             test_images, test_labels = env.test_set()
             test_acc = sess.run([accuracy], feed_dict={epx: test_images, true_labels: test_labels})
             print("Iteration %s/%s: Test Accuracy = %s" % (iteration, max_steps, test_acc))
+            print(sess.run([true_labels, y_pred], {epx: test_images, true_labels: test_labels}))
 
         # Plot the confusion matrix
         if iteration == max_steps - 1:
             test_images, test_labels = env.test_set()
-            true_labels, predictions = sess.run([y_true, y_pred], feed_dict={epx: test_images, \
+            true_labels, predictions = sess.run([true_labels, y_pred], feed_dict={epx: test_images, \
                     true_labels: test_labels})
             cnf_matrix = confusion_matrix(true_labels, predictions)
             # plt.figure()
