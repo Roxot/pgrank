@@ -92,6 +92,8 @@ with tf.Session() as sess:
 
         # Prepare training data
         rs = np.vstack(rs)
+        # baseline = total_reward / (batch_size * float(iteration + 1)) # baseline as average
+        # rs -= baseline
 
         # Train on the batch
         _ = sess.run([train_step], feed_dict={epx: xs, epy: ys, epr: rs})
