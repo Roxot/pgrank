@@ -1,5 +1,7 @@
 from tensorflow.examples.tutorials.mnist import input_data
 from sklearn.metrics import confusion_matrix
+from tensorflow.contrib.layers import initializers
+from tensorflow.contrib.layers import regularizers
 
 from mlp import MLP
 from plot import plot_confusion_matrix
@@ -20,14 +22,21 @@ if __name__ == '__main__':
     learning_rate = 0.1
     max_steps = 1000
     batch_size = 256
-    optimizer = tf.train.GradientDescentOptimizer(learning_rate);
+    dropout_rate = 0.
+    activation_fn = tf.nn.relu
+    weight_initializer = initializers.xavier_initializer()
+    weight_reg_strength = 1e-3
+    weight_regularizer = regularizers.l2_regularizer(weight_reg_strength)
+    optimizer = tf.train.GradientDescentOptimizer(learning_rate)
 
     # Setup graph
     is_training = tf.placeholder(tf.bool)
     x = tf.placeholder(tf.float32, [None, input_dim])
     y = tf.placeholder(tf.float32, [None, num_classes])
     mlp = MLP(n_classes=num_classes, is_training=is_training, \
-            n_hidden=num_hidden)
+            n_hidden=num_hidden, dropout_rate=dropout_rate, \
+            activation_fn=activation_fn, \
+            weight_regularizer=weight_regularizer)
     logits = mlp.inference(x)
     loss = mlp.loss(logits, y)
     train_step = optimizer.minimize(loss)

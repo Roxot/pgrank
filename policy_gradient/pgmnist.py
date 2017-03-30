@@ -19,16 +19,17 @@ print_freq = 100
 test_freq = 1000
 
 # Hyperparameters
-learning_rate = 1e-3
+learning_rate = 0.1 # 1e-3
 batch_size = 128
-decay = 0.9
 max_steps = 1000
 epsilon = 0
 epsilon_decay = epsilon / max_steps
 num_hidden = 128
 weight_reg_strength = 1e-3
 bias_init = 0.1
-optimizer = tf.train.RMSPropOptimizer(learning_rate, decay=decay);
+decay = 0.9
+# optimizer = tf.train.RMSPropOptimizer(learning_rate, decay=decay);
+optimizer = tf.train.GradientDescentOptimizer(learning_rate)
 
 # Setup graph
 epx = tf.placeholder(tf.float32, [None, input_dim], name="epx")
