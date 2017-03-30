@@ -30,3 +30,6 @@ class MNISTEnvironment:
 
     def test_set(self):
         return self.dataset.test.images, self.dataset.test.labels
+
+    def validation_set(self):
+        return self.dataset.validation.images, self.dataset.validation.labels
