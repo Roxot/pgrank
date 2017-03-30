@@ -58,6 +58,8 @@ action_probs = tf.nn.softmax(logits)
 # Promote actions we already took, then multiply it with the rewards,
 # such that we only really promote actions that yielded good reward.
 loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits, epy) * tf.transpose(epr))
+# loss = tf.reduce_mean(-tf.reduce_sum(epy * tf.log(action_probs + 1e-10), reduction_indices=[1]) * tf.transpose(epr))
+# loss = tf.reduce_mean(-tf.reduce_sum(epy * action_probs, reduction_indices=[1]) * tf.transpose(epr))
 train_step = optimizer.minimize(loss)
 
 # Accuracy
