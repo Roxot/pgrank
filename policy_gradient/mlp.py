@@ -18,21 +18,21 @@ class MLP:
         self.weight_initializer = weight_initializer
         self.weight_regularizer = weight_regularizer
 
-    def inference(self, x):
+    def inference(self, x, i):
         inp = x
         for layer_num, hidden_dim in enumerate(self.n_hidden):
-          layer_name = "hidden_%d" % layer_num
+          layer_name = "hidden_%d_%d" % (layer_num, i)
           with tf.name_scope(layer_name):
             pre_activations = self._layer(inp, hidden_dim, layer_name)
             activations = self.activation_fn(pre_activations)
             tf.histogram_summary(layer_name + "/activations", activations)
             inp = activations
 
-          with tf.name_scope("dropout_%d" % layer_num):
+          with tf.name_scope("dropout_%d_%d" % (layer_num, i)):
             inp = tf.cond(self.is_training, lambda: tf.nn.dropout(inp, 1. - self.dropout_rate), lambda: inp)
 
         with tf.name_scope("final_linear"):
-          logits = self._layer(inp, self.n_classes, "final_linear")
+          logits = self._layer(inp, self.n_classes, "final_linear_%d" % i)
 
         return logits
 
