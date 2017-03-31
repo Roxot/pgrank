@@ -15,8 +15,8 @@ input_dim = 784     # number of observations
 num_actions = 10
 
 # Run settings
-print_freq = 100
-test_freq = 1000
+print_freq = 20
+test_freq = 100
 
 # Hyperparameters
 learning_rate = 0.1 # 1e-3
@@ -67,10 +67,18 @@ true_labels = tf.placeholder(tf.int64, [None], name="true_labels")
 y_pred = tf.argmax(logits, 1)
 accuracy = tf.reduce_mean(tf.cast(tf.equal(y_pred, true_labels), tf.float32))
 
+# Summaries
+acc_summary = tf.scalar_summary("accuracy", accuracy)
+loss_summary = tf.scalar_summary("loss", loss)
+
 # Run the session
 total_reward = 0
 running_reward = None
 with tf.Session() as sess:
+    train_writer = tf.train.SummaryWriter("logs/pg" + "/train", sess.graph)
+    val_writer = tf.train.SummaryWriter("logs/pg" + "/validation")
+    test_writer = tf.train.SummaryWriter("logs/pg" + "/test")
+
     sess.run(tf.initialize_all_variables())
     env = MNISTEnvironment(batch_size)
     observation = env.reset()
@@ -88,6 +96,7 @@ with tf.Session() as sess:
 
         # Observe rewards, save the last observation for training
         xs = observation
+        old_labels = env.current_labels
         observation, rs = env.step(actions)
 
         # Prepare training data
@@ -96,7 +105,9 @@ with tf.Session() as sess:
         # rs -= baseline
 
         # Train on the batch
-        _ = sess.run([train_step], feed_dict={epx: xs, epy: ys, epr: rs})
+        summary1, summary2, _ = sess.run([acc_summary, loss_summary, train_step], feed_dict={epx: xs, epy: ys, epr: rs, true_labels: old_labels})
+        train_writer.add_summary(summary1, iteration)
+        train_writer.add_summary(summary2, iteration)
 
         # Update epsilon and some statistics
         epsilon -= epsilon_decay
@@ -110,8 +121,16 @@ with tf.Session() as sess:
                     (iteration, max_steps, train_loss, running_reward, average_reward))
 
         if iteration % test_freq == 0 or iteration == max_steps - 1:
+
+            # Log the validation accuracy.
+            val_images, val_labels = env.test_set()
+            summary = sess.run(acc_summary, feed_dict={epx: val_images, true_labels: val_labels})
+            val_writer.add_summary(summary, iteration)
+
+            # Log and print the test accuracy
             test_images, test_labels = env.test_set()
-            test_acc = sess.run([accuracy], feed_dict={epx: test_images, true_labels: test_labels})
+            summary, test_acc = sess.run([acc_summary, accuracy], feed_dict={epx: test_images, true_labels: test_labels})
+            test_writer.add_summary(summary, iteration)
             print("Iteration %s/%s: Test Accuracy = %s" % (iteration, max_steps, test_acc))
 
         # Plot the confusion matrix
