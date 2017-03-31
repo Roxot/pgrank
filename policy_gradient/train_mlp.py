@@ -16,18 +16,20 @@ if __name__ == '__main__':
     classes = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
     input_dim = 784
     num_classes = 10
+    test_freq = 100
+    print_freq = 20
 
     # Hyperparameters
-    num_hidden = []
-    learning_rate = 0.1
-    max_steps = 1000
-    batch_size = 256
+    num_hidden = [256]
+    learning_rate = 3e-3
+    max_steps = 5000
+    batch_size = 512
     dropout_rate = 0.
     activation_fn = tf.nn.relu
     weight_initializer = initializers.xavier_initializer()
-    weight_reg_strength = 1e-3
+    weight_reg_strength = 0.
     weight_regularizer = regularizers.l2_regularizer(weight_reg_strength)
-    optimizer = tf.train.GradientDescentOptimizer(learning_rate)
+    optimizer = tf.train.AdamOptimizer(learning_rate)
 
     # Setup graph
     is_training = tf.placeholder(tf.bool)
@@ -45,19 +47,35 @@ if __name__ == '__main__':
 
     # Run the session
     with tf.Session() as sess:
+        train_writer = tf.train.SummaryWriter("logs/mlp" + "/train", sess.graph)
+        val_writer = tf.train.SummaryWriter("logs/mlp" + "/validation")
+        test_writer = tf.train.SummaryWriter("logs/mlp" + "/test")
         sess.run(tf.initialize_all_variables())
 
         # Train for max_steps batches
         for iteration in range(max_steps):
             batch = dataset.train.next_batch(batch_size)
-            _ = sess.run([train_step], \
+            summary, _ = sess.run([merged, train_step], \
                     feed_dict={x: batch[0], y: batch[1], is_training: True})
+            train_writer.add_summary(summary, iteration)
 
-            if iteration % 100 == 0 or iteration == max_steps - 1:
+            if iteration % print_freq == 0 or iteration == max_steps - 1:
                 train_acc, train_loss = sess.run([accuracy, loss], \
                         feed_dict={x: batch[0], y: batch[1], is_training: False})
                 print("Iteration %s/%s: Train Loss = %s, Train Accuracy = %s" % \
                         (iteration, max_steps, train_loss, train_acc))
+
+            if iteration % test_freq == 0 or iteration == max_steps - 1:
+                summary = sess.run(merged, \
+                        feed_dict={x: dataset.validation.images, y: dataset.validation.labels, \
+                        is_training: False})
+                val_writer.add_summary(summary, iteration)
+
+                test_acc, summary = sess.run([accuracy, merged], \
+                        feed_dict={x: dataset.test.images, y: dataset.test.labels, \
+                        is_training: False})
+                print("Test accuracy: %s" % test_acc)
+                test_writer.add_summary(summary, iteration)
 
         # Report the test accuracy
         y_pred = tf.argmax(logits, 1)
@@ -65,7 +83,7 @@ if __name__ == '__main__':
         test_acc, y_pred, y_true = sess.run([accuracy, y_pred, y_true], \
                 feed_dict={x: dataset.test.images, y: dataset.test.labels, \
                 is_training: False})
-        print("Test accuracy: %s" % test_acc)
+        # print("Test accuracy: %s" % test_acc)
 
         # Plot the confusion matrix
         cnf_matrix = confusion_matrix(y_true, y_pred)

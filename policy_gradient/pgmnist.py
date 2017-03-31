@@ -19,17 +19,16 @@ print_freq = 20
 test_freq = 100
 
 # Hyperparameters
-learning_rate = 0.1 # 1e-3
-batch_size = 128
+learning_rate = 3e-3
+batch_size = 512
 max_steps = 1000
 epsilon = 0
 epsilon_decay = epsilon / max_steps
-num_hidden = 128
-weight_reg_strength = 1e-3
+num_hidden = 256
+weight_reg_strength = 0.
 bias_init = 0.1
 decay = 0.9
-# optimizer = tf.train.RMSPropOptimizer(learning_rate, decay=decay);
-optimizer = tf.train.GradientDescentOptimizer(learning_rate)
+optimizer = tf.train.AdamOptimizer(learning_rate)
 
 # Setup graph
 epx = tf.placeholder(tf.float32, [None, input_dim], name="epx")
@@ -57,9 +56,9 @@ action_probs = tf.nn.softmax(logits)
 
 # Promote actions we already took, then multiply it with the rewards,
 # such that we only really promote actions that yielded good reward.
-loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits, epy) * tf.transpose(epr))
+# loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits, epy) * tf.transpose(epr))
 # loss = tf.reduce_mean(-tf.reduce_sum(epy * tf.log(action_probs + 1e-10), reduction_indices=[1]) * tf.transpose(epr))
-# loss = tf.reduce_mean(-tf.reduce_sum(epy * action_probs, reduction_indices=[1]) * tf.transpose(epr))
+loss = tf.reduce_mean(-tf.reduce_sum(epy * action_probs, reduction_indices=[1]) * tf.transpose(epr))
 train_step = optimizer.minimize(loss)
 
 # Accuracy
@@ -124,7 +123,7 @@ with tf.Session() as sess:
 
             # Log the validation accuracy.
             val_images, val_labels = env.test_set()
-            summary = sess.run(acc_summary, feed_dict={epx: val_images, true_labels: val_labels})
+            summary, val_acc = sess.run([acc_summary, accuracy], feed_dict={epx: val_images, true_labels: val_labels})
             val_writer.add_summary(summary, iteration)
 
             # Log and print the test accuracy
