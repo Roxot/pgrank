@@ -18,6 +18,7 @@ class MNISTSearchEnvironment:
 
         # Pick one of the labels randomly.
         query = batch[1][np.random.randint(self.k)]
+        # query = np.random.randint(10)
         labels = np.where(batch[1] == query)[0]
 
         # Return ([image1, ..., imagek], random_label) and the correct image.
@@ -29,8 +30,8 @@ class MNISTSearchEnvironment:
         data = np.zeros(self.k)
         data[self.current_labels] = 1.
         idcg = self._get_idcg(data, self.k)
-        ranking = data[::-1] if predicted_label == 0 else data
-        return self._ndcg_at_k(ranking, self.k, idcg)
+        ranking = data[::-1] if predicted_label == 1 else data
+        return 0 if idcg == 0 else self._ndcg_at_k(ranking, self.k, idcg)
 
     def step(self, label):
         reward = self._reward(label)
