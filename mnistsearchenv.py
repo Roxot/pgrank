@@ -7,9 +7,10 @@ class MNISTSearchEnvironment:
     POS_REWARD = 1
     NEG_REWARD = -1
 
-    def __init__(self, k):
+    def __init__(self, k, random_query=False):
         self.dataset = input_data.read_data_sets("MNIST_data/", one_hot=False)
         self.k = k
+        self.random_query = random_query
 
     def _observe(self):
 
@@ -17,8 +18,12 @@ class MNISTSearchEnvironment:
         batch = self.dataset.train.next_batch(self.k)
 
         # Pick one of the labels randomly.
-        query = batch[1][np.random.randint(self.k)]
-        # query = np.random.randint(10)
+        if random_query:
+            # Completely random query.
+            query = np.random.randint(10)
+        else:
+            # Query as random label of one of the images.
+            query = batch[1][np.random.randint(self.k)]
         labels = np.where(batch[1] == query)[0]
 
         # Return ([image1, ..., imagek], random_label) and the correct image.
