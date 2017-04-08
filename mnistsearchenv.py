@@ -18,7 +18,7 @@ class MNISTSearchEnvironment:
         batch = self.dataset.train.next_batch(self.k)
 
         # Pick one of the labels randomly.
-        if random_query:
+        if self.random_query:
             # Completely random query.
             query = np.random.randint(10)
         else:
