@@ -31,12 +31,13 @@ class MNISTSearchEnvironment:
         return observation, labels
 
     def _reward(self, predicted_ranking):
-        # return self.POS_REWARD if predicted_label in self.current_labels else self.NEG_REWARD
         data = np.zeros(self.k)
         data[self.current_labels] = 1.
         idcg = self._get_idcg(data, self.k)
-        # ranking = data[::-1] if predicted_label == 1 else data
+        # wdcg = self._get_wdcg(data, self.k)
         ranking = data[predicted_ranking]
+        # scaled_ndcg = self._scaled_ndcg_at_k(ranking, self.k, idcg, wdcg)
+        # return scaled_ndcg
         return 0 if idcg == 0 else self._ndcg_at_k(ranking, self.k, idcg)
 
     def step(self, ranking):
@@ -59,9 +60,16 @@ class MNISTSearchEnvironment:
     def _ndcg_at_k(self, ranking, k, idcg):
         return self._dcg_at_k(ranking, k) / idcg 
 
+    def _scaled_ndcg_at_k(self, ranking, k, idcg, wdcg):
+        return (self._dcg_at_k(ranking, k) - wdcg) / (idcg - wdcg + 1e-10)
+
     # Calculate the ideal DCG@k given all data.
     def _get_idcg(self, data, k):
         ideal_ranking = sorted(data, reverse=True)
+        return self._dcg_at_k(ideal_ranking, k)
+
+    def _get_wdcg(self, data, k):
+        ideal_ranking = sorted(data, reverse=False)
         return self._dcg_at_k(ideal_ranking, k)
 
     def _dcg_at_k(self, ranking, k):
