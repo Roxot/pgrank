@@ -1,8 +1,6 @@
 from tensorflow.contrib.layers import initializers
 from tensorflow.contrib.layers import regularizers
-from sklearn.metrics import confusion_matrix
-
-from mnistsearchenv import MNISTSearchEnvironment
+from sklearn.metrics import confusion_matrix from mnistsearchenv import MNISTSearchEnvironment
 from scipy.misc import logsumexp
 
 import io
@@ -70,7 +68,7 @@ action_probs = tf.nn.softmax(scores)
 
 # Loss
 # loss = -tf.reduce_sum(tf.mul(epy, action_probs)) * epr
-loss = -tf.reduce_sum(tf.mul(epy, scores)) * epr # TODO we changed here
+loss = -tf.reduce_sum(tf.mul(epy, scores)) * epr
 train_step = optimizer.minimize(loss)
 
 # Accuracy
