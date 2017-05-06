@@ -120,8 +120,7 @@ running_reward = None
 average_reward = 0
 with tf.Session() as sess:
     if args.log_dir is not None:
-        train_writer = tf.train.SummaryWriter("logs/%s" % args.log_dir + "/train", sess.graph)
-        test_writer = tf.train.SummaryWriter("logs/%s" % args.log_dir + "/test")
+        train_writer = tf.train.SummaryWriter("logs/%s" % args.log_dir, sess.graph)
 
     sess.run(tf.initialize_all_variables())
     env = MNISTSearchEnvironment(k)
@@ -190,13 +189,13 @@ with tf.Session() as sess:
             avg_ndcg_summary = tf.Summary(value=[tf.Summary.Value(tag="average_ndcg", \
                     simple_value=avg_ndcg)])
             if args.log_dir is not None:
-                test_writer.add_summary(avg_ndcg_summary, iteration)
+                train_writer.add_summary(avg_ndcg_summary, iteration)
 
             test_acc = sess.run(accuracy, {epx: test_images, true_labels: test_labels})
             test_acc_summary = tf.Summary(value=[tf.Summary.Value(tag="accuracy", \
                     simple_value=float(test_acc))])
             if args.log_dir is not None:
-                test_writer.add_summary(test_acc_summary, iteration)
+                train_writer.add_summary(test_acc_summary, iteration)
 
             print("Iteration %d/%d: test ndcg = %.6f test accuracy = %.2f" % (iteration, max_steps, avg_ndcg, test_acc))
 
@@ -225,4 +224,4 @@ with tf.Session() as sess:
     image = tf.expand_dims(image, 0)
     image_summary = tf.image_summary("top_10_images", image)
     if args.log_dir is not None:
-        test_writer.add_summary(sess.run(image_summary))
+        train_writer.add_summary(sess.run(image_summary))
