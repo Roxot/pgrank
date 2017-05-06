@@ -22,7 +22,7 @@ k = 2
 # Hyperparameters
 learning_rate = 3e-3
 batch_size = 512
-max_steps = 50000
+max_steps = 25000
 epsilon = 0
 epsilon_decay = epsilon / max_steps
 num_hidden = 256
@@ -76,8 +76,8 @@ total_reward = 0
 running_reward = None
 average_reward = 0
 with tf.Session() as sess:
-    train_writer = tf.train.SummaryWriter("logs/pgsearch" + "/train", sess.graph)
-    test_writer = tf.train.SummaryWriter("logs/pgsearch" + "/test")
+    train_writer = tf.train.SummaryWriter("logs/old_loss" + "/train", sess.graph)
+    test_writer = tf.train.SummaryWriter("logs/old_loss" + "/test")
 
     sess.run(tf.initialize_all_variables())
     env = MNISTSearchEnvironment(k)

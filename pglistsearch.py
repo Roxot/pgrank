@@ -3,11 +3,21 @@ from tensorflow.contrib.layers import regularizers
 from sklearn.metrics import confusion_matrix
 
 from mnistsearchenv import MNISTSearchEnvironment
+from scipy.misc import logsumexp
 
 import io
 import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
+import argparse
+
+# Arguments
+parser = argparse.ArgumentParser()
+parser.add_argument("--k", type=int, default=2)
+parser.add_argument("--lr", type=float, default=1e-3)
+parser.add_argument("--log_dir", type=str, default=None)
+parser.add_argument("--num_iter", type=int, default=10000)
+args = parser.parse_args()
 
 # Dataset parameters
 classes = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
@@ -17,12 +27,12 @@ num_queries = 10
 # Run settings
 print_freq = 20
 test_freq = 100
-k = 2
+k = args.k
 
 # Hyperparameters
-learning_rate = 3e-3
+learning_rate = args.lr
 batch_size = 512
-max_steps = 25000
+max_steps = args.num_iter
 epsilon = 0
 epsilon_decay = epsilon / max_steps
 num_hidden = 256
@@ -72,13 +82,46 @@ accuracy = tf.reduce_mean(tf.cast(tf.equal(y_pred, true_labels), tf.float32))
 loss_summary = tf.scalar_summary("loss", loss)
 merged = tf.merge_all_summaries()
 
+def softmax(a):
+    log_Z = logsumexp(a)
+    log_softmax = a - log_Z
+    return np.exp(log_softmax)
+
+def sample_ranking(output_scores):
+    k = len(output_scores)
+    P = np.zeros((k, k))
+    ranking = np.zeros(k, dtype=np.int)
+    docs = np.arange(k)
+    temp_outputs = np.copy(output_scores)
+    for i in range(k):
+        probs = softmax(temp_outputs)
+        P[i, i:k] = probs
+        action = np.random.choice(len(probs), p=probs)
+        ranking[i] = docs[action]
+        temp_outputs = np.delete(temp_outputs, action)
+        docs = np.delete(docs, action)
+    return ranking, P
+
+def calculate_derivatives(ranking, P):
+    k = len(ranking)
+    derivatives = np.zeros(k)
+    p_list = np.prod(np.diag(P))
+    for i in range(k):
+        M = np.zeros((k, k))
+        M[:i, i] = -1.
+        M[i, :] = 1.
+        M[i, i] = 0.
+        derivatives[i] = np.sum(M * P) * p_list
+    return derivatives[ranking]
+
 # Run the session
 total_reward = 0
 running_reward = None
 average_reward = 0
 with tf.Session() as sess:
-    train_writer = tf.train.SummaryWriter("logs/new_loss" + "/train", sess.graph)
-    test_writer = tf.train.SummaryWriter("logs/new_loss" + "/test")
+    if args.log_dir is not None:
+        train_writer = tf.train.SummaryWriter("logs/%s" % args.log_dir + "/train", sess.graph)
+        test_writer = tf.train.SummaryWriter("logs/%s" % args.log_dir + "/test")
 
     sess.run(tf.initialize_all_variables())
     env = MNISTSearchEnvironment(k)
@@ -90,16 +133,14 @@ with tf.Session() as sess:
         # Calculate action probabilities, sample an action
         query_onehot = np.zeros(num_queries)
         query_onehot[query] = 1
-        aprobs = sess.run(action_probs, {epx: images, epq: query_onehot})
-        action = np.random.choice(k, p=aprobs)
+        net_out = sess.run(scores, {epx: images, epq: query_onehot})
 
-        # TODO here we changed
-        action_onehot = np.zeros(k)
-        action_onehot[action] = aprobs[action] * aprobs[(action + 1) % 2]
-        action_onehot[(action + 1) % 2] = -aprobs[action] * aprobs[(action + 1) % 2]
+        ranking, P = sample_ranking(net_out)
+        # print("Ranking: %s,\nP =\n%s" % (ranking, P))
+        derivatives = calculate_derivatives(ranking, P)
 
         # Observe the reward.
-        observation, reward = env.step([action, (action + 1) % 2])
+        observation, reward = env.step(ranking)
         old_images = images
         images, query = observation
 
@@ -108,12 +149,13 @@ with tf.Session() as sess:
         running_reward = reward if running_reward is None else 0.99 * running_reward + 0.01 * reward
         average_reward = total_reward / (iteration + 1.0)
 
-        sess.run(train_step, {epx: old_images, epq: query_onehot, epy: action_onehot, epr: reward - average_reward})
+        sess.run(train_step, {epx: old_images, epq: query_onehot, epy: derivatives, epr: reward - average_reward})
 
         if iteration % print_freq == 0 or iteration == max_steps - 1:
             train_loss, summary = sess.run([loss, loss_summary], \
-                    {epx: old_images, epq: query_onehot, epy: action_onehot, epr: reward - average_reward})
-            train_writer.add_summary(summary, iteration)
+                    {epx: old_images, epq: query_onehot, epy: derivatives, epr: reward - average_reward})
+            if args.log_dir is not None:
+                train_writer.add_summary(summary, iteration)
 
             # Reward summaries
             if iteration != 0:
@@ -121,8 +163,9 @@ with tf.Session() as sess:
                         simple_value=average_reward)])
                 running_reward_summary = tf.Summary(value=[tf.Summary.Value(tag="running_reward", \
                         simple_value=running_reward)])
-                train_writer.add_summary(avg_reward_summary, iteration)
-                train_writer.add_summary(running_reward_summary, iteration)
+                if args.log_dir is not None:
+                    train_writer.add_summary(avg_reward_summary, iteration)
+                    train_writer.add_summary(running_reward_summary, iteration)
 
             print("Iteration %d/%d: training loss = %.6f, average reward = %f, running reward = %f" % (iteration, \
                     max_steps, train_loss, average_reward, running_reward))
@@ -146,12 +189,14 @@ with tf.Session() as sess:
             avg_ndcg = sum_ndcg / float(num_queries)
             avg_ndcg_summary = tf.Summary(value=[tf.Summary.Value(tag="average_ndcg", \
                     simple_value=avg_ndcg)])
-            test_writer.add_summary(avg_ndcg_summary, iteration)
+            if args.log_dir is not None:
+                test_writer.add_summary(avg_ndcg_summary, iteration)
 
             test_acc = sess.run(accuracy, {epx: test_images, true_labels: test_labels})
             test_acc_summary = tf.Summary(value=[tf.Summary.Value(tag="accuracy", \
                     simple_value=float(test_acc))])
-            test_writer.add_summary(test_acc_summary, iteration)
+            if args.log_dir is not None:
+                test_writer.add_summary(test_acc_summary, iteration)
 
             print("Iteration %d/%d: test ndcg = %.6f test accuracy = %.2f" % (iteration, max_steps, avg_ndcg, test_acc))
 
@@ -179,4 +224,5 @@ with tf.Session() as sess:
     image = tf.image.decode_png(buf.getvalue(), channels=4)
     image = tf.expand_dims(image, 0)
     image_summary = tf.image_summary("top_10_images", image)
-    test_writer.add_summary(sess.run(image_summary))
+    if args.log_dir is not None:
+        test_writer.add_summary(sess.run(image_summary))
