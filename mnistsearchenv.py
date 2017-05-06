@@ -30,16 +30,17 @@ class MNISTSearchEnvironment:
         observation = (batch[0], query)
         return observation, labels
 
-    def _reward(self, predicted_label):
+    def _reward(self, predicted_ranking):
         # return self.POS_REWARD if predicted_label in self.current_labels else self.NEG_REWARD
         data = np.zeros(self.k)
         data[self.current_labels] = 1.
         idcg = self._get_idcg(data, self.k)
-        ranking = data[::-1] if predicted_label == 1 else data
+        # ranking = data[::-1] if predicted_label == 1 else data
+        ranking = data[predicted_ranking]
         return 0 if idcg == 0 else self._ndcg_at_k(ranking, self.k, idcg)
 
-    def step(self, label):
-        reward = self._reward(label)
+    def step(self, ranking):
+        reward = self._reward(ranking)
         new_observation, self.current_labels = self._observe()
         return new_observation, reward
 
