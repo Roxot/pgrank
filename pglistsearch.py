@@ -1,6 +1,7 @@
 from tensorflow.contrib.layers import initializers
 from tensorflow.contrib.layers import regularizers
-from sklearn.metrics import confusion_matrix from mnistsearchenv import MNISTSearchEnvironment
+from sklearn.metrics import confusion_matrix
+from mnistsearchenv import MNISTSearchEnvironment
 from scipy.misc import logsumexp
 
 import io
