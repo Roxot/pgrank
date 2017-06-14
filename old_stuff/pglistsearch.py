@@ -34,10 +34,9 @@ batch_size = 512
 max_steps = args.num_iter
 epsilon = 0
 epsilon_decay = epsilon / max_steps
-num_hidden = 256
+num_hidden = 512
 weight_reg_strength = 0.
 bias_init = 0.1
-decay = 0.9
 optimizer = tf.train.AdamOptimizer(learning_rate)
 
 # Setup graph
@@ -54,15 +53,15 @@ W = tf.get_variable("weights_1", shape=([input_dim, num_hidden]),
 b = tf.get_variable("biases_1", shape=([num_hidden]), \
                   initializer=tf.constant_initializer(bias_init),
                   regularizer=regularizers.l2_regularizer(weight_reg_strength))
-W2 = tf.get_variable("weights_2", shape=([num_hidden, num_queries]),
+W4 = tf.get_variable("weights_4", shape=([num_hidden, num_queries]),
                   initializer=initializers.xavier_initializer(),
                   regularizer=regularizers.l2_regularizer(weight_reg_strength))
-b2 = tf.get_variable("biases_2", shape=([num_queries]), \
+b4 = tf.get_variable("biases_4", shape=([num_queries]), \
                   initializer=tf.constant_initializer(bias_init),
                   regularizer=regularizers.l2_regularizer(weight_reg_strength))
 h = tf.matmul(epx, W) + b
 h = tf.nn.relu(h)
-logits = tf.matmul(h, W2) + b2
+logits = tf.matmul(h, W4) + b4
 # scores = tf.reduce_sum(tf.nn.softmax(logits) * epq, reduction_indices=[1])
 scores = tf.reduce_sum(logits * epq, reduction_indices=[1])
 action_probs = tf.nn.softmax(scores)
@@ -134,7 +133,6 @@ with tf.Session() as sess:
         net_out = sess.run(scores, {epx: images, epq: query_onehot})
 
         ranking, P = sample_ranking(net_out)
-        # print("Ranking: %s,\nP =\n%s" % (ranking, P))
         derivatives = calculate_derivatives(ranking, P)
 
         # Observe the reward.
