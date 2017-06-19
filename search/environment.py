@@ -17,7 +17,8 @@ class Environment:
         return self.reward_fn(serp, self.rel_labels)
 
     def next_epoch(self):
-        while self.epoch == self.dataset.train.epochs_completed:
+        self.dataset.train._index_in_epoch = 0
+        while self.dataset.train.epochs_completed < (self.epoch + self.k):
             docs, doc_labels = self.dataset.train.next_batch(self.k * self.batch_size)
             docs = np.reshape(docs, (self.batch_size, self.k, docs.shape[1]))
             doc_labels = np.reshape(doc_labels, (self.batch_size, self.k))
