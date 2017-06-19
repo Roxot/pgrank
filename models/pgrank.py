@@ -47,5 +47,5 @@ class PGRank:
             query = tf.one_hot(self.q, self.output_dim, axis=-1)            # batch_size x 1 x output_dim
             logits = tf.reshape(logits, (batch_size, k, self.output_dim))   # batch_size x k x output_dim
             doc_scores = tf.reduce_sum(tf.mul(logits, query), 2)            # batch_size x k
-            self.policy = tf.nn.softmax(doc_scores * 1000)                         # batch_size x k
+            self.policy = tf.nn.softmax(doc_scores)                         # batch_size x k
 
