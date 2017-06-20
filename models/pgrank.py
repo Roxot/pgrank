@@ -1,4 +1,4 @@
-from utils import softmax
+from helper import softmax
 
 from tensorflow.contrib.layers import initializers
 from tensorflow.contrib.layers import regularizers
@@ -23,6 +23,7 @@ class PGRank:
         self.reward = tf.placeholder(tf.float32, shape=[None, 1])               # batch_size x 1
         self.serp = tf.placeholder(tf.int32, shape=[None, None])                # batch_size x k
         self.deriv_weights = tf.placeholder(tf.float32, shape=[None, None])     # batch_size x k
+        self.true_labels = tf.placeholder(tf.int64, [None, None])               # num_data_sets x data_size
 
     def _build_model(self):
 
@@ -59,9 +60,17 @@ class PGRank:
             J = tf.reduce_mean(tf.mul(J, self.reward))
             self.loss = -J
 
+            # Some evaluation metrics on some left-out test or validation set.
+            predictions = tf.argmax(logits, 2)
+            accuracy = tf.reduce_mean(tf.cast(tf.equal(predictions, self.true_labels), tf.float32), \
+                    reduction_indices=[1])
+            self.det_ranking = tf.nn.top_k(doc_scores, k=k).indices
+
             # Make some tensors available for fetching.
+            self.logits = logits
             self.doc_scores = doc_scores
             self.policy = policy
+            self.accuracy = accuracy
 
     """
         derivative_weights(doc_scores, ranking):
@@ -125,3 +134,54 @@ class PGRank:
             deriv_weights[b, :] = deriv_weights[b, ranking[b, :]]
 
         return deriv_weights
+
+    def train_on_batch(self, sess, train_step, docs, queries, env, explorer):
+
+        # Calculate the document scores andthe policy.
+        feed_dict = { self.x: docs, self.q: queries }
+        doc_scores, policy = sess.run([self.doc_scores, self.policy], feed_dict=feed_dict)
+
+        # Rank the documents using the policy and observe the reward.
+        ranking = explorer.rank_docs(policy)
+        reward = env.reward(ranking)
+        batch_reward = np.average(reward)
+
+        # Train on the batch.
+        feed_dict[self.reward] = reward
+        feed_dict[self.deriv_weights] = self.derivative_weights(doc_scores, ranking)
+        _, loss = sess.run([train_step, self.loss], feed_dict=feed_dict)
+
+        return batch_reward, loss
+
+    # # TODO remove this function, should be in run_pg.py
+    # # Evaluates NDCG and accuracy on a set of evaluation images. This function is reasonably
+    # # specific to the MNIST dataset. Could be more efficient but does the job.
+    # def evaluate(self, sess, evaluation_set):
+    #     images = evaluation_set.images
+    #     labels = evaluation_set.labels
+    #     x = np.reshape(images, (1, images.shape[0], images.shape[1]))
+    #     labels = np.reshape(labels, (1, len(labels)))
+
+    #     ndcgs = np.zeros((1, self.output_dim))
+    #     for query_id in range(self.output_dim):
+
+    #         # Prepare the network input.
+    #         queries = np.array([[query_id]])
+
+    #         # Retrieve the document deterministic ranking for the query, sorted by document score.
+    #         feed_dict = { self.x: x, self.q: queries }
+    #         ranking = sess.run(self.det_ranking, feed_dict=feed_dict)
+
+    #         # Calculate the ndcg for this list.
+    #         rel_labels = np.zeros(labels.shape)
+    #         rel_labels[np.where(labels == queries)] = 1.
+    #         from search.reward import ndcg_full
+    #         ndcgs[0, query_id] = ndcg_full(ranking, rel_labels)[0, 0]
+
+    #     print(ndcgs)
+    #     print(np.average(ndcgs))
+
+    #     # Retrieve the logits for all possible queries.
+    #     feed_dict = { self.x: x, self.true_labels: labels }
+    #     acc = sess.run(self.accuracy, feed_dict=feed_dict)
+    #     print(acc)
