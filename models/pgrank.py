@@ -143,11 +143,11 @@ class PGRank:
 
         # Rank the documents using the policy and observe the reward.
         ranking = explorer.rank_docs(policy)
-        reward = env.reward(ranking)
+        reward, baseline = env.reward(ranking)
         batch_reward = np.average(reward)
 
         # Train on the batch.
-        feed_dict[self.reward] = reward
+        feed_dict[self.reward] = reward - baseline
         feed_dict[self.deriv_weights] = self.derivative_weights(doc_scores, ranking)
         _, loss = sess.run([train_step, self.loss], feed_dict=feed_dict)
 

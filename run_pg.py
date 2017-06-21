@@ -10,7 +10,7 @@ from search.query import random_digit, random_from_docs
 from search.reward import ndcg_full
 from search import Environment
 from models import PGRank
-from utils import evaluate_model, write_train_summaries, write_evaluation_summaries
+from utils import evaluate_model, mnist_image_summary, write_train_summaries, write_evaluation_summaries
 
 # Arguments
 parser = argparse.ArgumentParser()
@@ -96,3 +96,7 @@ with tf.Session() as sess:
     test_accuracy, test_ndcgs = evaluate_model(model, dataset.test, sess, num_queries)
     avg_test_ndcg = np.average(test_ndcgs)
     print("test accuracy = %.3f     \taverage test NDCG = %.3f" % (test_accuracy, avg_test_ndcg))
+
+    if args.log_dir is not None:
+        img_summary = mnist_image_summary(model, dataset.test, sess)
+        summ_writer.add_summary(sess.run(img_summary))
