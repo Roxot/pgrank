@@ -21,6 +21,7 @@ parser.add_argument("--num_epochs", type=int, default=10)
 parser.add_argument("--batch_size", type=int, default=1024)
 parser.add_argument("--h_dim", type=int, default=256)
 parser.add_argument("--epsilon", type=float, default=0.)
+parser.add_argument("--use_baseline", type=bool, default=True)
 args = parser.parse_args()
 
 # Hyperparameters
@@ -40,6 +41,7 @@ print("Log dir = %s" % args.log_dir)
 print("Query function = %s" % query_fn)
 print("Reward function = %s" % reward_fn)
 print("Greedy action = %s" % greedy_action)
+print("Use baseline = %s" % args.use_baseline)
 print("")
 
 # Load the dataset.
@@ -50,7 +52,8 @@ num_queries = 10
 print("")
 
 # Create the environment and explorer.
-env = Environment(dataset, args.k, args.batch_size, query_fn=query_fn, reward_fn=reward_fn)
+env = Environment(dataset, args.k, args.batch_size, query_fn=query_fn, reward_fn=reward_fn, \
+        use_baseline=args.use_baseline)
 explorer = explorers.EpsGreedy(args.epsilon, greedy_action=greedy_action)
 
 # Create model and optimizer.
