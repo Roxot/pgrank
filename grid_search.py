@@ -79,9 +79,8 @@ def run_model(k, learning_rate, batch_size):
 
         return val_ndcgs
 
-learning_rates = np.power(10., np.arange(-10, 2))
-batch_sizes = [512, 1024]
-#[1, 32, 128, 256, 512, 1024, 2056, 5012, 1024, 2048, 4096]
+learning_rates = [1e-4, 1e-5] # np.power(10., np.arange(-10, 2)) TODO
+batch_sizes = [512, 1024] #[1, 32, 128, 256, 512, 1024, 2056, 5012, 1024, 2048, 4096] TODO
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--k", type=int, default=2)
