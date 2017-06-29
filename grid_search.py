@@ -87,7 +87,7 @@ reg_strengths = [0., 0.05, 0.2, 0.5, 1.0, 1.5]
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--k", type=int, default=2)
-parser.add_argument("--num_epochs", type=int, default=5)
+parser.add_argument("--num_epochs", type=int, default=3)
 args = parser.parse_args()
 print("Finding best parameters for k = %d" % args.k)
 print("=========")
