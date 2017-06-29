@@ -23,6 +23,7 @@ class PGRank:
         self.reward = tf.placeholder(tf.float32, shape=[None, 1])               # batch_size x 1
         self.serp = tf.placeholder(tf.int32, shape=[None, None])                # batch_size x k
         self.deriv_weights = tf.placeholder(tf.float32, shape=[None, None])     # batch_size x k
+        self.sample_weight = tf.placeholder(tf.float32, shape=[None, 1])        # batch_size x 1
         self.true_labels = tf.placeholder(tf.int64, [None, None])               # num_data_sets x data_size
 
     def _build_model(self):
@@ -51,13 +52,13 @@ class PGRank:
             # Select only the output for the current queries.
             query = tf.one_hot(self.q, self.output_dim, axis=-1)            # batch_size x 1 x output_dim
             logits = tf.reshape(logits, (batch_size, k, self.output_dim))   # batch_size x k x output_dim
-            doc_scores = tf.reduce_sum(tf.mul(logits, query), 2)            # batch_size x k
+            doc_scores = tf.reduce_sum(tf.mul(logits, query), 2) * 100           # batch_size x k TODO
             policy = tf.nn.softmax(doc_scores)                              # batch_size x k
 
             # Calculate the surrogate loss using an input placeholder weights vector and a rewards vector.
             J = tf.mul(doc_scores, self.deriv_weights)
             J = tf.reduce_sum(J, reduction_indices=[1], keep_dims=True)
-            J = tf.reduce_mean(tf.mul(J, self.reward))
+            J = tf.reduce_mean(tf.mul(tf.mul(J, self.reward), self.sample_weight))
             self.loss = -J
 
             # Some evaluation metrics on some left-out test or validation set.
@@ -97,8 +98,10 @@ class PGRank:
     """
     def derivative_weights(self, doc_scores, ranking):
 
+
         # Calculate matrix P.
         batch_size, k = ranking.shape
+        action_probs = np.zeros((batch_size, k))
         P = np.zeros((batch_size, k, k))
         doc_scores_copy = np.copy(doc_scores)
         for i in range(k):
@@ -107,6 +110,7 @@ class PGRank:
 
             # Calculate the probability of each document being chosen.
             P[:, i, i:k] = softmax(doc_scores_copy)
+            action_probs[:, i] = P[:, i, i]
 
             # Remove the documents selected at this iteration from the scores array.
             actions = (ranking[:, i] - i) % num_docs_left
@@ -133,6 +137,7 @@ class PGRank:
         for b in range(batch_size):
             deriv_weights[b, :] = deriv_weights[b, ranking[b, :]]
 
+        self.action_probs = action_probs
         return deriv_weights
 
     def train_on_batch(self, sess, train_step, docs, queries, env, explorer):
@@ -149,6 +154,7 @@ class PGRank:
         # Train on the batch.
         feed_dict[self.reward] = reward - baseline
         feed_dict[self.deriv_weights] = self.derivative_weights(doc_scores, ranking)
+        feed_dict[self.sample_weight] = explorer.sample_weight(self.action_probs)
         _, loss = sess.run([train_step, self.loss], feed_dict=feed_dict)
 
         return batch_reward, loss

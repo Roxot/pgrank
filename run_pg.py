@@ -78,7 +78,7 @@ with tf.Session() as sess:
             # Train on the batch.
             batch_reward, loss = model.train_on_batch(sess, train_step, docs, queries, \
                     env, explorer)
-            print("batch %02d: loss = %.3f    \taverage batch reward = %.3f" % (batch_id, loss, batch_reward))
+            print("batch %02d: loss = %.6f    \taverage batch reward = %.3f" % (batch_id, loss, batch_reward))
 
             # Administration.
             if args.log_dir is not None:

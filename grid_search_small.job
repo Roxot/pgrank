@@ -1,9 +1,0 @@
-#PBS -lnodes=1 -lwalltime=00:04:00
-cp -r $HOME/policygradient "$TMPDIR"
-(  
-  cd "$TMPDIR"/policygradient_k2
-  python "$TMPDIR"/policygradient_k2/grid_search.py --k 2 >out 2>err
-  cp out $HOME/policygradient/k2_out
-  cp err $HOME/policygradient/k2_err
-) &
-wait
