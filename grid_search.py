@@ -14,7 +14,7 @@ from search import Environment
 from models import PGRank
 from utils import evaluate_model, mnist_image_summary, write_train_summaries, write_evaluation_summaries
 
-def run_model(k, learning_rate, batch_size, num_epochs):
+def run_model(k, learning_rate, batch_size, reg_str, num_epochs):
     query_fn = random_from_docs
     reward_fn = ndcg_full
     greedy_action = explorers.exploit.sample
@@ -32,6 +32,7 @@ def run_model(k, learning_rate, batch_size, num_epochs):
     print("Query function = %s" % query_fn)
     print("Reward function = %s" % reward_fn)
     print("Greedy action = %s" % greedy_action)
+    print("Reg strength = %f" % reg_str)
     print("")
 
     # Load the dataset.
@@ -46,7 +47,7 @@ def run_model(k, learning_rate, batch_size, num_epochs):
     explorer = explorers.EpsGreedy(epsilon, greedy_action=greedy_action)
 
     # Create model and optimizer.
-    model = PGRank(data_dim, num_queries, h_dim)
+    model = PGRank(data_dim, num_queries, h_dim, reg_str=reg_str)
     optimizer = tf.train.AdamOptimizer(learning_rate)
     train_step = optimizer.minimize(model.loss)
     val_ndcgs = np.zeros(num_epochs)
@@ -74,18 +75,19 @@ def run_model(k, learning_rate, batch_size, num_epochs):
             val_ndcgs[epoch_id] = avg_val_ndcg
             print("average train loss = %.6f    \taverage train batch reward = %.3f" % \
                     (np.average(train_losses), np.average(batch_rewards)))
-            print("validation accuracy = %.3f\taverage validation NDCG = %.3f" % (val_accuracy, avg_val_ndcg))
+            print("validation accuracy = %.3f\t\taverage validation NDCG = %.3f" % (val_accuracy, avg_val_ndcg))
             print("")
 
         return val_ndcgs
 
 print(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
-learning_rates = [1e-4, 1e-5] # np.power(10., np.arange(-10, 2))
-batch_sizes = [1024, 5012] # [256, 512, 1024, 2056, 5012, 1024, 2048, 4096] # 1, 32, 128
+learning_rates = np.power(10., np.arange(-7, 1))
+batch_sizes = [50, 512, 5012]
+reg_strengths = [0., 0.05, 0.2, 0.5, 1.0, 1.5]
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--k", type=int, default=2)
-parser.add_argument("--num_epochs", type=int, default=25)
+parser.add_argument("--num_epochs", type=int, default=5)
 args = parser.parse_args()
 print("Finding best parameters for k = %d" % args.k)
 print("=========")
@@ -93,8 +95,8 @@ print("=========")
 cur_best_val_ndcgs = [-1, -1, -1]
 cur_best_settings = [(), (), ()]
 
-for learning_rate, batch_size in itertools.product(learning_rates, batch_sizes):
-    val_ndcgs = run_model(args.k, learning_rate, batch_size, args.num_epochs)
+for learning_rate, batch_size, reg_str in itertools.product(learning_rates, batch_sizes, reg_strengths):
+    val_ndcgs = run_model(args.k, learning_rate, batch_size, reg_str, args.num_epochs)
     best_val_ndcg = np.max(val_ndcgs)
 
     # Save the best 3 scores to see the variety.
@@ -105,7 +107,7 @@ for learning_rate, batch_size in itertools.product(learning_rates, batch_sizes):
                 cur_best_settings[i+1] = cur_best_settings[i]
 
             cur_best_val_ndcgs[i] = best_val_ndcg
-            cur_best_settings[i] = (learning_rate, batch_size)
+            cur_best_settings[i] = (learning_rate, batch_size, reg_str)
             break
 
     # Print the current best setups.
