@@ -2,7 +2,7 @@ import numpy as np
 
 import exploit, explore
 
-# TODO: Decay, how?
+# TODO: Decay, how: linearly from 1.0 to e.g. 0.1 over x (e.g. 1 million) steps, then fix at 0.1.
 class EpsGreedy:
 
     def __init__(self, epsilon, greedy_action=exploit.sample, explore_action=explore.Uniform()):
@@ -11,7 +11,7 @@ class EpsGreedy:
         self.greedy_action = greedy_action
         self.explore_action = explore_action
 
-    def rank_docs(self, policy):
+    def rank_docs(self, policy, labels):
 
         # Decide which batch elements we explore and exploit.
         rand_unif = np.random.rand(policy.shape[0], 1)
@@ -19,21 +19,21 @@ class EpsGreedy:
         should_exploit = np.tile((rand_unif >= self.epsilon).astype(int), policy.shape[1])
 
         # Perform both the greedy as wel as the exploratory actions.
-        exploratory_batch = self.explore_action.rank(policy)
+        exploratory_batch = self.explore_action.rank(policy, labels)
         greedy_batch = self.greedy_action(policy)
 
         # Return the batch balanced between exploration and exploitation.
         return exploratory_batch * should_explore + greedy_batch * should_exploit
 
     # Calculates the weights that we need to give to samples in order to correct for exploration.
-    def sample_weight(self, action_probs):
+    def sample_weight(self, action_probs, ranking, labels):
         batch_size = action_probs.shape[0]
         k = action_probs.shape[1]
         corr_numerator = np.zeros(batch_size)
         corr_denominator = np.zeros(batch_size)
 
         # Get the probabilities of doing exploration for each document sampled.
-        exploration_probs = self.explore_action.explore_dist(k)
+        exploration_probs = self.explore_action.explore_dist(ranking, labels)
 
         # The actual probabilities we are using in sampling.
         actual_probs = (1.0 - self.epsilon) * action_probs + self.epsilon * exploration_probs
@@ -45,4 +45,3 @@ class EpsGreedy:
         correction = np.exp(correction)
 
         return correction
-

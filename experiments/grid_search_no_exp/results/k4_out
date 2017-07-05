@@ -1,0 +1,4756 @@
+2017-06-30 08:45:16
+Finding best parameters for k = 4
+=========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.073011    	average train batch reward = 0.702
+validation accuracy = 0.087		average validation NDCG = 0.692
+
+epoch 2
+average train loss = -0.073210    	average train batch reward = 0.706
+validation accuracy = 0.089		average validation NDCG = 0.693
+
+epoch 3
+average train loss = -0.085558    	average train batch reward = 0.706
+validation accuracy = 0.091		average validation NDCG = 0.694
+
+========
+Currently the best setups are [(9.9999999999999995e-08, 50, 0.0), (), ()], which got scores of [0.69435504477559784, -1, -1]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.050000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.013013    	average train batch reward = 0.673
+validation accuracy = 0.098		average validation NDCG = 0.660
+
+epoch 2
+average train loss = -0.005695    	average train batch reward = 0.673
+validation accuracy = 0.100		average validation NDCG = 0.661
+
+epoch 3
+average train loss = -0.029544    	average train batch reward = 0.674
+validation accuracy = 0.103		average validation NDCG = 0.661
+
+========
+Currently the best setups are [(9.9999999999999995e-08, 50, 0.0), (9.9999999999999995e-08, 50, 0.05), ()], which got scores of [0.69435504477559784, 0.66140080323515404, -1]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.200000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.062804    	average train batch reward = 0.669
+validation accuracy = 0.091		average validation NDCG = 0.666
+
+epoch 2
+average train loss = -0.017371    	average train batch reward = 0.670
+validation accuracy = 0.093		average validation NDCG = 0.667
+
+epoch 3
+average train loss = 0.004010    	average train batch reward = 0.672
+validation accuracy = 0.095		average validation NDCG = 0.668
+
+========
+Currently the best setups are [(9.9999999999999995e-08, 50, 0.0), (9.9999999999999995e-08, 50, 0.2), (9.9999999999999995e-08, 50, 0.05)], which got scores of [0.69435504477559784, 0.66836690624394657, 0.66140080323515404]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.045444    	average train batch reward = 0.688
+validation accuracy = 0.103		average validation NDCG = 0.675
+
+epoch 2
+average train loss = 0.045565    	average train batch reward = 0.690
+validation accuracy = 0.105		average validation NDCG = 0.676
+
+epoch 3
+average train loss = 0.020034    	average train batch reward = 0.689
+validation accuracy = 0.109		average validation NDCG = 0.677
+
+========
+Currently the best setups are [(9.9999999999999995e-08, 50, 0.0), (9.9999999999999995e-08, 50, 0.5), (9.9999999999999995e-08, 50, 0.2)], which got scores of [0.69435504477559784, 0.67682022378906215, 0.66836690624394657]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.035116    	average train batch reward = 0.697
+validation accuracy = 0.047		average validation NDCG = 0.685
+
+epoch 2
+average train loss = 0.036256    	average train batch reward = 0.698
+validation accuracy = 0.049		average validation NDCG = 0.686
+
+epoch 3
+average train loss = -0.007431    	average train batch reward = 0.701
+validation accuracy = 0.050		average validation NDCG = 0.687
+
+========
+Currently the best setups are [(9.9999999999999995e-08, 50, 0.0), (9.9999999999999995e-08, 50, 1.0), (9.9999999999999995e-08, 50, 0.5)], which got scores of [0.69435504477559784, 0.68698692512716508, 0.67682022378906215]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.084277    	average train batch reward = 0.685
+validation accuracy = 0.123		average validation NDCG = 0.681
+
+epoch 2
+average train loss = -0.055757    	average train batch reward = 0.688
+validation accuracy = 0.125		average validation NDCG = 0.682
+
+epoch 3
+average train loss = -0.141472    	average train batch reward = 0.690
+validation accuracy = 0.127		average validation NDCG = 0.682
+
+========
+Currently the best setups are [(9.9999999999999995e-08, 50, 0.0), (9.9999999999999995e-08, 50, 1.0), (9.9999999999999995e-08, 50, 1.5)], which got scores of [0.69435504477559784, 0.68698692512716508, 0.68231097210263159]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.028814    	average train batch reward = 0.697
+validation accuracy = 0.090		average validation NDCG = 0.680
+
+epoch 2
+average train loss = 0.053481    	average train batch reward = 0.696
+validation accuracy = 0.091		average validation NDCG = 0.681
+
+epoch 3
+average train loss = 0.022345    	average train batch reward = 0.698
+validation accuracy = 0.093		average validation NDCG = 0.682
+
+========
+Currently the best setups are [(9.9999999999999995e-08, 50, 0.0), (9.9999999999999995e-08, 50, 1.0), (9.9999999999999995e-08, 50, 1.5)], which got scores of [0.69435504477559784, 0.68698692512716508, 0.68231097210263159]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.050000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.034086    	average train batch reward = 0.677
+validation accuracy = 0.068		average validation NDCG = 0.674
+
+epoch 2
+average train loss = -0.009420    	average train batch reward = 0.676
+validation accuracy = 0.069		average validation NDCG = 0.674
+
+epoch 3
+average train loss = -0.008978    	average train batch reward = 0.678
+validation accuracy = 0.069		average validation NDCG = 0.675
+
+========
+Currently the best setups are [(9.9999999999999995e-08, 50, 0.0), (9.9999999999999995e-08, 50, 1.0), (9.9999999999999995e-08, 50, 1.5)], which got scores of [0.69435504477559784, 0.68698692512716508, 0.68231097210263159]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.200000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.155235    	average train batch reward = 0.712
+validation accuracy = 0.174		average validation NDCG = 0.695
+
+epoch 2
+average train loss = -0.157984    	average train batch reward = 0.715
+validation accuracy = 0.175		average validation NDCG = 0.695
+
+epoch 3
+average train loss = -0.105085    	average train batch reward = 0.714
+validation accuracy = 0.176		average validation NDCG = 0.696
+
+========
+Currently the best setups are [(9.9999999999999995e-08, 512, 0.2), (9.9999999999999995e-08, 50, 0.0), (9.9999999999999995e-08, 50, 1.5)], which got scores of [0.6956973770686623, 0.69435504477559784, 0.68231097210263159]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.137947    	average train batch reward = 0.665
+validation accuracy = 0.079		average validation NDCG = 0.663
+
+epoch 2
+average train loss = 0.123871    	average train batch reward = 0.668
+validation accuracy = 0.080		average validation NDCG = 0.663
+
+epoch 3
+average train loss = 0.086147    	average train batch reward = 0.667
+validation accuracy = 0.080		average validation NDCG = 0.663
+
+========
+Currently the best setups are [(9.9999999999999995e-08, 512, 0.2), (9.9999999999999995e-08, 50, 0.0), (9.9999999999999995e-08, 50, 1.5)], which got scores of [0.6956973770686623, 0.69435504477559784, 0.68231097210263159]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.027283    	average train batch reward = 0.690
+validation accuracy = 0.103		average validation NDCG = 0.684
+
+epoch 2
+average train loss = -0.074402    	average train batch reward = 0.692
+validation accuracy = 0.104		average validation NDCG = 0.685
+
+epoch 3
+average train loss = -0.049204    	average train batch reward = 0.693
+validation accuracy = 0.105		average validation NDCG = 0.685
+
+========
+Currently the best setups are [(9.9999999999999995e-08, 512, 0.2), (9.9999999999999995e-08, 50, 0.0), (9.9999999999999995e-08, 512, 1.0)], which got scores of [0.6956973770686623, 0.69435504477559784, 0.68478989478356556]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.017961    	average train batch reward = 0.671
+validation accuracy = 0.108		average validation NDCG = 0.657
+
+epoch 2
+average train loss = 0.079686    	average train batch reward = 0.671
+validation accuracy = 0.108		average validation NDCG = 0.657
+
+epoch 3
+average train loss = 0.077534    	average train batch reward = 0.672
+validation accuracy = 0.109		average validation NDCG = 0.657
+
+========
+Currently the best setups are [(9.9999999999999995e-08, 512, 0.2), (9.9999999999999995e-08, 50, 0.0), (9.9999999999999995e-08, 512, 1.0)], which got scores of [0.6956973770686623, 0.69435504477559784, 0.68478989478356556]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.070888    	average train batch reward = 0.666
+validation accuracy = 0.065		average validation NDCG = 0.658
+
+epoch 2
+average train loss = 0.086003    	average train batch reward = 0.669
+validation accuracy = 0.065		average validation NDCG = 0.658
+
+epoch 3
+average train loss = 0.068764    	average train batch reward = 0.666
+validation accuracy = 0.066		average validation NDCG = 0.658
+
+========
+Currently the best setups are [(9.9999999999999995e-08, 512, 0.2), (9.9999999999999995e-08, 50, 0.0), (9.9999999999999995e-08, 512, 1.0)], which got scores of [0.6956973770686623, 0.69435504477559784, 0.68478989478356556]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.050000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.109968    	average train batch reward = 0.669
+validation accuracy = 0.090		average validation NDCG = 0.660
+
+epoch 2
+average train loss = 0.162379    	average train batch reward = 0.667
+validation accuracy = 0.090		average validation NDCG = 0.660
+
+epoch 3
+average train loss = 0.076436    	average train batch reward = 0.667
+validation accuracy = 0.090		average validation NDCG = 0.660
+
+========
+Currently the best setups are [(9.9999999999999995e-08, 512, 0.2), (9.9999999999999995e-08, 50, 0.0), (9.9999999999999995e-08, 512, 1.0)], which got scores of [0.6956973770686623, 0.69435504477559784, 0.68478989478356556]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.200000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.035152    	average train batch reward = 0.685
+validation accuracy = 0.101		average validation NDCG = 0.679
+
+epoch 2
+average train loss = 0.001797    	average train batch reward = 0.686
+validation accuracy = 0.101		average validation NDCG = 0.679
+
+epoch 3
+average train loss = -0.038839    	average train batch reward = 0.687
+validation accuracy = 0.101		average validation NDCG = 0.679
+
+========
+Currently the best setups are [(9.9999999999999995e-08, 512, 0.2), (9.9999999999999995e-08, 50, 0.0), (9.9999999999999995e-08, 512, 1.0)], which got scores of [0.6956973770686623, 0.69435504477559784, 0.68478989478356556]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.063288    	average train batch reward = 0.691
+validation accuracy = 0.120		average validation NDCG = 0.684
+
+epoch 2
+average train loss = -0.104842    	average train batch reward = 0.692
+validation accuracy = 0.120		average validation NDCG = 0.684
+
+epoch 3
+average train loss = -0.113714    	average train batch reward = 0.693
+validation accuracy = 0.120		average validation NDCG = 0.685
+
+========
+Currently the best setups are [(9.9999999999999995e-08, 512, 0.2), (9.9999999999999995e-08, 50, 0.0), (9.9999999999999995e-08, 512, 1.0)], which got scores of [0.6956973770686623, 0.69435504477559784, 0.68478989478356556]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.234799    	average train batch reward = 0.702
+validation accuracy = 0.090		average validation NDCG = 0.676
+
+epoch 2
+average train loss = -0.305511    	average train batch reward = 0.701
+validation accuracy = 0.090		average validation NDCG = 0.676
+
+epoch 3
+average train loss = -0.279711    	average train batch reward = 0.701
+validation accuracy = 0.090		average validation NDCG = 0.676
+
+========
+Currently the best setups are [(9.9999999999999995e-08, 512, 0.2), (9.9999999999999995e-08, 50, 0.0), (9.9999999999999995e-08, 512, 1.0)], which got scores of [0.6956973770686623, 0.69435504477559784, 0.68478989478356556]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.005414    	average train batch reward = 0.679
+validation accuracy = 0.073		average validation NDCG = 0.667
+
+epoch 2
+average train loss = 0.100495    	average train batch reward = 0.679
+validation accuracy = 0.073		average validation NDCG = 0.667
+
+epoch 3
+average train loss = 0.042741    	average train batch reward = 0.682
+validation accuracy = 0.073		average validation NDCG = 0.667
+
+========
+Currently the best setups are [(9.9999999999999995e-08, 512, 0.2), (9.9999999999999995e-08, 50, 0.0), (9.9999999999999995e-08, 512, 1.0)], which got scores of [0.6956973770686623, 0.69435504477559784, 0.68478989478356556]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.000001
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.044701    	average train batch reward = 0.689
+validation accuracy = 0.104		average validation NDCG = 0.682
+
+epoch 2
+average train loss = -0.247088    	average train batch reward = 0.699
+validation accuracy = 0.137		average validation NDCG = 0.692
+
+epoch 3
+average train loss = -0.307113    	average train batch reward = 0.708
+validation accuracy = 0.162		average validation NDCG = 0.702
+
+========
+Currently the best setups are [(9.9999999999999995e-07, 50, 0.0), (9.9999999999999995e-08, 512, 0.2), (9.9999999999999995e-08, 512, 1.0)], which got scores of [0.70222962032471159, 0.6956973770686623, 0.68478989478356556]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.000001
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.050000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.159658    	average train batch reward = 0.655
+validation accuracy = 0.059		average validation NDCG = 0.658
+
+epoch 2
+average train loss = 0.011817    	average train batch reward = 0.671
+validation accuracy = 0.083		average validation NDCG = 0.669
+
+epoch 3
+average train loss = -0.089727    	average train batch reward = 0.685
+validation accuracy = 0.104		average validation NDCG = 0.679
+
+========
+Currently the best setups are [(9.9999999999999995e-07, 50, 0.0), (9.9999999999999995e-08, 512, 0.2), (9.9999999999999995e-08, 512, 1.0)], which got scores of [0.70222962032471159, 0.6956973770686623, 0.68478989478356556]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.000001
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.200000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.084069    	average train batch reward = 0.709
+validation accuracy = 0.137		average validation NDCG = 0.712
+
+epoch 2
+average train loss = -0.169681    	average train batch reward = 0.721
+validation accuracy = 0.156		average validation NDCG = 0.723
+
+epoch 3
+average train loss = -0.303503    	average train batch reward = 0.732
+validation accuracy = 0.175		average validation NDCG = 0.734
+
+========
+Currently the best setups are [(9.9999999999999995e-07, 50, 0.2), (9.9999999999999995e-07, 50, 0.0), (9.9999999999999995e-08, 512, 1.0)], which got scores of [0.73395850694772369, 0.70222962032471159, 0.68478989478356556]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.000001
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.050233    	average train batch reward = 0.671
+validation accuracy = 0.118		average validation NDCG = 0.663
+
+epoch 2
+average train loss = -0.090383    	average train batch reward = 0.681
+validation accuracy = 0.130		average validation NDCG = 0.671
+
+epoch 3
+average train loss = -0.178340    	average train batch reward = 0.691
+validation accuracy = 0.144		average validation NDCG = 0.681
+
+========
+Currently the best setups are [(9.9999999999999995e-07, 50, 0.2), (9.9999999999999995e-07, 50, 0.0), (9.9999999999999995e-08, 512, 1.0)], which got scores of [0.73395850694772369, 0.70222962032471159, 0.68478989478356556]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.000001
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.045437    	average train batch reward = 0.686
+validation accuracy = 0.088		average validation NDCG = 0.679
+
+epoch 2
+average train loss = -0.103696    	average train batch reward = 0.697
+validation accuracy = 0.099		average validation NDCG = 0.688
+
+epoch 3
+average train loss = -0.215225    	average train batch reward = 0.708
+validation accuracy = 0.113		average validation NDCG = 0.697
+
+========
+Currently the best setups are [(9.9999999999999995e-07, 50, 0.2), (9.9999999999999995e-07, 50, 0.0), (9.9999999999999995e-07, 50, 1.0)], which got scores of [0.73395850694772369, 0.70222962032471159, 0.697451828484559]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.000001
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.032147    	average train batch reward = 0.699
+validation accuracy = 0.098		average validation NDCG = 0.698
+
+epoch 2
+average train loss = -0.162273    	average train batch reward = 0.711
+validation accuracy = 0.111		average validation NDCG = 0.710
+
+epoch 3
+average train loss = -0.207263    	average train batch reward = 0.726
+validation accuracy = 0.126		average validation NDCG = 0.721
+
+========
+Currently the best setups are [(9.9999999999999995e-07, 50, 0.2), (9.9999999999999995e-07, 50, 1.5), (9.9999999999999995e-07, 50, 0.0)], which got scores of [0.73395850694772369, 0.72131549636675363, 0.70222962032471159]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.000001
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.036006    	average train batch reward = 0.678
+validation accuracy = 0.101		average validation NDCG = 0.668
+
+epoch 2
+average train loss = -0.069811    	average train batch reward = 0.683
+validation accuracy = 0.105		average validation NDCG = 0.671
+
+epoch 3
+average train loss = -0.054198    	average train batch reward = 0.687
+validation accuracy = 0.111		average validation NDCG = 0.674
+
+========
+Currently the best setups are [(9.9999999999999995e-07, 50, 0.2), (9.9999999999999995e-07, 50, 1.5), (9.9999999999999995e-07, 50, 0.0)], which got scores of [0.73395850694772369, 0.72131549636675363, 0.70222962032471159]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.000001
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.050000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.064833    	average train batch reward = 0.663
+validation accuracy = 0.098		average validation NDCG = 0.667
+
+epoch 2
+average train loss = -0.148711    	average train batch reward = 0.666
+validation accuracy = 0.101		average validation NDCG = 0.669
+
+epoch 3
+average train loss = -0.149491    	average train batch reward = 0.670
+validation accuracy = 0.104		average validation NDCG = 0.671
+
+========
+Currently the best setups are [(9.9999999999999995e-07, 50, 0.2), (9.9999999999999995e-07, 50, 1.5), (9.9999999999999995e-07, 50, 0.0)], which got scores of [0.73395850694772369, 0.72131549636675363, 0.70222962032471159]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.000001
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.200000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.069538    	average train batch reward = 0.694
+validation accuracy = 0.197		average validation NDCG = 0.676
+
+epoch 2
+average train loss = -0.182160    	average train batch reward = 0.700
+validation accuracy = 0.202		average validation NDCG = 0.678
+
+epoch 3
+average train loss = -0.246529    	average train batch reward = 0.702
+validation accuracy = 0.205		average validation NDCG = 0.681
+
+========
+Currently the best setups are [(9.9999999999999995e-07, 50, 0.2), (9.9999999999999995e-07, 50, 1.5), (9.9999999999999995e-07, 50, 0.0)], which got scores of [0.73395850694772369, 0.72131549636675363, 0.70222962032471159]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.000001
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.180034    	average train batch reward = 0.681
+validation accuracy = 0.054		average validation NDCG = 0.668
+
+epoch 2
+average train loss = 0.132040    	average train batch reward = 0.684
+validation accuracy = 0.058		average validation NDCG = 0.670
+
+epoch 3
+average train loss = 0.081468    	average train batch reward = 0.687
+validation accuracy = 0.062		average validation NDCG = 0.673
+
+========
+Currently the best setups are [(9.9999999999999995e-07, 50, 0.2), (9.9999999999999995e-07, 50, 1.5), (9.9999999999999995e-07, 50, 0.0)], which got scores of [0.73395850694772369, 0.72131549636675363, 0.70222962032471159]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.000001
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.003166    	average train batch reward = 0.714
+validation accuracy = 0.127		average validation NDCG = 0.691
+
+epoch 2
+average train loss = 0.024859    	average train batch reward = 0.717
+validation accuracy = 0.131		average validation NDCG = 0.694
+
+epoch 3
+average train loss = -0.075749    	average train batch reward = 0.721
+validation accuracy = 0.137		average validation NDCG = 0.697
+
+========
+Currently the best setups are [(9.9999999999999995e-07, 50, 0.2), (9.9999999999999995e-07, 50, 1.5), (9.9999999999999995e-07, 50, 0.0)], which got scores of [0.73395850694772369, 0.72131549636675363, 0.70222962032471159]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.000001
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.129365    	average train batch reward = 0.655
+validation accuracy = 0.080		average validation NDCG = 0.650
+
+epoch 2
+average train loss = 0.116850    	average train batch reward = 0.657
+validation accuracy = 0.081		average validation NDCG = 0.651
+
+epoch 3
+average train loss = 0.142077    	average train batch reward = 0.658
+validation accuracy = 0.082		average validation NDCG = 0.653
+
+========
+Currently the best setups are [(9.9999999999999995e-07, 50, 0.2), (9.9999999999999995e-07, 50, 1.5), (9.9999999999999995e-07, 50, 0.0)], which got scores of [0.73395850694772369, 0.72131549636675363, 0.70222962032471159]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.000001
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.048259    	average train batch reward = 0.670
+validation accuracy = 0.086		average validation NDCG = 0.665
+
+epoch 2
+average train loss = 0.021971    	average train batch reward = 0.671
+validation accuracy = 0.087		average validation NDCG = 0.665
+
+epoch 3
+average train loss = 0.030095    	average train batch reward = 0.672
+validation accuracy = 0.087		average validation NDCG = 0.666
+
+========
+Currently the best setups are [(9.9999999999999995e-07, 50, 0.2), (9.9999999999999995e-07, 50, 1.5), (9.9999999999999995e-07, 50, 0.0)], which got scores of [0.73395850694772369, 0.72131549636675363, 0.70222962032471159]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.000001
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.050000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.024654    	average train batch reward = 0.674
+validation accuracy = 0.104		average validation NDCG = 0.663
+
+epoch 2
+average train loss = 0.038977    	average train batch reward = 0.675
+validation accuracy = 0.106		average validation NDCG = 0.663
+
+epoch 3
+average train loss = 0.013092    	average train batch reward = 0.675
+validation accuracy = 0.106		average validation NDCG = 0.663
+
+========
+Currently the best setups are [(9.9999999999999995e-07, 50, 0.2), (9.9999999999999995e-07, 50, 1.5), (9.9999999999999995e-07, 50, 0.0)], which got scores of [0.73395850694772369, 0.72131549636675363, 0.70222962032471159]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.000001
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.200000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.012149    	average train batch reward = 0.673
+validation accuracy = 0.134		average validation NDCG = 0.669
+
+epoch 2
+average train loss = 0.006370    	average train batch reward = 0.675
+validation accuracy = 0.134		average validation NDCG = 0.670
+
+epoch 3
+average train loss = -0.050651    	average train batch reward = 0.675
+validation accuracy = 0.135		average validation NDCG = 0.670
+
+========
+Currently the best setups are [(9.9999999999999995e-07, 50, 0.2), (9.9999999999999995e-07, 50, 1.5), (9.9999999999999995e-07, 50, 0.0)], which got scores of [0.73395850694772369, 0.72131549636675363, 0.70222962032471159]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.000001
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.087724    	average train batch reward = 0.661
+validation accuracy = 0.090		average validation NDCG = 0.656
+
+epoch 2
+average train loss = -0.011070    	average train batch reward = 0.663
+validation accuracy = 0.091		average validation NDCG = 0.656
+
+epoch 3
+average train loss = 0.101746    	average train batch reward = 0.661
+validation accuracy = 0.091		average validation NDCG = 0.656
+
+========
+Currently the best setups are [(9.9999999999999995e-07, 50, 0.2), (9.9999999999999995e-07, 50, 1.5), (9.9999999999999995e-07, 50, 0.0)], which got scores of [0.73395850694772369, 0.72131549636675363, 0.70222962032471159]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.000001
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.152721    	average train batch reward = 0.731
+validation accuracy = 0.147		average validation NDCG = 0.710
+
+epoch 2
+average train loss = -0.167466    	average train batch reward = 0.731
+validation accuracy = 0.147		average validation NDCG = 0.710
+
+epoch 3
+average train loss = -0.149606    	average train batch reward = 0.731
+validation accuracy = 0.147		average validation NDCG = 0.711
+
+========
+Currently the best setups are [(9.9999999999999995e-07, 50, 0.2), (9.9999999999999995e-07, 50, 1.5), (9.9999999999999995e-07, 5012, 1.0)], which got scores of [0.73395850694772369, 0.72131549636675363, 0.71094624712123866]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.000001
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.108994    	average train batch reward = 0.662
+validation accuracy = 0.095		average validation NDCG = 0.661
+
+epoch 2
+average train loss = 0.083256    	average train batch reward = 0.664
+validation accuracy = 0.095		average validation NDCG = 0.662
+
+epoch 3
+average train loss = 0.103507    	average train batch reward = 0.664
+validation accuracy = 0.096		average validation NDCG = 0.662
+
+========
+Currently the best setups are [(9.9999999999999995e-07, 50, 0.2), (9.9999999999999995e-07, 50, 1.5), (9.9999999999999995e-07, 5012, 1.0)], which got scores of [0.73395850694772369, 0.72131549636675363, 0.71094624712123866]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.000010
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.435519    	average train batch reward = 0.719
+validation accuracy = 0.224		average validation NDCG = 0.752
+
+epoch 2
+average train loss = -1.605466    	average train batch reward = 0.788
+validation accuracy = 0.374		average validation NDCG = 0.807
+
+epoch 3
+average train loss = -2.743511    	average train batch reward = 0.822
+validation accuracy = 0.431		average validation NDCG = 0.847
+
+========
+Currently the best setups are [(1.0000000000000001e-05, 50, 0.0), (9.9999999999999995e-07, 50, 0.2), (9.9999999999999995e-07, 5012, 1.0)], which got scores of [0.84746141516917761, 0.73395850694772369, 0.71094624712123866]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.000010
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.050000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.475787    	average train batch reward = 0.736
+validation accuracy = 0.179		average validation NDCG = 0.763
+
+epoch 2
+average train loss = -1.414717    	average train batch reward = 0.814
+validation accuracy = 0.290		average validation NDCG = 0.842
+
+epoch 3
+average train loss = -2.331272    	average train batch reward = 0.857
+validation accuracy = 0.400		average validation NDCG = 0.878
+
+========
+Currently the best setups are [(1.0000000000000001e-05, 50, 0.05), (1.0000000000000001e-05, 50, 0.0), (9.9999999999999995e-07, 5012, 1.0)], which got scores of [0.87808386239272185, 0.84746141516917761, 0.71094624712123866]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.000010
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.200000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.545554    	average train batch reward = 0.721
+validation accuracy = 0.212		average validation NDCG = 0.764
+
+epoch 2
+average train loss = -1.767218    	average train batch reward = 0.798
+validation accuracy = 0.314		average validation NDCG = 0.814
+
+epoch 3
+average train loss = -3.004094    	average train batch reward = 0.828
+validation accuracy = 0.361		average validation NDCG = 0.838
+
+========
+Currently the best setups are [(1.0000000000000001e-05, 50, 0.05), (1.0000000000000001e-05, 50, 0.0), (1.0000000000000001e-05, 50, 0.2)], which got scores of [0.87808386239272185, 0.84746141516917761, 0.83822450135749238]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.000010
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.849905    	average train batch reward = 0.748
+validation accuracy = 0.384		average validation NDCG = 0.786
+
+epoch 2
+average train loss = -2.308178    	average train batch reward = 0.812
+validation accuracy = 0.445		average validation NDCG = 0.826
+
+epoch 3
+average train loss = -3.639335    	average train batch reward = 0.831
+validation accuracy = 0.455		average validation NDCG = 0.839
+
+========
+Currently the best setups are [(1.0000000000000001e-05, 50, 0.05), (1.0000000000000001e-05, 50, 0.0), (1.0000000000000001e-05, 50, 0.5)], which got scores of [0.87808386239272185, 0.84746141516917761, 0.8390960813250411]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.000010
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.443725    	average train batch reward = 0.742
+validation accuracy = 0.310		average validation NDCG = 0.768
+
+epoch 2
+average train loss = -1.688561    	average train batch reward = 0.821
+validation accuracy = 0.463		average validation NDCG = 0.837
+
+epoch 3
+average train loss = -2.783877    	average train batch reward = 0.859
+validation accuracy = 0.515		average validation NDCG = 0.865
+
+========
+Currently the best setups are [(1.0000000000000001e-05, 50, 0.05), (1.0000000000000001e-05, 50, 1.0), (1.0000000000000001e-05, 50, 0.0)], which got scores of [0.87808386239272185, 0.86504947352567962, 0.84746141516917761]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.000010
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.579885    	average train batch reward = 0.752
+validation accuracy = 0.375		average validation NDCG = 0.777
+
+epoch 2
+average train loss = -2.072659    	average train batch reward = 0.806
+validation accuracy = 0.453		average validation NDCG = 0.815
+
+epoch 3
+average train loss = -3.217620    	average train batch reward = 0.829
+validation accuracy = 0.485		average validation NDCG = 0.834
+
+========
+Currently the best setups are [(1.0000000000000001e-05, 50, 0.05), (1.0000000000000001e-05, 50, 1.0), (1.0000000000000001e-05, 50, 0.0)], which got scores of [0.87808386239272185, 0.86504947352567962, 0.84746141516917761]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.000010
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.318320    	average train batch reward = 0.709
+validation accuracy = 0.191		average validation NDCG = 0.706
+
+epoch 2
+average train loss = -0.662820    	average train batch reward = 0.732
+validation accuracy = 0.232		average validation NDCG = 0.729
+
+epoch 3
+average train loss = -0.967493    	average train batch reward = 0.752
+validation accuracy = 0.261		average validation NDCG = 0.748
+
+========
+Currently the best setups are [(1.0000000000000001e-05, 50, 0.05), (1.0000000000000001e-05, 50, 1.0), (1.0000000000000001e-05, 50, 0.0)], which got scores of [0.87808386239272185, 0.86504947352567962, 0.84746141516917761]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.000010
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.050000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.325477    	average train batch reward = 0.721
+validation accuracy = 0.175		average validation NDCG = 0.721
+
+epoch 2
+average train loss = -0.619445    	average train batch reward = 0.749
+validation accuracy = 0.217		average validation NDCG = 0.744
+
+epoch 3
+average train loss = -1.045233    	average train batch reward = 0.773
+validation accuracy = 0.263		average validation NDCG = 0.767
+
+========
+Currently the best setups are [(1.0000000000000001e-05, 50, 0.05), (1.0000000000000001e-05, 50, 1.0), (1.0000000000000001e-05, 50, 0.0)], which got scores of [0.87808386239272185, 0.86504947352567962, 0.84746141516917761]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.000010
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.200000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.007062    	average train batch reward = 0.681
+validation accuracy = 0.116		average validation NDCG = 0.680
+
+epoch 2
+average train loss = -0.414679    	average train batch reward = 0.716
+validation accuracy = 0.167		average validation NDCG = 0.711
+
+epoch 3
+average train loss = -0.884425    	average train batch reward = 0.745
+validation accuracy = 0.251		average validation NDCG = 0.738
+
+========
+Currently the best setups are [(1.0000000000000001e-05, 50, 0.05), (1.0000000000000001e-05, 50, 1.0), (1.0000000000000001e-05, 50, 0.0)], which got scores of [0.87808386239272185, 0.86504947352567962, 0.84746141516917761]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.000010
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.307088    	average train batch reward = 0.732
+validation accuracy = 0.166		average validation NDCG = 0.736
+
+epoch 2
+average train loss = -0.725467    	average train batch reward = 0.760
+validation accuracy = 0.226		average validation NDCG = 0.760
+
+epoch 3
+average train loss = -1.094963    	average train batch reward = 0.783
+validation accuracy = 0.284		average validation NDCG = 0.781
+
+========
+Currently the best setups are [(1.0000000000000001e-05, 50, 0.05), (1.0000000000000001e-05, 50, 1.0), (1.0000000000000001e-05, 50, 0.0)], which got scores of [0.87808386239272185, 0.86504947352567962, 0.84746141516917761]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.000010
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.138965    	average train batch reward = 0.707
+validation accuracy = 0.179		average validation NDCG = 0.714
+
+epoch 2
+average train loss = -0.617883    	average train batch reward = 0.738
+validation accuracy = 0.257		average validation NDCG = 0.745
+
+epoch 3
+average train loss = -1.074303    	average train batch reward = 0.760
+validation accuracy = 0.305		average validation NDCG = 0.765
+
+========
+Currently the best setups are [(1.0000000000000001e-05, 50, 0.05), (1.0000000000000001e-05, 50, 1.0), (1.0000000000000001e-05, 50, 0.0)], which got scores of [0.87808386239272185, 0.86504947352567962, 0.84746141516917761]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.000010
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.014633    	average train batch reward = 0.697
+validation accuracy = 0.119		average validation NDCG = 0.689
+
+epoch 2
+average train loss = -0.239723    	average train batch reward = 0.721
+validation accuracy = 0.152		average validation NDCG = 0.716
+
+epoch 3
+average train loss = -0.596452    	average train batch reward = 0.747
+validation accuracy = 0.185		average validation NDCG = 0.743
+
+========
+Currently the best setups are [(1.0000000000000001e-05, 50, 0.05), (1.0000000000000001e-05, 50, 1.0), (1.0000000000000001e-05, 50, 0.0)], which got scores of [0.87808386239272185, 0.86504947352567962, 0.84746141516917761]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.000010
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.131354    	average train batch reward = 0.672
+validation accuracy = 0.077		average validation NDCG = 0.666
+
+epoch 2
+average train loss = 0.126368    	average train batch reward = 0.675
+validation accuracy = 0.083		average validation NDCG = 0.671
+
+epoch 3
+average train loss = 0.126047    	average train batch reward = 0.682
+validation accuracy = 0.090		average validation NDCG = 0.676
+
+========
+Currently the best setups are [(1.0000000000000001e-05, 50, 0.05), (1.0000000000000001e-05, 50, 1.0), (1.0000000000000001e-05, 50, 0.0)], which got scores of [0.87808386239272185, 0.86504947352567962, 0.84746141516917761]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.000010
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.050000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.065171    	average train batch reward = 0.657
+validation accuracy = 0.090		average validation NDCG = 0.663
+
+epoch 2
+average train loss = 0.028256    	average train batch reward = 0.664
+validation accuracy = 0.097		average validation NDCG = 0.666
+
+epoch 3
+average train loss = 0.084575    	average train batch reward = 0.667
+validation accuracy = 0.102		average validation NDCG = 0.670
+
+========
+Currently the best setups are [(1.0000000000000001e-05, 50, 0.05), (1.0000000000000001e-05, 50, 1.0), (1.0000000000000001e-05, 50, 0.0)], which got scores of [0.87808386239272185, 0.86504947352567962, 0.84746141516917761]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.000010
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.200000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.123076    	average train batch reward = 0.658
+validation accuracy = 0.064		average validation NDCG = 0.651
+
+epoch 2
+average train loss = 0.091546    	average train batch reward = 0.665
+validation accuracy = 0.069		average validation NDCG = 0.655
+
+epoch 3
+average train loss = 0.067149    	average train batch reward = 0.671
+validation accuracy = 0.075		average validation NDCG = 0.659
+
+========
+Currently the best setups are [(1.0000000000000001e-05, 50, 0.05), (1.0000000000000001e-05, 50, 1.0), (1.0000000000000001e-05, 50, 0.0)], which got scores of [0.87808386239272185, 0.86504947352567962, 0.84746141516917761]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.000010
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.031283    	average train batch reward = 0.679
+validation accuracy = 0.095		average validation NDCG = 0.671
+
+epoch 2
+average train loss = -0.044900    	average train batch reward = 0.684
+validation accuracy = 0.104		average validation NDCG = 0.676
+
+epoch 3
+average train loss = -0.068108    	average train batch reward = 0.691
+validation accuracy = 0.112		average validation NDCG = 0.682
+
+========
+Currently the best setups are [(1.0000000000000001e-05, 50, 0.05), (1.0000000000000001e-05, 50, 1.0), (1.0000000000000001e-05, 50, 0.0)], which got scores of [0.87808386239272185, 0.86504947352567962, 0.84746141516917761]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.000010
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.018247    	average train batch reward = 0.698
+validation accuracy = 0.100		average validation NDCG = 0.685
+
+epoch 2
+average train loss = -0.118456    	average train batch reward = 0.704
+validation accuracy = 0.106		average validation NDCG = 0.689
+
+epoch 3
+average train loss = -0.049022    	average train batch reward = 0.709
+validation accuracy = 0.116		average validation NDCG = 0.694
+
+========
+Currently the best setups are [(1.0000000000000001e-05, 50, 0.05), (1.0000000000000001e-05, 50, 1.0), (1.0000000000000001e-05, 50, 0.0)], which got scores of [0.87808386239272185, 0.86504947352567962, 0.84746141516917761]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.000010
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = 0.002426    	average train batch reward = 0.685
+validation accuracy = 0.079		average validation NDCG = 0.681
+
+epoch 2
+average train loss = -0.001877    	average train batch reward = 0.692
+validation accuracy = 0.088		average validation NDCG = 0.687
+
+epoch 3
+average train loss = -0.125069    	average train batch reward = 0.699
+validation accuracy = 0.099		average validation NDCG = 0.692
+
+========
+Currently the best setups are [(1.0000000000000001e-05, 50, 0.05), (1.0000000000000001e-05, 50, 1.0), (1.0000000000000001e-05, 50, 0.0)], which got scores of [0.87808386239272185, 0.86504947352567962, 0.84746141516917761]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.000100
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -5.037403    	average train batch reward = 0.832
+validation accuracy = 0.505		average validation NDCG = 0.890
+
+epoch 2
+average train loss = -16.702732    	average train batch reward = 0.882
+validation accuracy = 0.529		average validation NDCG = 0.895
+
+epoch 3
+average train loss = -29.777798    	average train batch reward = 0.886
+validation accuracy = 0.510		average validation NDCG = 0.900
+
+========
+Currently the best setups are [(0.0001, 50, 0.0), (1.0000000000000001e-05, 50, 0.05), (1.0000000000000001e-05, 50, 0.0)], which got scores of [0.89961869189476151, 0.87808386239272185, 0.84746141516917761]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.000100
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.050000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -6.881748    	average train batch reward = 0.833
+validation accuracy = 0.487		average validation NDCG = 0.871
+
+epoch 2
+average train loss = -21.325132    	average train batch reward = 0.867
+validation accuracy = 0.498		average validation NDCG = 0.878
+
+epoch 3
+average train loss = -50.131218    	average train batch reward = 0.871
+validation accuracy = 0.473		average validation NDCG = 0.878
+
+========
+Currently the best setups are [(0.0001, 50, 0.0), (1.0000000000000001e-05, 50, 0.05), (0.0001, 50, 0.05)], which got scores of [0.89961869189476151, 0.87808386239272185, 0.87768318007220147]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.000100
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.200000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -5.598698    	average train batch reward = 0.857
+validation accuracy = 0.584		average validation NDCG = 0.923
+
+epoch 2
+average train loss = -15.511717    	average train batch reward = 0.914
+validation accuracy = 0.553		average validation NDCG = 0.934
+
+epoch 3
+average train loss = -26.227747    	average train batch reward = 0.918
+validation accuracy = 0.483		average validation NDCG = 0.934
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.0), (0.0001, 50, 0.05)], which got scores of [0.93403209026104916, 0.89961869189476151, 0.87768318007220147]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.000100
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -5.536471    	average train batch reward = 0.860
+validation accuracy = 0.537		average validation NDCG = 0.921
+
+epoch 2
+average train loss = -15.229596    	average train batch reward = 0.910
+validation accuracy = 0.492		average validation NDCG = 0.932
+
+epoch 3
+average train loss = -26.499245    	average train batch reward = 0.914
+validation accuracy = 0.489		average validation NDCG = 0.934
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 50, 0.0)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.89961869189476151]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.000100
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -6.253751    	average train batch reward = 0.845
+validation accuracy = 0.529		average validation NDCG = 0.915
+
+epoch 2
+average train loss = -18.539389    	average train batch reward = 0.910
+validation accuracy = 0.475		average validation NDCG = 0.930
+
+epoch 3
+average train loss = -30.299911    	average train batch reward = 0.914
+validation accuracy = 0.431		average validation NDCG = 0.931
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 50, 1.0)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.9310127254536964]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.000100
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -7.866905    	average train batch reward = 0.827
+validation accuracy = 0.547		average validation NDCG = 0.869
+
+epoch 2
+average train loss = -26.118937    	average train batch reward = 0.865
+validation accuracy = 0.544		average validation NDCG = 0.871
+
+epoch 3
+average train loss = -52.959183    	average train batch reward = 0.862
+validation accuracy = 0.491		average validation NDCG = 0.873
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 50, 1.0)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.9310127254536964]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.000100
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -1.809242    	average train batch reward = 0.761
+validation accuracy = 0.418		average validation NDCG = 0.825
+
+epoch 2
+average train loss = -5.774452    	average train batch reward = 0.850
+validation accuracy = 0.485		average validation NDCG = 0.867
+
+epoch 3
+average train loss = -9.482027    	average train batch reward = 0.869
+validation accuracy = 0.506		average validation NDCG = 0.879
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 50, 1.0)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.9310127254536964]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.000100
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.050000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -1.924233    	average train batch reward = 0.786
+validation accuracy = 0.425		average validation NDCG = 0.843
+
+epoch 2
+average train loss = -5.091606    	average train batch reward = 0.860
+validation accuracy = 0.484		average validation NDCG = 0.880
+
+epoch 3
+average train loss = -8.661853    	average train batch reward = 0.879
+validation accuracy = 0.504		average validation NDCG = 0.891
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 50, 1.0)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.9310127254536964]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.000100
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.200000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -1.941269    	average train batch reward = 0.760
+validation accuracy = 0.309		average validation NDCG = 0.816
+
+epoch 2
+average train loss = -6.243538    	average train batch reward = 0.829
+validation accuracy = 0.395		average validation NDCG = 0.840
+
+epoch 3
+average train loss = -10.216538    	average train batch reward = 0.839
+validation accuracy = 0.441		average validation NDCG = 0.850
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 50, 1.0)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.9310127254536964]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.000100
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -1.771217    	average train batch reward = 0.811
+validation accuracy = 0.426		average validation NDCG = 0.884
+
+epoch 2
+average train loss = -4.681308    	average train batch reward = 0.894
+validation accuracy = 0.548		average validation NDCG = 0.918
+
+epoch 3
+average train loss = -6.594846    	average train batch reward = 0.912
+validation accuracy = 0.606		average validation NDCG = 0.933
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.000100
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -1.341082    	average train batch reward = 0.752
+validation accuracy = 0.428		average validation NDCG = 0.835
+
+epoch 2
+average train loss = -4.847622    	average train batch reward = 0.851
+validation accuracy = 0.523		average validation NDCG = 0.865
+
+epoch 3
+average train loss = -8.295988    	average train batch reward = 0.862
+validation accuracy = 0.545		average validation NDCG = 0.872
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.000100
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -1.807649    	average train batch reward = 0.798
+validation accuracy = 0.498		average validation NDCG = 0.852
+
+epoch 2
+average train loss = -5.337433    	average train batch reward = 0.857
+validation accuracy = 0.537		average validation NDCG = 0.872
+
+epoch 3
+average train loss = -8.897390    	average train batch reward = 0.871
+validation accuracy = 0.537		average validation NDCG = 0.895
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.000100
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.212436    	average train batch reward = 0.685
+validation accuracy = 0.171		average validation NDCG = 0.691
+
+epoch 2
+average train loss = -0.784348    	average train batch reward = 0.723
+validation accuracy = 0.220		average validation NDCG = 0.722
+
+epoch 3
+average train loss = -1.532311    	average train batch reward = 0.753
+validation accuracy = 0.264		average validation NDCG = 0.753
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.000100
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.050000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.206455    	average train batch reward = 0.690
+validation accuracy = 0.186		average validation NDCG = 0.712
+
+epoch 2
+average train loss = -0.625399    	average train batch reward = 0.733
+validation accuracy = 0.272		average validation NDCG = 0.751
+
+epoch 3
+average train loss = -1.098529    	average train batch reward = 0.774
+validation accuracy = 0.333		average validation NDCG = 0.785
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.000100
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.200000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.182668    	average train batch reward = 0.710
+validation accuracy = 0.226		average validation NDCG = 0.722
+
+epoch 2
+average train loss = -0.652168    	average train batch reward = 0.750
+validation accuracy = 0.305		average validation NDCG = 0.770
+
+epoch 3
+average train loss = -1.226513    	average train batch reward = 0.786
+validation accuracy = 0.365		average validation NDCG = 0.804
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.000100
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.237464    	average train batch reward = 0.729
+validation accuracy = 0.176		average validation NDCG = 0.746
+
+epoch 2
+average train loss = -0.803394    	average train batch reward = 0.771
+validation accuracy = 0.249		average validation NDCG = 0.786
+
+epoch 3
+average train loss = -1.347792    	average train batch reward = 0.801
+validation accuracy = 0.311		average validation NDCG = 0.817
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.000100
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.168791    	average train batch reward = 0.709
+validation accuracy = 0.166		average validation NDCG = 0.735
+
+epoch 2
+average train loss = -0.619652    	average train batch reward = 0.755
+validation accuracy = 0.268		average validation NDCG = 0.778
+
+epoch 3
+average train loss = -1.245671    	average train batch reward = 0.785
+validation accuracy = 0.346		average validation NDCG = 0.805
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.000100
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.041744    	average train batch reward = 0.668
+validation accuracy = 0.122		average validation NDCG = 0.679
+
+epoch 2
+average train loss = -0.453803    	average train batch reward = 0.717
+validation accuracy = 0.207		average validation NDCG = 0.726
+
+epoch 3
+average train loss = -1.053845    	average train batch reward = 0.753
+validation accuracy = 0.265		average validation NDCG = 0.758
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.001000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -444.806000    	average train batch reward = 0.805
+validation accuracy = 0.370		average validation NDCG = 0.815
+
+epoch 2
+average train loss = -2991.551758    	average train batch reward = 0.815
+validation accuracy = 0.345		average validation NDCG = 0.814
+
+epoch 3
+average train loss = -7619.735840    	average train batch reward = 0.813
+validation accuracy = 0.329		average validation NDCG = 0.813
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.001000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.050000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -377.945770    	average train batch reward = 0.824
+validation accuracy = 0.259		average validation NDCG = 0.854
+
+epoch 2
+average train loss = -2039.205322    	average train batch reward = 0.850
+validation accuracy = 0.277		average validation NDCG = 0.855
+
+epoch 3
+average train loss = -5563.048828    	average train batch reward = 0.851
+validation accuracy = 0.259		average validation NDCG = 0.857
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.001000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.200000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -283.743805    	average train batch reward = 0.773
+validation accuracy = 0.300		average validation NDCG = 0.779
+
+epoch 2
+average train loss = -1691.524902    	average train batch reward = 0.785
+validation accuracy = 0.310		average validation NDCG = 0.782
+
+epoch 3
+average train loss = -4433.302246    	average train batch reward = 0.784
+validation accuracy = 0.311		average validation NDCG = 0.782
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.001000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -177.411758    	average train batch reward = 0.868
+validation accuracy = 0.520		average validation NDCG = 0.903
+
+epoch 2
+average train loss = -1167.638062    	average train batch reward = 0.891
+validation accuracy = 0.390		average validation NDCG = 0.899
+
+epoch 3
+average train loss = -2824.005615    	average train batch reward = 0.892
+validation accuracy = 0.401		average validation NDCG = 0.903
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.001000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -249.529465    	average train batch reward = 0.757
+validation accuracy = 0.240		average validation NDCG = 0.775
+
+epoch 2
+average train loss = -1425.337646    	average train batch reward = 0.769
+validation accuracy = 0.223		average validation NDCG = 0.775
+
+epoch 3
+average train loss = -3466.538574    	average train batch reward = 0.770
+validation accuracy = 0.208		average validation NDCG = 0.785
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.001000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -269.780334    	average train batch reward = 0.796
+validation accuracy = 0.371		average validation NDCG = 0.803
+
+epoch 2
+average train loss = -1847.286621    	average train batch reward = 0.805
+validation accuracy = 0.355		average validation NDCG = 0.804
+
+epoch 3
+average train loss = -4669.814453    	average train batch reward = 0.804
+validation accuracy = 0.369		average validation NDCG = 0.804
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.001000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -16.451096    	average train batch reward = 0.867
+validation accuracy = 0.518		average validation NDCG = 0.925
+
+epoch 2
+average train loss = -60.585457    	average train batch reward = 0.912
+validation accuracy = 0.544		average validation NDCG = 0.932
+
+epoch 3
+average train loss = -134.627869    	average train batch reward = 0.914
+validation accuracy = 0.460		average validation NDCG = 0.932
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.001000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.050000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -15.250079    	average train batch reward = 0.869
+validation accuracy = 0.496		average validation NDCG = 0.926
+
+epoch 2
+average train loss = -63.481438    	average train batch reward = 0.914
+validation accuracy = 0.463		average validation NDCG = 0.932
+
+epoch 3
+average train loss = -136.409256    	average train batch reward = 0.917
+validation accuracy = 0.450		average validation NDCG = 0.933
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.001000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.200000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -16.707733    	average train batch reward = 0.850
+validation accuracy = 0.547		average validation NDCG = 0.897
+
+epoch 2
+average train loss = -80.091705    	average train batch reward = 0.888
+validation accuracy = 0.493		average validation NDCG = 0.904
+
+epoch 3
+average train loss = -197.940948    	average train batch reward = 0.888
+validation accuracy = 0.447		average validation NDCG = 0.902
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.001000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -15.933669    	average train batch reward = 0.863
+validation accuracy = 0.622		average validation NDCG = 0.906
+
+epoch 2
+average train loss = -70.269928    	average train batch reward = 0.895
+validation accuracy = 0.585		average validation NDCG = 0.907
+
+epoch 3
+average train loss = -183.290176    	average train batch reward = 0.897
+validation accuracy = 0.534		average validation NDCG = 0.909
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.001000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -16.361019    	average train batch reward = 0.867
+validation accuracy = 0.558		average validation NDCG = 0.898
+
+epoch 2
+average train loss = -71.122002    	average train batch reward = 0.891
+validation accuracy = 0.491		average validation NDCG = 0.903
+
+epoch 3
+average train loss = -183.143570    	average train batch reward = 0.894
+validation accuracy = 0.451		average validation NDCG = 0.906
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.001000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -18.341566    	average train batch reward = 0.869
+validation accuracy = 0.531		average validation NDCG = 0.925
+
+epoch 2
+average train loss = -67.359520    	average train batch reward = 0.916
+validation accuracy = 0.482		average validation NDCG = 0.931
+
+epoch 3
+average train loss = -141.369843    	average train batch reward = 0.919
+validation accuracy = 0.509		average validation NDCG = 0.932
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.001000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -1.499177    	average train batch reward = 0.754
+validation accuracy = 0.373		average validation NDCG = 0.829
+
+epoch 2
+average train loss = -7.287910    	average train batch reward = 0.848
+validation accuracy = 0.481		average validation NDCG = 0.866
+
+epoch 3
+average train loss = -13.810700    	average train batch reward = 0.866
+validation accuracy = 0.544		average validation NDCG = 0.878
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.001000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.050000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -1.400227    	average train batch reward = 0.781
+validation accuracy = 0.407		average validation NDCG = 0.858
+
+epoch 2
+average train loss = -6.252779    	average train batch reward = 0.880
+validation accuracy = 0.546		average validation NDCG = 0.907
+
+epoch 3
+average train loss = -10.269007    	average train batch reward = 0.902
+validation accuracy = 0.591		average validation NDCG = 0.923
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.001000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.200000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -1.204759    	average train batch reward = 0.759
+validation accuracy = 0.426		average validation NDCG = 0.846
+
+epoch 2
+average train loss = -5.979040    	average train batch reward = 0.858
+validation accuracy = 0.515		average validation NDCG = 0.883
+
+epoch 3
+average train loss = -10.888391    	average train batch reward = 0.880
+validation accuracy = 0.555		average validation NDCG = 0.898
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.001000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -1.684406    	average train batch reward = 0.760
+validation accuracy = 0.398		average validation NDCG = 0.841
+
+epoch 2
+average train loss = -6.986947    	average train batch reward = 0.859
+validation accuracy = 0.539		average validation NDCG = 0.881
+
+epoch 3
+average train loss = -12.541595    	average train batch reward = 0.886
+validation accuracy = 0.546		average validation NDCG = 0.918
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.001000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -1.609844    	average train batch reward = 0.775
+validation accuracy = 0.516		average validation NDCG = 0.869
+
+epoch 2
+average train loss = -6.829450    	average train batch reward = 0.889
+validation accuracy = 0.595		average validation NDCG = 0.918
+
+epoch 3
+average train loss = -11.593856    	average train batch reward = 0.909
+validation accuracy = 0.591		average validation NDCG = 0.928
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.001000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -0.751127    	average train batch reward = 0.715
+validation accuracy = 0.231		average validation NDCG = 0.783
+
+epoch 2
+average train loss = -5.189118    	average train batch reward = 0.795
+validation accuracy = 0.326		average validation NDCG = 0.834
+
+epoch 3
+average train loss = -10.740383    	average train batch reward = 0.831
+validation accuracy = 0.377		average validation NDCG = 0.855
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.010000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -52090.527344    	average train batch reward = 0.725
+validation accuracy = 0.106		average validation NDCG = 0.731
+
+epoch 2
+average train loss = -355928.343750    	average train batch reward = 0.733
+validation accuracy = 0.119		average validation NDCG = 0.732
+
+epoch 3
+average train loss = -836058.562500    	average train batch reward = 0.731
+validation accuracy = 0.110		average validation NDCG = 0.731
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.010000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.050000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -26007.011719    	average train batch reward = 0.753
+validation accuracy = 0.249		average validation NDCG = 0.756
+
+epoch 2
+average train loss = -181142.234375    	average train batch reward = 0.764
+validation accuracy = 0.291		average validation NDCG = 0.758
+
+epoch 3
+average train loss = -494017.875000    	average train batch reward = 0.766
+validation accuracy = 0.291		average validation NDCG = 0.758
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.010000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.200000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -18515.003906    	average train batch reward = 0.792
+validation accuracy = 0.163		average validation NDCG = 0.820
+
+epoch 2
+average train loss = -157267.984375    	average train batch reward = 0.841
+validation accuracy = 0.142		average validation NDCG = 0.840
+
+epoch 3
+average train loss = -355517.750000    	average train batch reward = 0.848
+validation accuracy = 0.149		average validation NDCG = 0.842
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.010000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -54523.644531    	average train batch reward = 0.780
+validation accuracy = 0.234		average validation NDCG = 0.781
+
+epoch 2
+average train loss = -337698.031250    	average train batch reward = 0.790
+validation accuracy = 0.238		average validation NDCG = 0.790
+
+epoch 3
+average train loss = -823019.625000    	average train batch reward = 0.792
+validation accuracy = 0.239		average validation NDCG = 0.791
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.010000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -27471.730469    	average train batch reward = 0.770
+validation accuracy = 0.263		average validation NDCG = 0.779
+
+epoch 2
+average train loss = -168643.718750    	average train batch reward = 0.777
+validation accuracy = 0.289		average validation NDCG = 0.779
+
+epoch 3
+average train loss = -407328.562500    	average train batch reward = 0.778
+validation accuracy = 0.271		average validation NDCG = 0.778
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.010000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -19515.847656    	average train batch reward = 0.813
+validation accuracy = 0.364		average validation NDCG = 0.822
+
+epoch 2
+average train loss = -159092.953125    	average train batch reward = 0.829
+validation accuracy = 0.391		average validation NDCG = 0.831
+
+epoch 3
+average train loss = -428810.593750    	average train batch reward = 0.828
+validation accuracy = 0.388		average validation NDCG = 0.826
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.010000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -1532.055542    	average train batch reward = 0.794
+validation accuracy = 0.346		average validation NDCG = 0.814
+
+epoch 2
+average train loss = -11258.696289    	average train batch reward = 0.815
+validation accuracy = 0.389		average validation NDCG = 0.817
+
+epoch 3
+average train loss = -36901.203125    	average train batch reward = 0.815
+validation accuracy = 0.351		average validation NDCG = 0.815
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.010000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.050000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -1179.403687    	average train batch reward = 0.811
+validation accuracy = 0.255		average validation NDCG = 0.828
+
+epoch 2
+average train loss = -11094.641602    	average train batch reward = 0.826
+validation accuracy = 0.273		average validation NDCG = 0.826
+
+epoch 3
+average train loss = -35409.648438    	average train batch reward = 0.825
+validation accuracy = 0.255		average validation NDCG = 0.820
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.010000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.200000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -841.985840    	average train batch reward = 0.764
+validation accuracy = 0.307		average validation NDCG = 0.775
+
+epoch 2
+average train loss = -7811.065918    	average train batch reward = 0.776
+validation accuracy = 0.258		average validation NDCG = 0.771
+
+epoch 3
+average train loss = -28400.019531    	average train batch reward = 0.777
+validation accuracy = 0.246		average validation NDCG = 0.771
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.010000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -1199.253662    	average train batch reward = 0.759
+validation accuracy = 0.265		average validation NDCG = 0.765
+
+epoch 2
+average train loss = -8577.428711    	average train batch reward = 0.767
+validation accuracy = 0.266		average validation NDCG = 0.762
+
+epoch 3
+average train loss = -25190.355469    	average train batch reward = 0.768
+validation accuracy = 0.256		average validation NDCG = 0.765
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.010000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -801.593994    	average train batch reward = 0.821
+validation accuracy = 0.488		average validation NDCG = 0.832
+
+epoch 2
+average train loss = -7519.531738    	average train batch reward = 0.838
+validation accuracy = 0.468		average validation NDCG = 0.833
+
+epoch 3
+average train loss = -24156.238281    	average train batch reward = 0.836
+validation accuracy = 0.461		average validation NDCG = 0.831
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.010000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -1039.702393    	average train batch reward = 0.763
+validation accuracy = 0.202		average validation NDCG = 0.779
+
+epoch 2
+average train loss = -9037.947266    	average train batch reward = 0.779
+validation accuracy = 0.284		average validation NDCG = 0.781
+
+epoch 3
+average train loss = -31845.304688    	average train batch reward = 0.777
+validation accuracy = 0.282		average validation NDCG = 0.781
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.010000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -18.818487    	average train batch reward = 0.804
+validation accuracy = 0.499		average validation NDCG = 0.873
+
+epoch 2
+average train loss = -122.872261    	average train batch reward = 0.868
+validation accuracy = 0.496		average validation NDCG = 0.872
+
+epoch 3
+average train loss = -293.906128    	average train batch reward = 0.870
+validation accuracy = 0.505		average validation NDCG = 0.874
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.010000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.050000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -15.463475    	average train batch reward = 0.788
+validation accuracy = 0.300		average validation NDCG = 0.850
+
+epoch 2
+average train loss = -99.406960    	average train batch reward = 0.842
+validation accuracy = 0.307		average validation NDCG = 0.853
+
+epoch 3
+average train loss = -264.382843    	average train batch reward = 0.846
+validation accuracy = 0.302		average validation NDCG = 0.856
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.010000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.200000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -13.492469    	average train batch reward = 0.816
+validation accuracy = 0.575		average validation NDCG = 0.885
+
+epoch 2
+average train loss = -87.010376    	average train batch reward = 0.881
+validation accuracy = 0.608		average validation NDCG = 0.895
+
+epoch 3
+average train loss = -209.199005    	average train batch reward = 0.885
+validation accuracy = 0.599		average validation NDCG = 0.897
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.010000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -13.756454    	average train batch reward = 0.788
+validation accuracy = 0.443		average validation NDCG = 0.871
+
+epoch 2
+average train loss = -96.877548    	average train batch reward = 0.873
+validation accuracy = 0.493		average validation NDCG = 0.893
+
+epoch 3
+average train loss = -254.978302    	average train batch reward = 0.880
+validation accuracy = 0.494		average validation NDCG = 0.892
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.010000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -11.408100    	average train batch reward = 0.777
+validation accuracy = 0.431		average validation NDCG = 0.850
+
+epoch 2
+average train loss = -79.854530    	average train batch reward = 0.842
+validation accuracy = 0.454		average validation NDCG = 0.858
+
+epoch 3
+average train loss = -231.577225    	average train batch reward = 0.846
+validation accuracy = 0.450		average validation NDCG = 0.857
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.010000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -15.460957    	average train batch reward = 0.779
+validation accuracy = 0.422		average validation NDCG = 0.835
+
+epoch 2
+average train loss = -109.704323    	average train batch reward = 0.828
+validation accuracy = 0.432		average validation NDCG = 0.838
+
+epoch 3
+average train loss = -320.911926    	average train batch reward = 0.831
+validation accuracy = 0.446		average validation NDCG = 0.836
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.100000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -2067200.875000    	average train batch reward = 0.723
+validation accuracy = 0.197		average validation NDCG = 0.721
+
+epoch 2
+average train loss = -14902699.000000    	average train batch reward = 0.731
+validation accuracy = 0.197		average validation NDCG = 0.720
+
+epoch 3
+average train loss = -38245708.000000    	average train batch reward = 0.730
+validation accuracy = 0.198		average validation NDCG = 0.721
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.100000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.050000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -5774977.000000    	average train batch reward = 0.725
+validation accuracy = 0.103		average validation NDCG = 0.731
+
+epoch 2
+average train loss = -36679120.000000    	average train batch reward = 0.735
+validation accuracy = 0.105		average validation NDCG = 0.731
+
+epoch 3
+average train loss = -92466024.000000    	average train batch reward = 0.736
+validation accuracy = 0.104		average validation NDCG = 0.732
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.100000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.200000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -2953053.750000    	average train batch reward = 0.795
+validation accuracy = 0.226		average validation NDCG = 0.796
+
+epoch 2
+average train loss = -22277500.000000    	average train batch reward = 0.807
+validation accuracy = 0.255		average validation NDCG = 0.796
+
+epoch 3
+average train loss = -66268228.000000    	average train batch reward = 0.807
+validation accuracy = 0.261		average validation NDCG = 0.795
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.100000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -2636064.250000    	average train batch reward = 0.745
+validation accuracy = 0.201		average validation NDCG = 0.741
+
+epoch 2
+average train loss = -17573536.000000    	average train batch reward = 0.750
+validation accuracy = 0.201		average validation NDCG = 0.740
+
+epoch 3
+average train loss = -39714960.000000    	average train batch reward = 0.750
+validation accuracy = 0.200		average validation NDCG = 0.740
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.100000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -3234136.750000    	average train batch reward = 0.708
+validation accuracy = 0.116		average validation NDCG = 0.703
+
+epoch 2
+average train loss = -16736475.000000    	average train batch reward = 0.709
+validation accuracy = 0.116		average validation NDCG = 0.703
+
+epoch 3
+average train loss = -47354028.000000    	average train batch reward = 0.710
+validation accuracy = 0.114		average validation NDCG = 0.703
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 0.100000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -1925749.875000    	average train batch reward = 0.737
+validation accuracy = 0.180		average validation NDCG = 0.744
+
+epoch 2
+average train loss = -11753377.000000    	average train batch reward = 0.750
+validation accuracy = 0.161		average validation NDCG = 0.745
+
+epoch 3
+average train loss = -32029028.000000    	average train batch reward = 0.749
+validation accuracy = 0.147		average validation NDCG = 0.745
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.100000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -84467.992188    	average train batch reward = 0.803
+validation accuracy = 0.349		average validation NDCG = 0.818
+
+epoch 2
+average train loss = -867882.750000    	average train batch reward = 0.823
+validation accuracy = 0.437		average validation NDCG = 0.821
+
+epoch 3
+average train loss = -2586485.250000    	average train batch reward = 0.822
+validation accuracy = 0.403		average validation NDCG = 0.821
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.100000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.050000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -152554.953125    	average train batch reward = 0.735
+validation accuracy = 0.105		average validation NDCG = 0.751
+
+epoch 2
+average train loss = -1525630.375000    	average train batch reward = 0.752
+validation accuracy = 0.108		average validation NDCG = 0.747
+
+epoch 3
+average train loss = -4750043.500000    	average train batch reward = 0.751
+validation accuracy = 0.108		average validation NDCG = 0.747
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.100000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.200000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -101112.593750    	average train batch reward = 0.822
+validation accuracy = 0.259		average validation NDCG = 0.833
+
+epoch 2
+average train loss = -933403.062500    	average train batch reward = 0.847
+validation accuracy = 0.259		average validation NDCG = 0.842
+
+epoch 3
+average train loss = -2831054.250000    	average train batch reward = 0.851
+validation accuracy = 0.262		average validation NDCG = 0.848
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.100000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -110106.984375    	average train batch reward = 0.774
+validation accuracy = 0.184		average validation NDCG = 0.780
+
+epoch 2
+average train loss = -1220180.000000    	average train batch reward = 0.789
+validation accuracy = 0.200		average validation NDCG = 0.776
+
+epoch 3
+average train loss = -3779332.250000    	average train batch reward = 0.788
+validation accuracy = 0.195		average validation NDCG = 0.774
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.100000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -97944.468750    	average train batch reward = 0.734
+validation accuracy = 0.176		average validation NDCG = 0.727
+
+epoch 2
+average train loss = -834670.937500    	average train batch reward = 0.743
+validation accuracy = 0.204		average validation NDCG = 0.736
+
+epoch 3
+average train loss = -3280671.750000    	average train batch reward = 0.749
+validation accuracy = 0.183		average validation NDCG = 0.736
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 0.100000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -125011.695312    	average train batch reward = 0.760
+validation accuracy = 0.177		average validation NDCG = 0.759
+
+epoch 2
+average train loss = -1335264.875000    	average train batch reward = 0.773
+validation accuracy = 0.184		average validation NDCG = 0.774
+
+epoch 3
+average train loss = -4116818.000000    	average train batch reward = 0.775
+validation accuracy = 0.170		average validation NDCG = 0.766
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.100000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -450.672394    	average train batch reward = 0.799
+validation accuracy = 0.441		average validation NDCG = 0.852
+
+epoch 2
+average train loss = -4614.060547    	average train batch reward = 0.860
+validation accuracy = 0.460		average validation NDCG = 0.873
+
+epoch 3
+average train loss = -14684.574219    	average train batch reward = 0.868
+validation accuracy = 0.481		average validation NDCG = 0.875
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.100000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.050000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -528.114990    	average train batch reward = 0.752
+validation accuracy = 0.339		average validation NDCG = 0.801
+
+epoch 2
+average train loss = -7075.852539    	average train batch reward = 0.800
+validation accuracy = 0.378		average validation NDCG = 0.809
+
+epoch 3
+average train loss = -26307.992188    	average train batch reward = 0.805
+validation accuracy = 0.376		average validation NDCG = 0.810
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.100000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.200000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -523.423767    	average train batch reward = 0.770
+validation accuracy = 0.400		average validation NDCG = 0.805
+
+epoch 2
+average train loss = -6471.827148    	average train batch reward = 0.814
+validation accuracy = 0.411		average validation NDCG = 0.811
+
+epoch 3
+average train loss = -20474.623047    	average train batch reward = 0.817
+validation accuracy = 0.373		average validation NDCG = 0.816
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.100000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -452.550659    	average train batch reward = 0.783
+validation accuracy = 0.341		average validation NDCG = 0.835
+
+epoch 2
+average train loss = -5431.482910    	average train batch reward = 0.826
+validation accuracy = 0.417		average validation NDCG = 0.833
+
+epoch 3
+average train loss = -19682.453125    	average train batch reward = 0.828
+validation accuracy = 0.439		average validation NDCG = 0.835
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.100000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -545.578308    	average train batch reward = 0.754
+validation accuracy = 0.338		average validation NDCG = 0.784
+
+epoch 2
+average train loss = -7063.819824    	average train batch reward = 0.792
+validation accuracy = 0.324		average validation NDCG = 0.805
+
+epoch 3
+average train loss = -25291.126953    	average train batch reward = 0.800
+validation accuracy = 0.337		average validation NDCG = 0.806
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 0.100000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -443.260956    	average train batch reward = 0.774
+validation accuracy = 0.428		average validation NDCG = 0.809
+
+epoch 2
+average train loss = -5650.294922    	average train batch reward = 0.821
+validation accuracy = 0.411		average validation NDCG = 0.812
+
+epoch 3
+average train loss = -20693.195312    	average train batch reward = 0.825
+validation accuracy = 0.394		average validation NDCG = 0.815
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 1.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -620087104.000000    	average train batch reward = 0.725
+validation accuracy = 0.132		average validation NDCG = 0.725
+
+epoch 2
+average train loss = -3507168512.000000    	average train batch reward = 0.730
+validation accuracy = 0.132		average validation NDCG = 0.725
+
+epoch 3
+average train loss = -8454492160.000000    	average train batch reward = 0.730
+validation accuracy = 0.134		average validation NDCG = 0.725
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 1.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.050000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -538847040.000000    	average train batch reward = 0.709
+validation accuracy = 0.096		average validation NDCG = 0.704
+
+epoch 2
+average train loss = -3972165888.000000    	average train batch reward = 0.713
+validation accuracy = 0.096		average validation NDCG = 0.703
+
+epoch 3
+average train loss = -7985345536.000000    	average train batch reward = 0.711
+validation accuracy = 0.096		average validation NDCG = 0.703
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 1.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.200000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -227779504.000000    	average train batch reward = 0.742
+validation accuracy = 0.212		average validation NDCG = 0.746
+
+epoch 2
+average train loss = -1568764928.000000    	average train batch reward = 0.756
+validation accuracy = 0.214		average validation NDCG = 0.751
+
+epoch 3
+average train loss = -3982474496.000000    	average train batch reward = 0.757
+validation accuracy = 0.221		average validation NDCG = 0.751
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 1.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -69797328.000000    	average train batch reward = 0.700
+validation accuracy = 0.126		average validation NDCG = 0.697
+
+epoch 2
+average train loss = -630633024.000000    	average train batch reward = 0.705
+validation accuracy = 0.140		average validation NDCG = 0.697
+
+epoch 3
+average train loss = -2098286592.000000    	average train batch reward = 0.706
+validation accuracy = 0.123		average validation NDCG = 0.697
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 1.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -330520224.000000    	average train batch reward = 0.739
+validation accuracy = 0.176		average validation NDCG = 0.744
+
+epoch 2
+average train loss = -2430834944.000000    	average train batch reward = 0.750
+validation accuracy = 0.133		average validation NDCG = 0.752
+
+epoch 3
+average train loss = -6541958144.000000    	average train batch reward = 0.751
+validation accuracy = 0.121		average validation NDCG = 0.751
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 50
+Num epochs = 3
+Learning rate = 1.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -543346624.000000    	average train batch reward = 0.748
+validation accuracy = 0.103		average validation NDCG = 0.752
+
+epoch 2
+average train loss = -3844784896.000000    	average train batch reward = 0.761
+validation accuracy = 0.109		average validation NDCG = 0.762
+
+epoch 3
+average train loss = -9170799616.000000    	average train batch reward = 0.760
+validation accuracy = 0.108		average validation NDCG = 0.757
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 1.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -11934419.000000    	average train batch reward = 0.780
+validation accuracy = 0.224		average validation NDCG = 0.785
+
+epoch 2
+average train loss = -126426584.000000    	average train batch reward = 0.797
+validation accuracy = 0.236		average validation NDCG = 0.793
+
+epoch 3
+average train loss = -389806464.000000    	average train batch reward = 0.799
+validation accuracy = 0.255		average validation NDCG = 0.788
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 1.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.050000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -9128283.000000    	average train batch reward = 0.747
+validation accuracy = 0.237		average validation NDCG = 0.736
+
+epoch 2
+average train loss = -89265864.000000    	average train batch reward = 0.757
+validation accuracy = 0.257		average validation NDCG = 0.737
+
+epoch 3
+average train loss = -281482848.000000    	average train batch reward = 0.756
+validation accuracy = 0.241		average validation NDCG = 0.737
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 1.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.200000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -8819957.000000    	average train batch reward = 0.746
+validation accuracy = 0.247		average validation NDCG = 0.758
+
+epoch 2
+average train loss = -91779368.000000    	average train batch reward = 0.758
+validation accuracy = 0.230		average validation NDCG = 0.761
+
+epoch 3
+average train loss = -294591136.000000    	average train batch reward = 0.760
+validation accuracy = 0.240		average validation NDCG = 0.761
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 1.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -18962852.000000    	average train batch reward = 0.762
+validation accuracy = 0.107		average validation NDCG = 0.786
+
+epoch 2
+average train loss = -157013776.000000    	average train batch reward = 0.787
+validation accuracy = 0.129		average validation NDCG = 0.785
+
+epoch 3
+average train loss = -462543072.000000    	average train batch reward = 0.784
+validation accuracy = 0.135		average validation NDCG = 0.784
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 1.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -9431953.000000    	average train batch reward = 0.766
+validation accuracy = 0.304		average validation NDCG = 0.776
+
+epoch 2
+average train loss = -117383616.000000    	average train batch reward = 0.782
+validation accuracy = 0.265		average validation NDCG = 0.781
+
+epoch 3
+average train loss = -401927136.000000    	average train batch reward = 0.785
+validation accuracy = 0.241		average validation NDCG = 0.784
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 512
+Num epochs = 3
+Learning rate = 1.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -7486251.500000    	average train batch reward = 0.760
+validation accuracy = 0.256		average validation NDCG = 0.772
+
+epoch 2
+average train loss = -94576344.000000    	average train batch reward = 0.773
+validation accuracy = 0.216		average validation NDCG = 0.778
+
+epoch 3
+average train loss = -298852288.000000    	average train batch reward = 0.777
+validation accuracy = 0.235		average validation NDCG = 0.778
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 1.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -40922.375000    	average train batch reward = 0.750
+validation accuracy = 0.308		average validation NDCG = 0.782
+
+epoch 2
+average train loss = -661843.750000    	average train batch reward = 0.794
+validation accuracy = 0.299		average validation NDCG = 0.789
+
+epoch 3
+average train loss = -2550497.000000    	average train batch reward = 0.796
+validation accuracy = 0.318		average validation NDCG = 0.793
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 1.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.050000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -31981.080078    	average train batch reward = 0.762
+validation accuracy = 0.444		average validation NDCG = 0.804
+
+epoch 2
+average train loss = -498551.656250    	average train batch reward = 0.822
+validation accuracy = 0.379		average validation NDCG = 0.814
+
+epoch 3
+average train loss = -1911268.500000    	average train batch reward = 0.825
+validation accuracy = 0.385		average validation NDCG = 0.812
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 1.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.200000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -36853.628906    	average train batch reward = 0.775
+validation accuracy = 0.471		average validation NDCG = 0.848
+
+epoch 2
+average train loss = -495243.000000    	average train batch reward = 0.852
+validation accuracy = 0.491		average validation NDCG = 0.853
+
+epoch 3
+average train loss = -1749260.875000    	average train batch reward = 0.856
+validation accuracy = 0.510		average validation NDCG = 0.854
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 1.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 0.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -30028.125000    	average train batch reward = 0.757
+validation accuracy = 0.303		average validation NDCG = 0.810
+
+epoch 2
+average train loss = -472779.656250    	average train batch reward = 0.812
+validation accuracy = 0.335		average validation NDCG = 0.819
+
+epoch 3
+average train loss = -1806697.875000    	average train batch reward = 0.815
+validation accuracy = 0.351		average validation NDCG = 0.824
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 1.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.000000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -29616.589844    	average train batch reward = 0.758
+validation accuracy = 0.429		average validation NDCG = 0.798
+
+epoch 2
+average train loss = -477693.343750    	average train batch reward = 0.802
+validation accuracy = 0.436		average validation NDCG = 0.797
+
+epoch 3
+average train loss = -1891189.375000    	average train batch reward = 0.803
+validation accuracy = 0.434		average validation NDCG = 0.797
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+Hyperparameters:
+k = 4
+Batch size = 5012
+Num epochs = 3
+Learning rate = 1.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x2ace054ee0c8>
+Reward function = <function ndcg_full at 0x2ace054ee140>
+Greedy action = <function sample at 0x2acdfe342758>
+Reg strength = 1.500000
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+epoch 1
+average train loss = -41470.402344    	average train batch reward = 0.759
+validation accuracy = 0.346		average validation NDCG = 0.817
+
+epoch 2
+average train loss = -584618.750000    	average train batch reward = 0.820
+validation accuracy = 0.384		average validation NDCG = 0.828
+
+epoch 3
+average train loss = -2135373.750000    	average train batch reward = 0.820
+validation accuracy = 0.413		average validation NDCG = 0.825
+
+========
+Currently the best setups are [(0.0001, 50, 0.2), (0.0001, 50, 0.5), (0.0001, 512, 0.5)], which got scores of [0.93403209026104916, 0.93401010788249894, 0.93331912414471963]
+========
+2017-06-30 13:55:04

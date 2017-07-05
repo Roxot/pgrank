@@ -89,7 +89,9 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--k", type=int, default=2)
 parser.add_argument("--num_epochs", type=int, default=3)
 args = parser.parse_args()
+explore_action = explorers.explore.Oracle() if args.exploration_type == "oracle" else explorers.explore.Uniform()
 print("Finding best parameters for k = %d" % args.k)
+print("Explore action = %s" % explore_action)
 print("=========")
 
 cur_best_val_ndcgs = [-1, -1, -1]

@@ -140,21 +140,24 @@ class PGRank:
         self.action_probs = action_probs
         return deriv_weights
 
-    def train_on_batch(self, sess, train_step, docs, queries, env, explorer):
+    # Trains on a batch given a session, a train_step op, a set of documents and queries,
+    # a Reinforcement Learning environment, an explorer and  the true labels of the documents,
+    #  which are only used for exploration (say, for doing oracle exploration).
+    def train_on_batch(self, sess, train_step, docs, queries, env, explorer, labels):
 
         # Calculate the document scores andthe policy.
         feed_dict = { self.x: docs, self.q: queries }
         doc_scores, policy = sess.run([self.doc_scores, self.policy], feed_dict=feed_dict)
 
         # Rank the documents using the policy and observe the reward.
-        ranking = explorer.rank_docs(policy)
+        ranking = explorer.rank_docs(policy, labels)
         reward, baseline = env.reward(ranking)
         batch_reward = np.average(reward)
 
         # Train on the batch.
         feed_dict[self.reward] = reward - baseline
         feed_dict[self.deriv_weights] = self.derivative_weights(doc_scores, ranking)
-        feed_dict[self.sample_weight] = explorer.sample_weight(self.action_probs)
+        feed_dict[self.sample_weight] = explorer.sample_weight(self.action_probs, ranking, labels)
         _, loss = sess.run([train_step, self.loss], feed_dict=feed_dict)
 
         return batch_reward, loss

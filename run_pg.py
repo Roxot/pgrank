@@ -22,12 +22,15 @@ parser.add_argument("--batch_size", type=int, default=1024)
 parser.add_argument("--h_dim", type=int, default=256)
 parser.add_argument("--epsilon", type=float, default=0.)
 parser.add_argument("--use_baseline", type=bool, default=True)
+parser.add_argument("--weight_reg_str", type=float, default=0.)
+parser.add_argument("--exploration_type", type=str, default="uniform")
 args = parser.parse_args()
 
 # Hyperparameters
 query_fn = random_from_docs
 reward_fn = ndcg_full
 greedy_action = explorers.exploit.sample
+explore_action = explorers.explore.Oracle() if args.exploration_type == "oracle" else explorers.explore.Uniform()
 
 # Print hyperparameters.
 print("Hyperparameters:")
@@ -41,6 +44,7 @@ print("Log dir = %s" % args.log_dir)
 print("Query function = %s" % query_fn)
 print("Reward function = %s" % reward_fn)
 print("Greedy action = %s" % greedy_action)
+print("Explore action = %s" % explore_action)
 print("Use baseline = %s" % args.use_baseline)
 print("")
 
@@ -54,10 +58,10 @@ print("")
 # Create the environment and explorer.
 env = Environment(dataset, args.k, args.batch_size, query_fn=query_fn, reward_fn=reward_fn, \
         use_baseline=args.use_baseline)
-explorer = explorers.EpsGreedy(args.epsilon, greedy_action=greedy_action)
+explorer = explorers.EpsGreedy(args.epsilon, greedy_action=greedy_action, explore_action=explore_action)
 
 # Create model and optimizer.
-model = PGRank(data_dim, num_queries, args.h_dim)
+model = PGRank(data_dim, num_queries, args.h_dim, reg_str=args.weight_reg_str)
 optimizer = tf.train.AdamOptimizer(args.learning_rate)
 train_step = optimizer.minimize(model.loss)
 
@@ -68,17 +72,27 @@ with tf.Session() as sess:
     if args.log_dir is not None:
         summ_writer = tf.train.SummaryWriter("logs/%s" % args.log_dir, sess.graph)
 
+    val_accuracy, val_ndcgs = evaluate_model(model, dataset.validation, sess, num_queries)
+    avg_val_ndcg = np.average(val_ndcgs)
+    if args.log_dir is not None:
+        write_evaluation_summaries(summ_writer, 0, val_accuracy, avg_val_ndcg)
+    print("before training")
+    print("validation accuracy = %.3f\t\taverage validation NDCG = %.3f\n" % (val_accuracy, avg_val_ndcg))
+
     iteration = 0
-    for epoch_id in range(args.num_epochs):
-        print("epoch %d" % (epoch_id + 1))
+    for epoch_id in range(1, args.num_epochs + 1):
+        print("epoch %d" % epoch_id)
 
         batch_id = 1
+        train_losses = []
+        batch_rewards = []
         for docs, queries in env.next_epoch():
 
             # Train on the batch.
             batch_reward, loss = model.train_on_batch(sess, train_step, docs, queries, \
-                    env, explorer)
-            print("batch %02d: loss = %.6f    \taverage batch reward = %.3f" % (batch_id, loss, batch_reward))
+                    env, explorer, env.rel_labels)
+            batch_rewards.append(batch_reward)
+            train_losses.append(loss)
 
             # Administration.
             if args.log_dir is not None:
@@ -89,7 +103,9 @@ with tf.Session() as sess:
         # Print some evaluation metrics on the validation set.
         val_accuracy, val_ndcgs = evaluate_model(model, dataset.validation, sess, num_queries)
         avg_val_ndcg = np.average(val_ndcgs)
-        print("validation accuracy = %.3f\taverage validation NDCG = %.3f" % (val_accuracy, avg_val_ndcg))
+        print("average train loss = %.6f    \taverage train batch reward = %.3f" % \
+                (np.average(train_losses), np.average(batch_rewards)))
+        print("validation accuracy = %.3f\t\taverage validation NDCG = %.3f" % (val_accuracy, avg_val_ndcg))
 
         # Write evaluation summaries.
         if args.log_dir is not None:
@@ -98,7 +114,7 @@ with tf.Session() as sess:
 
     test_accuracy, test_ndcgs = evaluate_model(model, dataset.test, sess, num_queries)
     avg_test_ndcg = np.average(test_ndcgs)
-    print("test accuracy = %.3f     \taverage test NDCG = %.3f" % (test_accuracy, avg_test_ndcg))
+    print("test accuracy = %.3f     \t\taverage test NDCG = %.3f" % (test_accuracy, avg_test_ndcg))
 
     if args.log_dir is not None:
         img_summary = mnist_image_summary(model, dataset.test, sess)
