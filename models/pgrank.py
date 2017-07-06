@@ -143,7 +143,7 @@ class PGRank:
     # Trains on a batch given a session, a train_step op, a set of documents and queries,
     # a Reinforcement Learning environment, an explorer and  the true labels of the documents,
     #  which are only used for exploration (say, for doing oracle exploration).
-    def train_on_batch(self, sess, train_step, docs, queries, env, explorer, labels):
+    def train_on_batch(self, sess, train_step, docs, queries, env, explorer, labels, baseline):
 
         # Calculate the document scores andthe policy.
         feed_dict = { self.x: docs, self.q: queries }
@@ -151,7 +151,7 @@ class PGRank:
 
         # Rank the documents using the policy and observe the reward.
         ranking = explorer.rank_docs(policy, labels)
-        reward, baseline = env.reward(ranking)
+        reward = env.reward(ranking)
         batch_reward = np.average(reward)
 
         # Train on the batch.
