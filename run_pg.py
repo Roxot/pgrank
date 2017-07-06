@@ -24,6 +24,7 @@ parser.add_argument("--epsilon", type=float, default=0.)
 parser.add_argument("--baseline", type=float, default=0.)
 parser.add_argument("--weight_reg_str", type=float, default=0.)
 parser.add_argument("--exploration_type", type=str, default="uniform")
+parser.add_argument("--grad_clip_norm", type=float, default=None)
 args = parser.parse_args()
 
 # Hyperparameters
@@ -60,9 +61,9 @@ env = Environment(dataset, args.k, args.batch_size, query_fn=query_fn, reward_fn
 explorer = explorers.EpsGreedy(args.epsilon, greedy_action=greedy_action, explore_action=explore_action)
 
 # Create model and optimizer.
-model = PGRank(data_dim, num_queries, args.h_dim, reg_str=args.weight_reg_str)
 optimizer = tf.train.AdamOptimizer(args.learning_rate)
-train_step = optimizer.minimize(model.loss)
+model = PGRank(data_dim, num_queries, args.h_dim, optimizer, reg_str=args.weight_reg_str, \
+        grad_clip_norm=args.grad_clip_norm)
 
 # Train the model.
 with tf.Session() as sess:
@@ -88,7 +89,7 @@ with tf.Session() as sess:
         for docs, queries in env.next_epoch():
 
             # Train on the batch.
-            batch_reward, loss = model.train_on_batch(sess, train_step, docs, queries, \
+            batch_reward, loss = model.train_on_batch(sess, docs, queries, \
                     env, explorer, env.rel_labels, args.baseline)
             batch_rewards.append(batch_reward)
             train_losses.append(loss)

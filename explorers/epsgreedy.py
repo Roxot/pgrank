@@ -2,7 +2,6 @@ import numpy as np
 
 import exploit, explore
 
-# TODO: Decay, how: linearly from 1.0 to e.g. 0.1 over x (e.g. 1 million) steps, then fix at 0.1.
 class EpsGreedy:
 
     def __init__(self, epsilon, greedy_action=exploit.sample, explore_action=explore.Uniform()):

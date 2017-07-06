@@ -8,11 +8,13 @@ import numpy as np
 
 class PGRank:
 
-    def __init__(self, input_dim, output_dim, h_dim, reg_str=0.):
+    def __init__(self, input_dim, output_dim, h_dim, optimizer, reg_str=0., grad_clip_norm=None):
         self.input_dim = input_dim
         self.output_dim = output_dim
         self.h_dim = h_dim
         self.reg_str = reg_str
+        self.grad_clip_norm = grad_clip_norm
+        self.optimizer = optimizer
 
         self._create_placeholders()
         self._build_model()
@@ -52,7 +54,7 @@ class PGRank:
             # Select only the output for the current queries.
             query = tf.one_hot(self.q, self.output_dim, axis=-1)            # batch_size x 1 x output_dim
             logits = tf.reshape(logits, (batch_size, k, self.output_dim))   # batch_size x k x output_dim
-            doc_scores = tf.reduce_sum(tf.mul(logits, query), 2) * 100           # batch_size x k TODO
+            doc_scores = tf.reduce_sum(tf.mul(logits, query), 2) * 100      # batch_size x k TODO
             policy = tf.nn.softmax(doc_scores)                              # batch_size x k
 
             # Calculate the surrogate loss using an input placeholder weights vector and a rewards vector.
@@ -72,6 +74,13 @@ class PGRank:
             self.doc_scores = doc_scores
             self.policy = policy
             self.accuracy = accuracy
+
+            # Prepare the training step.
+            tvars = tf.trainable_variables()
+            gradients = tf.gradients(self.loss, tvars)
+            if self.grad_clip_norm is not None:
+                gradients, _ = tf.clip_by_global_norm(gradients, self.grad_clip_norm)
+            self.train_op = self.optimizer.apply_gradients(zip(gradients, tvars))
 
     """
         derivative_weights(doc_scores, ranking):
@@ -143,7 +152,7 @@ class PGRank:
     # Trains on a batch given a session, a train_step op, a set of documents and queries,
     # a Reinforcement Learning environment, an explorer and  the true labels of the documents,
     #  which are only used for exploration (say, for doing oracle exploration).
-    def train_on_batch(self, sess, train_step, docs, queries, env, explorer, labels, baseline):
+    def train_on_batch(self, sess, docs, queries, env, explorer, labels, baseline):
 
         # Calculate the document scores andthe policy.
         feed_dict = { self.x: docs, self.q: queries }
@@ -158,6 +167,6 @@ class PGRank:
         feed_dict[self.reward] = reward - baseline
         feed_dict[self.deriv_weights] = self.derivative_weights(doc_scores, ranking)
         feed_dict[self.sample_weight] = explorer.sample_weight(self.action_probs, ranking, labels)
-        _, loss = sess.run([train_step, self.loss], feed_dict=feed_dict)
+        _, loss = sess.run([self.train_op, self.loss], feed_dict=feed_dict)
 
         return batch_reward, loss
