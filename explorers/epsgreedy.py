@@ -25,7 +25,7 @@ class EpsGreedy:
         return exploratory_batch * should_explore + greedy_batch * should_exploit
 
     # Calculates the weights that we need to give to samples in order to correct for exploration.
-    def sample_weight(self, action_probs, ranking, labels):
+    def sample_weight(self, action_probs, ranking, labels, lower_bound=None, upper_bound=None):
         batch_size = action_probs.shape[0]
         k = action_probs.shape[1]
         corr_numerator = np.zeros(batch_size)
@@ -42,5 +42,9 @@ class EpsGreedy:
         correction = np.sum(correction, axis=1, keepdims=True)
         correction -= np.sum(np.log(actual_probs + 1e-12), axis=1, keepdims=True)
         correction = np.exp(correction)
+
+        # Clip the sampling weights if lower_bound or upper_bound is set.
+        if lower_bound is not None or upper_bound is not None:
+            correction = correction.clip(min=lower_bound, max=upper_bound)
 
         return correction

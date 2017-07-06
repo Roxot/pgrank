@@ -25,6 +25,8 @@ parser.add_argument("--baseline", type=float, default=0.)
 parser.add_argument("--weight_reg_str", type=float, default=0.)
 parser.add_argument("--exploration_type", type=str, default="uniform")
 parser.add_argument("--grad_clip_norm", type=float, default=None)
+parser.add_argument("--sample_weight_lower", type=float, default=None)
+parser.add_argument("--sample_weight_upper", type=float, default=None)
 args = parser.parse_args()
 
 # Hyperparameters
@@ -90,7 +92,9 @@ with tf.Session() as sess:
 
             # Train on the batch.
             batch_reward, loss = model.train_on_batch(sess, docs, queries, \
-                    env, explorer, env.rel_labels, args.baseline)
+                    env, explorer, env.rel_labels, args.baseline, \
+                    sample_weight_lower=args.sample_weight_lower, \
+                    sample_weight_upper=args.sample_weight_upper)
             batch_rewards.append(batch_reward)
             train_losses.append(loss)
 
