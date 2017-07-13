@@ -24,7 +24,7 @@ batch_normalization = True
 # Arguments.
 parser = argparse.ArgumentParser()
 parser.add_argument("--k", type=int, default=2)
-parser.add_argument("--num_epochs", type=int, default=3)
+parser.add_argument("--num_epochs", type=int, default=5)
 parser.add_argument("--average_over", type=int, default=10)
 parser.add_argument("--exploration_type", type=str, default=None)
 args = parser.parse_args()

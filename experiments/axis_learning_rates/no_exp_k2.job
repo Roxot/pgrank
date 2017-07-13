@@ -1,0 +1,13 @@
+#PBS -lnodes=1 -lwalltime=04:00:00
+
+module load python
+
+cp -r $HOME/policygradient "$TMPDIR"/axis_lr_no_exp_k2
+(
+  cd "$TMPDIR"/axis_lr_no_exp_k2
+  python "$TMPDIR"/axis_lr_no_exp_k2/axis_search.py --tune learning_rate --k 2 >out 2>err
+  cp out $HOME/policygradient/experiments/results/axis_lr_no_exp_k2_out
+  cp err $HOME/policygradient/experiments/results/axis_lr_no_exp_k2_err
+) &
+
+wait
