@@ -27,6 +27,7 @@ parser.add_argument("--exploration_type", type=str, default="uniform")
 parser.add_argument("--grad_clip_norm", type=float, default=None)
 parser.add_argument("--sample_weight_lower", type=float, default=None)
 parser.add_argument("--sample_weight_upper", type=float, default=None)
+parser.add_argument("--batch_normalization", type=str, default="True")
 args = parser.parse_args()
 
 # Hyperparameters
@@ -34,6 +35,7 @@ query_fn = random_from_docs
 reward_fn = ndcg_full
 greedy_action = explorers.exploit.sample
 explore_action = explorers.explore.Oracle() if args.exploration_type == "oracle" else explorers.explore.Uniform()
+batch_normalization = True if args.batch_normalization.lower() == "true" else False
 
 # Print hyperparameters.
 print("Hyperparameters:")
@@ -49,6 +51,11 @@ print("Reward function = %s" % reward_fn)
 print("Greedy action = %s" % greedy_action)
 print("Explore action = %s" % explore_action)
 print("Baseline = %s" % args.baseline)
+print("Weight regularization strength = %s" % args.weight_reg_str)
+print("Sample weight lower bound = %s" % args.sample_weight_lower)
+print("Sample weight upper bound = %s" % args.sample_weight_upper)
+print("Gradient clipping norm = %s" % args.grad_clip_norm)
+print("Batch normalization = %s" % batch_normalization)
 print("")
 
 # Load the dataset.
@@ -65,7 +72,7 @@ explorer = explorers.EpsGreedy(args.epsilon, greedy_action=greedy_action, explor
 # Create model and optimizer.
 optimizer = tf.train.AdamOptimizer(args.learning_rate)
 model = PGRank(data_dim, num_queries, args.h_dim, optimizer, reg_str=args.weight_reg_str, \
-        grad_clip_norm=args.grad_clip_norm)
+        grad_clip_norm=args.grad_clip_norm, batch_normalization=batch_normalization)
 
 # Train the model.
 with tf.Session() as sess:

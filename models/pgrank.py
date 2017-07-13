@@ -8,13 +8,15 @@ import numpy as np
 
 class PGRank:
 
-    def __init__(self, input_dim, output_dim, h_dim, optimizer, reg_str=0., grad_clip_norm=None):
+    def __init__(self, input_dim, output_dim, h_dim, optimizer, reg_str=0., grad_clip_norm=None, \
+                 batch_normalization=True):
         self.input_dim = input_dim
         self.output_dim = output_dim
         self.h_dim = h_dim
         self.reg_str = reg_str
         self.grad_clip_norm = grad_clip_norm
         self.optimizer = optimizer
+        self.batch_normalization = batch_normalization
 
         self._create_placeholders()
         self._build_model()
@@ -37,15 +39,18 @@ class PGRank:
 
         with tf.name_scope("policy_network"):
 
+            normalizer_fn = tf.contrib.layers.batch_norm if self.batch_normalization else None
+
             # First layer: (batch_size * k x input_dim) -> (batch_size * k x h_dim)
             h = tf.contrib.layers.fully_connected(nn_input, self.h_dim, activation_fn=tf.nn.relu, \
                 weights_initializer=initializers.xavier_initializer(), \
                 weights_regularizer=regularizers.l2_regularizer(self.reg_str), \
                 biases_initializer=tf.constant_initializer(0.), \
-                biases_regularizer=regularizers.l2_regularizer(self.reg_str))
+                biases_regularizer=regularizers.l2_regularizer(self.reg_str), \
+                normalizer_fn=normalizer_fn)
 
             # Second layer: (batch_size * k x h_dim) -> (batch_size * k x output_dim)
-            logits = tf.contrib.layers.fully_connected(h, self.output_dim, activation_fn=tf.nn.relu, \
+            logits = tf.contrib.layers.fully_connected(h, self.output_dim, activation_fn=None, \
                 weights_initializer=initializers.xavier_initializer(), \
                 weights_regularizer=regularizers.l2_regularizer(self.reg_str), \
                 biases_initializer=tf.constant_initializer(0.), \
@@ -54,7 +59,7 @@ class PGRank:
             # Select only the output for the current queries.
             query = tf.one_hot(self.q, self.output_dim, axis=-1)            # batch_size x 1 x output_dim
             logits = tf.reshape(logits, (batch_size, k, self.output_dim))   # batch_size x k x output_dim
-            doc_scores = tf.reduce_sum(tf.mul(logits, query), 2) * 100      # batch_size x k TODO
+            doc_scores = tf.reduce_sum(tf.mul(logits, query), 2)            # batch_size x k
             policy = tf.nn.softmax(doc_scores)                              # batch_size x k
 
             # Calculate the surrogate loss using an input placeholder weights vector and a rewards vector.
