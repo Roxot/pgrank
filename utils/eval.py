@@ -93,7 +93,7 @@ def run_model(k, average_over=10, learning_rate=1e-4, num_epochs=5, batch_size=6
 
         # Train the model.
         with tf.Session() as sess:
-            sess.run(tf.initialize_all_variables())
+            sess.run(tf.global_variables_initializer())
 
             val_accuracy, val_ndcg = evaluate_model(model, dataset.validation, sess, num_queries)
             avg_val_ndcg = np.average(val_ndcg)

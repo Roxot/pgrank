@@ -1,7 +1,6 @@
 from .helper import softmax
 
-from tensorflow.contrib.layers import initializers
-from tensorflow.contrib.layers import regularizers
+from tensorflow.contrib.layers import xavier_initializer, l2_regularizer
 
 import tensorflow as tf
 import numpy as np
@@ -43,29 +42,29 @@ class PGRank:
 
             # First layer: (batch_size * k x input_dim) -> (batch_size * k x h_dim)
             h = tf.contrib.layers.fully_connected(nn_input, self.h_dim, activation_fn=tf.nn.relu, \
-                weights_initializer=initializers.xavier_initializer(), \
-                weights_regularizer=regularizers.l2_regularizer(self.reg_str), \
+                weights_initializer=xavier_initializer(), \
+                weights_regularizer=l2_regularizer(self.reg_str), \
                 biases_initializer=tf.constant_initializer(0.), \
-                biases_regularizer=regularizers.l2_regularizer(self.reg_str), \
+                biases_regularizer=l2_regularizer(self.reg_str), \
                 normalizer_fn=normalizer_fn)
 
             # Second layer: (batch_size * k x h_dim) -> (batch_size * k x output_dim)
             logits = tf.contrib.layers.fully_connected(h, self.output_dim, activation_fn=None, \
-                weights_initializer=initializers.xavier_initializer(), \
-                weights_regularizer=regularizers.l2_regularizer(self.reg_str), \
+                weights_initializer=xavier_initializer(), \
+                weights_regularizer=l2_regularizer(self.reg_str), \
                 biases_initializer=tf.constant_initializer(0.), \
-                biases_regularizer=regularizers.l2_regularizer(self.reg_str))
+                biases_regularizer=l2_regularizer(self.reg_str))
 
             # Select only the output for the current queries.
             query = tf.one_hot(self.q, self.output_dim, axis=-1)            # batch_size x 1 x output_dim
             logits = tf.reshape(logits, (batch_size, k, self.output_dim))   # batch_size x k x output_dim
-            doc_scores = tf.reduce_sum(tf.mul(logits, query), 2)            # batch_size x k
+            doc_scores = tf.reduce_sum(tf.multiply(logits, query), 2)            # batch_size x k
             policy = tf.nn.softmax(doc_scores)                              # batch_size x k
 
             # Calculate the surrogate loss using an input placeholder weights vector and a rewards vector.
-            J = tf.mul(doc_scores, self.deriv_weights)
+            J = tf.multiply(doc_scores, self.deriv_weights)
             J = tf.reduce_sum(J, reduction_indices=[1], keep_dims=True)
-            J = tf.reduce_mean(tf.mul(tf.mul(J, self.reward), self.sample_weight))
+            J = tf.reduce_mean(tf.multiply(tf.multiply(J, self.reward), self.sample_weight))
             reg_loss = tf.reduce_sum(tf.get_collection(tf.GraphKeys.REGULARIZATION_LOSSES))
             self.loss = -J + reg_loss
 
