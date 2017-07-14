@@ -66,7 +66,8 @@ class PGRank:
             J = tf.mul(doc_scores, self.deriv_weights)
             J = tf.reduce_sum(J, reduction_indices=[1], keep_dims=True)
             J = tf.reduce_mean(tf.mul(tf.mul(J, self.reward), self.sample_weight))
-            self.loss = -J
+            reg_loss = tf.reduce_sum(tf.get_collection(tf.GraphKeys.REGULARIZATION_LOSSES))
+            self.loss = -J + reg_loss
 
             # Some evaluation metrics on some left-out test or validation set.
             predictions = tf.argmax(logits, 2)

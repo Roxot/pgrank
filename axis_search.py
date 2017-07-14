@@ -13,7 +13,7 @@ print("Started at %s" % datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 # Grid search params.
 learning_rates = np.power(10., np.arange(-7, 1))                        # 10e-7 -- 1.0
 reg_strengths = np.concatenate([[0.], np.power(10., np.arange(-5, 1))]) # 10e-5 -- 1.0 & 0.
-epsilons = [0.1, 0.5, 0.9]
+epsilons = [0.0, 0.1, 0.5, 0.9]
 baselines = [0., 0.5, 0.7, 0.9]
 
 # Unchangeable params.
