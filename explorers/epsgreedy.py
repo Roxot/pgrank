@@ -1,10 +1,12 @@
 import numpy as np
 
-import exploit, explore
+from .exploit import sample
+from .explore import Uniform
+
 
 class EpsGreedy:
 
-    def __init__(self, epsilon, greedy_action=exploit.sample, explore_action=explore.Uniform()):
+    def __init__(self, epsilon, greedy_action=sample, explore_action=Uniform()):
         assert epsilon <= 1. and epsilon >= 0.
         self.epsilon = epsilon
         self.greedy_action = greedy_action

@@ -1,4 +1,4 @@
-from helper import softmax
+from .helper import softmax
 
 from tensorflow.contrib.layers import initializers
 from tensorflow.contrib.layers import regularizers

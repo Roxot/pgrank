@@ -1,1 +1,1 @@
-from pgrank import PGRank
+from .pgrank import PGRank

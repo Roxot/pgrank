@@ -1,7 +1,7 @@
 import numpy as np
 
-from query import random_from_docs
-from reward import ndcg_full
+from .query import random_from_docs
+from .reward import ndcg_full
 
 class Environment:
 

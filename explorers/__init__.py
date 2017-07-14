@@ -1,1 +1,1 @@
-from epsgreedy import EpsGreedy
+from .epsgreedy import EpsGreedy

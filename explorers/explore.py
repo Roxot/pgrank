@@ -3,7 +3,7 @@ import itertools
 
 from scipy.special import factorial
 
-from helper import sample_without_replacement
+from .helper import sample_without_replacement
 
 # Explores independent of the policy, queries or labels using a uniform distribution over actions.
 class Uniform:
