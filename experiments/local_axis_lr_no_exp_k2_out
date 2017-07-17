@@ -1,0 +1,2510 @@
+Started at 2017-07-13 17:36:10
+Finding best parameters for k = 2
+Num epochs = 5
+Averaging over 10 runs
+Tuning the parameter: learning_rate
+
+If not tuned the following parameter values are used:
+Learning rate = 0.000100
+Epsilon = 0.000000
+Exploration type = None
+Weight regularization strength = 0.0
+Baseline = 0.0
+=========
+Hyperparameters:
+k = 2
+Batch size = 64
+Num epochs = 5
+Learning rate = 0.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x1124705f0>
+Reward function = <function ndcg_full at 0x112470668>
+Greedy action = <function sample at 0x10a4a5c08>
+Explore action = <explorers.explore.Uniform instance at 0x1132ca560>
+Baseline = 0.0
+Weight regularization strength = 0.0
+Sample weight lower bound = 0.01
+Sample weight upper bound = 5.0
+Gradient clipping norm = 5.0
+Batch normalization = True
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.138		average validation NDCG = 0.681
+
+epoch 1
+average train loss = -0.216145    	average train batch reward = 0.839
+validation accuracy = 0.140		average validation NDCG = 0.682
+
+epoch 2
+average train loss = -0.209024    	average train batch reward = 0.840
+validation accuracy = 0.142		average validation NDCG = 0.683
+
+epoch 3
+average train loss = -0.209913    	average train batch reward = 0.840
+validation accuracy = 0.144		average validation NDCG = 0.685
+
+epoch 4
+average train loss = -0.212323    	average train batch reward = 0.842
+validation accuracy = 0.145		average validation NDCG = 0.686
+
+epoch 5
+average train loss = -0.215085    	average train batch reward = 0.841
+validation accuracy = 0.148		average validation NDCG = 0.687
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.087		average validation NDCG = 0.666
+
+epoch 1
+average train loss = -0.210492    	average train batch reward = 0.829
+validation accuracy = 0.088		average validation NDCG = 0.667
+
+epoch 2
+average train loss = -0.216982    	average train batch reward = 0.830
+validation accuracy = 0.090		average validation NDCG = 0.668
+
+epoch 3
+average train loss = -0.224395    	average train batch reward = 0.831
+validation accuracy = 0.092		average validation NDCG = 0.669
+
+epoch 4
+average train loss = -0.221871    	average train batch reward = 0.831
+validation accuracy = 0.092		average validation NDCG = 0.670
+
+epoch 5
+average train loss = -0.219923    	average train batch reward = 0.831
+validation accuracy = 0.094		average validation NDCG = 0.672
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.069		average validation NDCG = 0.663
+
+epoch 1
+average train loss = -0.208781    	average train batch reward = 0.828
+validation accuracy = 0.070		average validation NDCG = 0.664
+
+epoch 2
+average train loss = -0.222817    	average train batch reward = 0.829
+validation accuracy = 0.071		average validation NDCG = 0.665
+
+epoch 3
+average train loss = -0.227456    	average train batch reward = 0.829
+validation accuracy = 0.073		average validation NDCG = 0.666
+
+epoch 4
+average train loss = -0.232241    	average train batch reward = 0.831
+validation accuracy = 0.074		average validation NDCG = 0.667
+
+epoch 5
+average train loss = -0.231511    	average train batch reward = 0.831
+validation accuracy = 0.076		average validation NDCG = 0.669
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.108		average validation NDCG = 0.683
+
+epoch 1
+average train loss = -0.219663    	average train batch reward = 0.840
+validation accuracy = 0.111		average validation NDCG = 0.685
+
+epoch 2
+average train loss = -0.220864    	average train batch reward = 0.841
+validation accuracy = 0.113		average validation NDCG = 0.686
+
+epoch 3
+average train loss = -0.221576    	average train batch reward = 0.841
+validation accuracy = 0.116		average validation NDCG = 0.687
+
+epoch 4
+average train loss = -0.224053    	average train batch reward = 0.841
+validation accuracy = 0.118		average validation NDCG = 0.689
+
+epoch 5
+average train loss = -0.226341    	average train batch reward = 0.844
+validation accuracy = 0.122		average validation NDCG = 0.691
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.094		average validation NDCG = 0.661
+
+epoch 1
+average train loss = -0.217943    	average train batch reward = 0.824
+validation accuracy = 0.096		average validation NDCG = 0.661
+
+epoch 2
+average train loss = -0.216548    	average train batch reward = 0.824
+validation accuracy = 0.098		average validation NDCG = 0.662
+
+epoch 3
+average train loss = -0.218163    	average train batch reward = 0.824
+validation accuracy = 0.100		average validation NDCG = 0.663
+
+epoch 4
+average train loss = -0.218112    	average train batch reward = 0.825
+validation accuracy = 0.102		average validation NDCG = 0.664
+
+epoch 5
+average train loss = -0.225707    	average train batch reward = 0.826
+validation accuracy = 0.103		average validation NDCG = 0.665
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.080		average validation NDCG = 0.650
+
+epoch 1
+average train loss = -0.197848    	average train batch reward = 0.826
+validation accuracy = 0.082		average validation NDCG = 0.650
+
+epoch 2
+average train loss = -0.199084    	average train batch reward = 0.826
+validation accuracy = 0.083		average validation NDCG = 0.651
+
+epoch 3
+average train loss = -0.199925    	average train batch reward = 0.825
+validation accuracy = 0.084		average validation NDCG = 0.652
+
+epoch 4
+average train loss = -0.200020    	average train batch reward = 0.827
+validation accuracy = 0.085		average validation NDCG = 0.653
+
+epoch 5
+average train loss = -0.206642    	average train batch reward = 0.826
+validation accuracy = 0.086		average validation NDCG = 0.654
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.086		average validation NDCG = 0.665
+
+epoch 1
+average train loss = -0.217119    	average train batch reward = 0.833
+validation accuracy = 0.088		average validation NDCG = 0.666
+
+epoch 2
+average train loss = -0.210364    	average train batch reward = 0.834
+validation accuracy = 0.090		average validation NDCG = 0.668
+
+epoch 3
+average train loss = -0.212110    	average train batch reward = 0.835
+validation accuracy = 0.093		average validation NDCG = 0.669
+
+epoch 4
+average train loss = -0.215038    	average train batch reward = 0.836
+validation accuracy = 0.096		average validation NDCG = 0.670
+
+epoch 5
+average train loss = -0.220828    	average train batch reward = 0.836
+validation accuracy = 0.098		average validation NDCG = 0.672
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.073		average validation NDCG = 0.669
+
+epoch 1
+average train loss = -0.212180    	average train batch reward = 0.830
+validation accuracy = 0.075		average validation NDCG = 0.670
+
+epoch 2
+average train loss = -0.211433    	average train batch reward = 0.832
+validation accuracy = 0.076		average validation NDCG = 0.671
+
+epoch 3
+average train loss = -0.215745    	average train batch reward = 0.833
+validation accuracy = 0.078		average validation NDCG = 0.672
+
+epoch 4
+average train loss = -0.218982    	average train batch reward = 0.832
+validation accuracy = 0.079		average validation NDCG = 0.674
+
+epoch 5
+average train loss = -0.222483    	average train batch reward = 0.832
+validation accuracy = 0.082		average validation NDCG = 0.675
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.099		average validation NDCG = 0.669
+
+epoch 1
+average train loss = -0.220339    	average train batch reward = 0.833
+validation accuracy = 0.100		average validation NDCG = 0.671
+
+epoch 2
+average train loss = -0.219576    	average train batch reward = 0.833
+validation accuracy = 0.103		average validation NDCG = 0.673
+
+epoch 3
+average train loss = -0.228899    	average train batch reward = 0.834
+validation accuracy = 0.105		average validation NDCG = 0.674
+
+epoch 4
+average train loss = -0.231168    	average train batch reward = 0.835
+validation accuracy = 0.106		average validation NDCG = 0.676
+
+epoch 5
+average train loss = -0.234814    	average train batch reward = 0.834
+validation accuracy = 0.110		average validation NDCG = 0.678
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.114		average validation NDCG = 0.666
+
+epoch 1
+average train loss = -0.209072    	average train batch reward = 0.828
+validation accuracy = 0.117		average validation NDCG = 0.667
+
+epoch 2
+average train loss = -0.204803    	average train batch reward = 0.830
+validation accuracy = 0.120		average validation NDCG = 0.668
+
+epoch 3
+average train loss = -0.204867    	average train batch reward = 0.830
+validation accuracy = 0.123		average validation NDCG = 0.670
+
+epoch 4
+average train loss = -0.205098    	average train batch reward = 0.831
+validation accuracy = 0.125		average validation NDCG = 0.671
+
+epoch 5
+average train loss = -0.208568    	average train batch reward = 0.830
+validation accuracy = 0.128		average validation NDCG = 0.673
+
+Current setup 1e-07 explored, avg = 0.673408, std = 0.009929, min = 0.653703, max = 0.690503
+========
+Currently the best setups are [9.9999999999999995e-08, (), ()], which got average scores of [0.67340754702175487, -1, -1]
+========
+Hyperparameters:
+k = 2
+Batch size = 64
+Num epochs = 5
+Learning rate = 0.000001
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x1124705f0>
+Reward function = <function ndcg_full at 0x112470668>
+Greedy action = <function sample at 0x10a4a5c08>
+Explore action = <explorers.explore.Uniform instance at 0x11c626998>
+Baseline = 0.0
+Weight regularization strength = 0.0
+Sample weight lower bound = 0.01
+Sample weight upper bound = 5.0
+Gradient clipping norm = 5.0
+Batch normalization = True
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.082		average validation NDCG = 0.665
+
+epoch 1
+average train loss = -0.228358    	average train batch reward = 0.827
+validation accuracy = 0.100		average validation NDCG = 0.677
+
+epoch 2
+average train loss = -0.254806    	average train batch reward = 0.832
+validation accuracy = 0.118		average validation NDCG = 0.691
+
+epoch 3
+average train loss = -0.289601    	average train batch reward = 0.836
+validation accuracy = 0.144		average validation NDCG = 0.706
+
+epoch 4
+average train loss = -0.334176    	average train batch reward = 0.842
+validation accuracy = 0.185		average validation NDCG = 0.721
+
+epoch 5
+average train loss = -0.383156    	average train batch reward = 0.848
+validation accuracy = 0.219		average validation NDCG = 0.734
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.118		average validation NDCG = 0.684
+
+epoch 1
+average train loss = -0.248503    	average train batch reward = 0.837
+validation accuracy = 0.139		average validation NDCG = 0.696
+
+epoch 2
+average train loss = -0.283574    	average train batch reward = 0.841
+validation accuracy = 0.167		average validation NDCG = 0.710
+
+epoch 3
+average train loss = -0.325956    	average train batch reward = 0.844
+validation accuracy = 0.201		average validation NDCG = 0.724
+
+epoch 4
+average train loss = -0.376742    	average train batch reward = 0.849
+validation accuracy = 0.231		average validation NDCG = 0.738
+
+epoch 5
+average train loss = -0.440466    	average train batch reward = 0.854
+validation accuracy = 0.268		average validation NDCG = 0.752
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.108		average validation NDCG = 0.666
+
+epoch 1
+average train loss = -0.234292    	average train batch reward = 0.842
+validation accuracy = 0.120		average validation NDCG = 0.681
+
+epoch 2
+average train loss = -0.262904    	average train batch reward = 0.848
+validation accuracy = 0.136		average validation NDCG = 0.701
+
+epoch 3
+average train loss = -0.310307    	average train batch reward = 0.856
+validation accuracy = 0.162		average validation NDCG = 0.724
+
+epoch 4
+average train loss = -0.375280    	average train batch reward = 0.864
+validation accuracy = 0.196		average validation NDCG = 0.748
+
+epoch 5
+average train loss = -0.447755    	average train batch reward = 0.873
+validation accuracy = 0.222		average validation NDCG = 0.767
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.093		average validation NDCG = 0.665
+
+epoch 1
+average train loss = -0.229933    	average train batch reward = 0.837
+validation accuracy = 0.108		average validation NDCG = 0.677
+
+epoch 2
+average train loss = -0.253295    	average train batch reward = 0.845
+validation accuracy = 0.138		average validation NDCG = 0.694
+
+epoch 3
+average train loss = -0.302149    	average train batch reward = 0.851
+validation accuracy = 0.188		average validation NDCG = 0.716
+
+epoch 4
+average train loss = -0.355008    	average train batch reward = 0.860
+validation accuracy = 0.234		average validation NDCG = 0.741
+
+epoch 5
+average train loss = -0.412019    	average train batch reward = 0.866
+validation accuracy = 0.278		average validation NDCG = 0.765
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.163		average validation NDCG = 0.687
+
+epoch 1
+average train loss = -0.221078    	average train batch reward = 0.845
+validation accuracy = 0.208		average validation NDCG = 0.706
+
+epoch 2
+average train loss = -0.258321    	average train batch reward = 0.854
+validation accuracy = 0.254		average validation NDCG = 0.728
+
+epoch 3
+average train loss = -0.309545    	average train batch reward = 0.864
+validation accuracy = 0.294		average validation NDCG = 0.752
+
+epoch 4
+average train loss = -0.382018    	average train batch reward = 0.876
+validation accuracy = 0.334		average validation NDCG = 0.775
+
+epoch 5
+average train loss = -0.475552    	average train batch reward = 0.885
+validation accuracy = 0.368		average validation NDCG = 0.800
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.069		average validation NDCG = 0.652
+
+epoch 1
+average train loss = -0.214573    	average train batch reward = 0.826
+validation accuracy = 0.080		average validation NDCG = 0.660
+
+epoch 2
+average train loss = -0.227919    	average train batch reward = 0.832
+validation accuracy = 0.098		average validation NDCG = 0.671
+
+epoch 3
+average train loss = -0.245420    	average train batch reward = 0.836
+validation accuracy = 0.116		average validation NDCG = 0.684
+
+epoch 4
+average train loss = -0.281659    	average train batch reward = 0.845
+validation accuracy = 0.145		average validation NDCG = 0.701
+
+epoch 5
+average train loss = -0.324366    	average train batch reward = 0.850
+validation accuracy = 0.178		average validation NDCG = 0.720
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.092		average validation NDCG = 0.662
+
+epoch 1
+average train loss = -0.194917    	average train batch reward = 0.831
+validation accuracy = 0.115		average validation NDCG = 0.673
+
+epoch 2
+average train loss = -0.209151    	average train batch reward = 0.836
+validation accuracy = 0.141		average validation NDCG = 0.686
+
+epoch 3
+average train loss = -0.237146    	average train batch reward = 0.843
+validation accuracy = 0.179		average validation NDCG = 0.705
+
+epoch 4
+average train loss = -0.275943    	average train batch reward = 0.853
+validation accuracy = 0.220		average validation NDCG = 0.729
+
+epoch 5
+average train loss = -0.329829    	average train batch reward = 0.862
+validation accuracy = 0.253		average validation NDCG = 0.752
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.126		average validation NDCG = 0.693
+
+epoch 1
+average train loss = -0.241613    	average train batch reward = 0.848
+validation accuracy = 0.155		average validation NDCG = 0.710
+
+epoch 2
+average train loss = -0.287513    	average train batch reward = 0.856
+validation accuracy = 0.189		average validation NDCG = 0.731
+
+epoch 3
+average train loss = -0.328290    	average train batch reward = 0.863
+validation accuracy = 0.229		average validation NDCG = 0.753
+
+epoch 4
+average train loss = -0.388171    	average train batch reward = 0.871
+validation accuracy = 0.277		average validation NDCG = 0.777
+
+epoch 5
+average train loss = -0.449844    	average train batch reward = 0.878
+validation accuracy = 0.335		average validation NDCG = 0.798
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.103		average validation NDCG = 0.665
+
+epoch 1
+average train loss = -0.243418    	average train batch reward = 0.834
+validation accuracy = 0.122		average validation NDCG = 0.681
+
+epoch 2
+average train loss = -0.277211    	average train batch reward = 0.839
+validation accuracy = 0.147		average validation NDCG = 0.699
+
+epoch 3
+average train loss = -0.318527    	average train batch reward = 0.845
+validation accuracy = 0.173		average validation NDCG = 0.716
+
+epoch 4
+average train loss = -0.368294    	average train batch reward = 0.851
+validation accuracy = 0.214		average validation NDCG = 0.731
+
+epoch 5
+average train loss = -0.436004    	average train batch reward = 0.858
+validation accuracy = 0.261		average validation NDCG = 0.744
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.106		average validation NDCG = 0.670
+
+epoch 1
+average train loss = -0.233237    	average train batch reward = 0.841
+validation accuracy = 0.133		average validation NDCG = 0.686
+
+epoch 2
+average train loss = -0.252840    	average train batch reward = 0.848
+validation accuracy = 0.169		average validation NDCG = 0.705
+
+epoch 3
+average train loss = -0.296027    	average train batch reward = 0.855
+validation accuracy = 0.199		average validation NDCG = 0.727
+
+epoch 4
+average train loss = -0.348096    	average train batch reward = 0.863
+validation accuracy = 0.241		average validation NDCG = 0.749
+
+epoch 5
+average train loss = -0.418538    	average train batch reward = 0.872
+validation accuracy = 0.290		average validation NDCG = 0.770
+
+Current setup 1e-06 explored, avg = 0.760203, std = 0.024195, min = 0.719990, max = 0.799899
+========
+Currently the best setups are [9.9999999999999995e-07, 9.9999999999999995e-08, ()], which got average scores of [0.76020312942889157, 0.67340754702175487, -1]
+========
+Hyperparameters:
+k = 2
+Batch size = 64
+Num epochs = 5
+Learning rate = 0.000010
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x1124705f0>
+Reward function = <function ndcg_full at 0x112470668>
+Greedy action = <function sample at 0x10a4a5c08>
+Explore action = <explorers.explore.Uniform instance at 0x120d41a28>
+Baseline = 0.0
+Weight regularization strength = 0.0
+Sample weight lower bound = 0.01
+Sample weight upper bound = 5.0
+Gradient clipping norm = 5.0
+Batch normalization = True
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.097		average validation NDCG = 0.669
+
+epoch 1
+average train loss = -0.470047    	average train batch reward = 0.861
+validation accuracy = 0.382		average validation NDCG = 0.814
+
+epoch 2
+average train loss = -1.383082    	average train batch reward = 0.903
+validation accuracy = 0.508		average validation NDCG = 0.869
+
+epoch 3
+average train loss = -2.254727    	average train batch reward = 0.918
+validation accuracy = 0.557		average validation NDCG = 0.883
+
+epoch 4
+average train loss = -2.995169    	average train batch reward = 0.925
+validation accuracy = 0.580		average validation NDCG = 0.886
+
+epoch 5
+average train loss = -3.616477    	average train batch reward = 0.928
+validation accuracy = 0.593		average validation NDCG = 0.887
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.094		average validation NDCG = 0.661
+
+epoch 1
+average train loss = -0.529846    	average train batch reward = 0.853
+validation accuracy = 0.341		average validation NDCG = 0.790
+
+epoch 2
+average train loss = -1.404110    	average train batch reward = 0.896
+validation accuracy = 0.510		average validation NDCG = 0.836
+
+epoch 3
+average train loss = -2.317190    	average train batch reward = 0.919
+validation accuracy = 0.585		average validation NDCG = 0.863
+
+epoch 4
+average train loss = -3.073035    	average train batch reward = 0.931
+validation accuracy = 0.623		average validation NDCG = 0.879
+
+epoch 5
+average train loss = -3.754202    	average train batch reward = 0.939
+validation accuracy = 0.649		average validation NDCG = 0.888
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.083		average validation NDCG = 0.665
+
+epoch 1
+average train loss = -0.520669    	average train batch reward = 0.867
+validation accuracy = 0.405		average validation NDCG = 0.824
+
+epoch 2
+average train loss = -1.484373    	average train batch reward = 0.909
+validation accuracy = 0.544		average validation NDCG = 0.863
+
+epoch 3
+average train loss = -2.388656    	average train batch reward = 0.922
+validation accuracy = 0.590		average validation NDCG = 0.883
+
+epoch 4
+average train loss = -3.122193    	average train batch reward = 0.930
+validation accuracy = 0.622		average validation NDCG = 0.896
+
+epoch 5
+average train loss = -3.695224    	average train batch reward = 0.935
+validation accuracy = 0.639		average validation NDCG = 0.903
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.123		average validation NDCG = 0.678
+
+epoch 1
+average train loss = -0.620404    	average train batch reward = 0.868
+validation accuracy = 0.408		average validation NDCG = 0.824
+
+epoch 2
+average train loss = -1.545489    	average train batch reward = 0.912
+validation accuracy = 0.531		average validation NDCG = 0.884
+
+epoch 3
+average train loss = -2.486590    	average train batch reward = 0.934
+validation accuracy = 0.607		average validation NDCG = 0.907
+
+epoch 4
+average train loss = -3.219136    	average train batch reward = 0.944
+validation accuracy = 0.636		average validation NDCG = 0.914
+
+epoch 5
+average train loss = -3.906761    	average train batch reward = 0.950
+validation accuracy = 0.658		average validation NDCG = 0.918
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.097		average validation NDCG = 0.684
+
+epoch 1
+average train loss = -0.606843    	average train batch reward = 0.883
+validation accuracy = 0.504		average validation NDCG = 0.858
+
+epoch 2
+average train loss = -1.656342    	average train batch reward = 0.927
+validation accuracy = 0.604		average validation NDCG = 0.892
+
+epoch 3
+average train loss = -2.567138    	average train batch reward = 0.940
+validation accuracy = 0.637		average validation NDCG = 0.901
+
+epoch 4
+average train loss = -3.307795    	average train batch reward = 0.945
+validation accuracy = 0.654		average validation NDCG = 0.905
+
+epoch 5
+average train loss = -3.899135    	average train batch reward = 0.947
+validation accuracy = 0.666		average validation NDCG = 0.909
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.072		average validation NDCG = 0.652
+
+epoch 1
+average train loss = -0.439356    	average train batch reward = 0.850
+validation accuracy = 0.276		average validation NDCG = 0.765
+
+epoch 2
+average train loss = -1.250392    	average train batch reward = 0.892
+validation accuracy = 0.465		average validation NDCG = 0.829
+
+epoch 3
+average train loss = -2.121089    	average train batch reward = 0.912
+validation accuracy = 0.564		average validation NDCG = 0.871
+
+epoch 4
+average train loss = -2.814436    	average train batch reward = 0.924
+validation accuracy = 0.616		average validation NDCG = 0.894
+
+epoch 5
+average train loss = -3.465372    	average train batch reward = 0.932
+validation accuracy = 0.652		average validation NDCG = 0.903
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.116		average validation NDCG = 0.687
+
+epoch 1
+average train loss = -0.570081    	average train batch reward = 0.870
+validation accuracy = 0.443		average validation NDCG = 0.847
+
+epoch 2
+average train loss = -1.469650    	average train batch reward = 0.917
+validation accuracy = 0.571		average validation NDCG = 0.902
+
+epoch 3
+average train loss = -2.335594    	average train batch reward = 0.939
+validation accuracy = 0.628		average validation NDCG = 0.924
+
+epoch 4
+average train loss = -3.058616    	average train batch reward = 0.950
+validation accuracy = 0.661		average validation NDCG = 0.937
+
+epoch 5
+average train loss = -3.746317    	average train batch reward = 0.961
+validation accuracy = 0.683		average validation NDCG = 0.947
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.101		average validation NDCG = 0.669
+
+epoch 1
+average train loss = -0.520490    	average train batch reward = 0.869
+validation accuracy = 0.439		average validation NDCG = 0.819
+
+epoch 2
+average train loss = -1.478684    	average train batch reward = 0.909
+validation accuracy = 0.529		average validation NDCG = 0.868
+
+epoch 3
+average train loss = -2.382322    	average train batch reward = 0.926
+validation accuracy = 0.569		average validation NDCG = 0.886
+
+epoch 4
+average train loss = -3.103027    	average train batch reward = 0.934
+validation accuracy = 0.596		average validation NDCG = 0.895
+
+epoch 5
+average train loss = -3.745052    	average train batch reward = 0.939
+validation accuracy = 0.614		average validation NDCG = 0.900
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.053		average validation NDCG = 0.643
+
+epoch 1
+average train loss = -0.500592    	average train batch reward = 0.843
+validation accuracy = 0.284		average validation NDCG = 0.781
+
+epoch 2
+average train loss = -1.358128    	average train batch reward = 0.879
+validation accuracy = 0.416		average validation NDCG = 0.850
+
+epoch 3
+average train loss = -2.249331    	average train batch reward = 0.899
+validation accuracy = 0.502		average validation NDCG = 0.874
+
+epoch 4
+average train loss = -3.014982    	average train batch reward = 0.910
+validation accuracy = 0.557		average validation NDCG = 0.885
+
+epoch 5
+average train loss = -3.620964    	average train batch reward = 0.918
+validation accuracy = 0.599		average validation NDCG = 0.894
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.082		average validation NDCG = 0.667
+
+epoch 1
+average train loss = -0.583335    	average train batch reward = 0.861
+validation accuracy = 0.397		average validation NDCG = 0.800
+
+epoch 2
+average train loss = -1.557728    	average train batch reward = 0.892
+validation accuracy = 0.492		average validation NDCG = 0.832
+
+epoch 3
+average train loss = -2.400840    	average train batch reward = 0.902
+validation accuracy = 0.529		average validation NDCG = 0.848
+
+epoch 4
+average train loss = -3.071068    	average train batch reward = 0.906
+validation accuracy = 0.552		average validation NDCG = 0.860
+
+epoch 5
+average train loss = -3.661115    	average train batch reward = 0.909
+validation accuracy = 0.568		average validation NDCG = 0.867
+
+Current setup 1e-05 explored, avg = 0.901582, std = 0.020009, min = 0.867052, max = 0.946573
+========
+Currently the best setups are [1.0000000000000001e-05, 9.9999999999999995e-07, 9.9999999999999995e-08], which got average scores of [0.90158185991151885, 0.76020312942889157, 0.67340754702175487]
+========
+Hyperparameters:
+k = 2
+Batch size = 64
+Num epochs = 5
+Learning rate = 0.000100
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x1124705f0>
+Reward function = <function ndcg_full at 0x112470668>
+Greedy action = <function sample at 0x10a4a5c08>
+Explore action = <explorers.explore.Uniform instance at 0x124911290>
+Baseline = 0.0
+Weight regularization strength = 0.0
+Sample weight lower bound = 0.01
+Sample weight upper bound = 5.0
+Gradient clipping norm = 5.0
+Batch normalization = True
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.108		average validation NDCG = 0.658
+
+epoch 1
+average train loss = -3.901536    	average train batch reward = 0.926
+validation accuracy = 0.702		average validation NDCG = 0.914
+
+epoch 2
+average train loss = -8.998886    	average train batch reward = 0.952
+validation accuracy = 0.724		average validation NDCG = 0.919
+
+epoch 3
+average train loss = -14.328077    	average train batch reward = 0.954
+validation accuracy = 0.723		average validation NDCG = 0.916
+
+epoch 4
+average train loss = -20.311190    	average train batch reward = 0.953
+validation accuracy = 0.712		average validation NDCG = 0.913
+
+epoch 5
+average train loss = -26.093903    	average train batch reward = 0.952
+validation accuracy = 0.695		average validation NDCG = 0.910
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.088		average validation NDCG = 0.661
+
+epoch 1
+average train loss = -4.112076    	average train batch reward = 0.914
+validation accuracy = 0.689		average validation NDCG = 0.904
+
+epoch 2
+average train loss = -8.434832    	average train batch reward = 0.951
+validation accuracy = 0.722		average validation NDCG = 0.919
+
+epoch 3
+average train loss = -13.726860    	average train batch reward = 0.962
+validation accuracy = 0.732		average validation NDCG = 0.921
+
+epoch 4
+average train loss = -19.389141    	average train batch reward = 0.965
+validation accuracy = 0.735		average validation NDCG = 0.920
+
+epoch 5
+average train loss = -25.525808    	average train batch reward = 0.967
+validation accuracy = 0.735		average validation NDCG = 0.920
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.115		average validation NDCG = 0.656
+
+epoch 1
+average train loss = -4.031796    	average train batch reward = 0.932
+validation accuracy = 0.723		average validation NDCG = 0.926
+
+epoch 2
+average train loss = -8.877812    	average train batch reward = 0.975
+validation accuracy = 0.782		average validation NDCG = 0.947
+
+epoch 3
+average train loss = -14.319344    	average train batch reward = 0.984
+validation accuracy = 0.802		average validation NDCG = 0.943
+
+epoch 4
+average train loss = -20.235264    	average train batch reward = 0.984
+validation accuracy = 0.803		average validation NDCG = 0.940
+
+epoch 5
+average train loss = -26.373888    	average train batch reward = 0.984
+validation accuracy = 0.797		average validation NDCG = 0.937
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.128		average validation NDCG = 0.717
+
+epoch 1
+average train loss = -4.489682    	average train batch reward = 0.960
+validation accuracy = 0.797		average validation NDCG = 0.955
+
+epoch 2
+average train loss = -9.604261    	average train batch reward = 0.984
+validation accuracy = 0.810		average validation NDCG = 0.958
+
+epoch 3
+average train loss = -15.149795    	average train batch reward = 0.984
+validation accuracy = 0.804		average validation NDCG = 0.956
+
+epoch 4
+average train loss = -21.085421    	average train batch reward = 0.984
+validation accuracy = 0.792		average validation NDCG = 0.951
+
+epoch 5
+average train loss = -27.396202    	average train batch reward = 0.983
+validation accuracy = 0.782		average validation NDCG = 0.948
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.062		average validation NDCG = 0.653
+
+epoch 1
+average train loss = -3.848911    	average train batch reward = 0.915
+validation accuracy = 0.648		average validation NDCG = 0.911
+
+epoch 2
+average train loss = -8.358205    	average train batch reward = 0.949
+validation accuracy = 0.693		average validation NDCG = 0.929
+
+epoch 3
+average train loss = -13.813157    	average train batch reward = 0.954
+validation accuracy = 0.692		average validation NDCG = 0.929
+
+epoch 4
+average train loss = -19.418518    	average train batch reward = 0.954
+validation accuracy = 0.669		average validation NDCG = 0.927
+
+epoch 5
+average train loss = -25.066633    	average train batch reward = 0.954
+validation accuracy = 0.654		average validation NDCG = 0.925
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.074		average validation NDCG = 0.653
+
+epoch 1
+average train loss = -3.698518    	average train batch reward = 0.891
+validation accuracy = 0.603		average validation NDCG = 0.881
+
+epoch 2
+average train loss = -8.265322    	average train batch reward = 0.915
+validation accuracy = 0.608		average validation NDCG = 0.887
+
+epoch 3
+average train loss = -13.177762    	average train batch reward = 0.917
+validation accuracy = 0.589		average validation NDCG = 0.886
+
+epoch 4
+average train loss = -18.320791    	average train batch reward = 0.918
+validation accuracy = 0.561		average validation NDCG = 0.884
+
+epoch 5
+average train loss = -23.985792    	average train batch reward = 0.919
+validation accuracy = 0.529		average validation NDCG = 0.881
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.100		average validation NDCG = 0.666
+
+epoch 1
+average train loss = -3.991219    	average train batch reward = 0.924
+validation accuracy = 0.682		average validation NDCG = 0.913
+
+epoch 2
+average train loss = -8.793931    	average train batch reward = 0.956
+validation accuracy = 0.720		average validation NDCG = 0.920
+
+epoch 3
+average train loss = -14.109450    	average train batch reward = 0.956
+validation accuracy = 0.725		average validation NDCG = 0.923
+
+epoch 4
+average train loss = -19.847122    	average train batch reward = 0.956
+validation accuracy = 0.700		average validation NDCG = 0.920
+
+epoch 5
+average train loss = -25.759804    	average train batch reward = 0.956
+validation accuracy = 0.687		average validation NDCG = 0.920
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.093		average validation NDCG = 0.673
+
+epoch 1
+average train loss = -4.183890    	average train batch reward = 0.917
+validation accuracy = 0.693		average validation NDCG = 0.907
+
+epoch 2
+average train loss = -9.049566    	average train batch reward = 0.935
+validation accuracy = 0.697		average validation NDCG = 0.899
+
+epoch 3
+average train loss = -14.076492    	average train batch reward = 0.934
+validation accuracy = 0.686		average validation NDCG = 0.894
+
+epoch 4
+average train loss = -19.699650    	average train batch reward = 0.933
+validation accuracy = 0.663		average validation NDCG = 0.891
+
+epoch 5
+average train loss = -25.652849    	average train batch reward = 0.931
+validation accuracy = 0.642		average validation NDCG = 0.889
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.102		average validation NDCG = 0.663
+
+epoch 1
+average train loss = -4.081867    	average train batch reward = 0.940
+validation accuracy = 0.757		average validation NDCG = 0.937
+
+epoch 2
+average train loss = -8.842485    	average train batch reward = 0.979
+validation accuracy = 0.790		average validation NDCG = 0.954
+
+epoch 3
+average train loss = -14.336490    	average train batch reward = 0.985
+validation accuracy = 0.793		average validation NDCG = 0.951
+
+epoch 4
+average train loss = -20.232185    	average train batch reward = 0.985
+validation accuracy = 0.796		average validation NDCG = 0.951
+
+epoch 5
+average train loss = -26.309280    	average train batch reward = 0.985
+validation accuracy = 0.794		average validation NDCG = 0.946
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.088		average validation NDCG = 0.671
+
+epoch 1
+average train loss = -4.178424    	average train batch reward = 0.940
+validation accuracy = 0.744		average validation NDCG = 0.945
+
+epoch 2
+average train loss = -9.033070    	average train batch reward = 0.979
+validation accuracy = 0.785		average validation NDCG = 0.952
+
+epoch 3
+average train loss = -14.672720    	average train batch reward = 0.984
+validation accuracy = 0.790		average validation NDCG = 0.949
+
+epoch 4
+average train loss = -20.712557    	average train batch reward = 0.985
+validation accuracy = 0.793		average validation NDCG = 0.947
+
+epoch 5
+average train loss = -26.525713    	average train batch reward = 0.984
+validation accuracy = 0.788		average validation NDCG = 0.946
+
+Current setup 0.0001 explored, avg = 0.929831, std = 0.021720, min = 0.887440, max = 0.958458
+========
+Currently the best setups are [0.0001, 1.0000000000000001e-05, 9.9999999999999995e-07], which got average scores of [0.92983094539221656, 0.90158185991151885, 0.76020312942889157]
+========
+Hyperparameters:
+k = 2
+Batch size = 64
+Num epochs = 5
+Learning rate = 0.001000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x1124705f0>
+Reward function = <function ndcg_full at 0x112470668>
+Greedy action = <function sample at 0x10a4a5c08>
+Explore action = <explorers.explore.Uniform instance at 0x12d2b9b00>
+Baseline = 0.0
+Weight regularization strength = 0.0
+Sample weight lower bound = 0.01
+Sample weight upper bound = 5.0
+Gradient clipping norm = 5.0
+Batch normalization = True
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.094		average validation NDCG = 0.680
+
+epoch 1
+average train loss = -37.511024    	average train batch reward = 0.858
+validation accuracy = 0.149		average validation NDCG = 0.679
+
+epoch 2
+average train loss = -111.103722    	average train batch reward = 0.834
+validation accuracy = 0.074		average validation NDCG = 0.673
+
+epoch 3
+average train loss = -183.625183    	average train batch reward = 0.834
+validation accuracy = 0.080		average validation NDCG = 0.671
+
+epoch 4
+average train loss = -252.952560    	average train batch reward = 0.834
+validation accuracy = 0.080		average validation NDCG = 0.671
+
+epoch 5
+average train loss = -324.966614    	average train batch reward = 0.835
+validation accuracy = 0.067		average validation NDCG = 0.672
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.087		average validation NDCG = 0.663
+
+epoch 1
+average train loss = -34.212704    	average train batch reward = 0.861
+validation accuracy = 0.151		average validation NDCG = 0.681
+
+epoch 2
+average train loss = -107.327362    	average train batch reward = 0.835
+validation accuracy = 0.110		average validation NDCG = 0.675
+
+epoch 3
+average train loss = -179.456161    	average train batch reward = 0.834
+validation accuracy = 0.124		average validation NDCG = 0.674
+
+epoch 4
+average train loss = -252.649368    	average train batch reward = 0.832
+validation accuracy = 0.118		average validation NDCG = 0.673
+
+epoch 5
+average train loss = -314.906067    	average train batch reward = 0.834
+validation accuracy = 0.123		average validation NDCG = 0.673
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.095		average validation NDCG = 0.658
+
+epoch 1
+average train loss = -36.622494    	average train batch reward = 0.851
+validation accuracy = 0.131		average validation NDCG = 0.676
+
+epoch 2
+average train loss = -109.101555    	average train batch reward = 0.834
+validation accuracy = 0.141		average validation NDCG = 0.673
+
+epoch 3
+average train loss = -181.797836    	average train batch reward = 0.834
+validation accuracy = 0.136		average validation NDCG = 0.672
+
+epoch 4
+average train loss = -250.550156    	average train batch reward = 0.836
+validation accuracy = 0.148		average validation NDCG = 0.673
+
+epoch 5
+average train loss = -318.307770    	average train batch reward = 0.833
+validation accuracy = 0.154		average validation NDCG = 0.672
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.082		average validation NDCG = 0.659
+
+epoch 1
+average train loss = -37.656361    	average train batch reward = 0.855
+validation accuracy = 0.245		average validation NDCG = 0.676
+
+epoch 2
+average train loss = -112.138443    	average train batch reward = 0.835
+validation accuracy = 0.147		average validation NDCG = 0.672
+
+epoch 3
+average train loss = -183.052536    	average train batch reward = 0.834
+validation accuracy = 0.136		average validation NDCG = 0.672
+
+epoch 4
+average train loss = -257.125458    	average train batch reward = 0.834
+validation accuracy = 0.145		average validation NDCG = 0.671
+
+epoch 5
+average train loss = -321.159546    	average train batch reward = 0.833
+validation accuracy = 0.136		average validation NDCG = 0.671
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.065		average validation NDCG = 0.652
+
+epoch 1
+average train loss = -38.523964    	average train batch reward = 0.851
+validation accuracy = 0.184		average validation NDCG = 0.702
+
+epoch 2
+average train loss = -120.192612    	average train batch reward = 0.865
+validation accuracy = 0.173		average validation NDCG = 0.710
+
+epoch 3
+average train loss = -196.285034    	average train batch reward = 0.873
+validation accuracy = 0.164		average validation NDCG = 0.716
+
+epoch 4
+average train loss = -265.626556    	average train batch reward = 0.878
+validation accuracy = 0.172		average validation NDCG = 0.717
+
+epoch 5
+average train loss = -335.197205    	average train batch reward = 0.880
+validation accuracy = 0.171		average validation NDCG = 0.722
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.085		average validation NDCG = 0.650
+
+epoch 1
+average train loss = -36.257885    	average train batch reward = 0.856
+validation accuracy = 0.087		average validation NDCG = 0.680
+
+epoch 2
+average train loss = -109.681442    	average train batch reward = 0.834
+validation accuracy = 0.094		average validation NDCG = 0.673
+
+epoch 3
+average train loss = -182.366165    	average train batch reward = 0.835
+validation accuracy = 0.153		average validation NDCG = 0.672
+
+epoch 4
+average train loss = -255.240784    	average train batch reward = 0.836
+validation accuracy = 0.169		average validation NDCG = 0.670
+
+epoch 5
+average train loss = -325.118683    	average train batch reward = 0.834
+validation accuracy = 0.165		average validation NDCG = 0.671
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.074		average validation NDCG = 0.657
+
+epoch 1
+average train loss = -35.457687    	average train batch reward = 0.862
+validation accuracy = 0.161		average validation NDCG = 0.697
+
+epoch 2
+average train loss = -103.968506    	average train batch reward = 0.838
+validation accuracy = 0.092		average validation NDCG = 0.675
+
+epoch 3
+average train loss = -177.979111    	average train batch reward = 0.835
+validation accuracy = 0.105		average validation NDCG = 0.672
+
+epoch 4
+average train loss = -246.748123    	average train batch reward = 0.833
+validation accuracy = 0.100		average validation NDCG = 0.673
+
+epoch 5
+average train loss = -313.572754    	average train batch reward = 0.834
+validation accuracy = 0.100		average validation NDCG = 0.672
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.097		average validation NDCG = 0.673
+
+epoch 1
+average train loss = -38.914391    	average train batch reward = 0.852
+validation accuracy = 0.121		average validation NDCG = 0.676
+
+epoch 2
+average train loss = -111.060066    	average train batch reward = 0.834
+validation accuracy = 0.083		average validation NDCG = 0.673
+
+epoch 3
+average train loss = -183.820618    	average train batch reward = 0.834
+validation accuracy = 0.128		average validation NDCG = 0.673
+
+epoch 4
+average train loss = -251.958817    	average train batch reward = 0.834
+validation accuracy = 0.124		average validation NDCG = 0.673
+
+epoch 5
+average train loss = -319.262543    	average train batch reward = 0.833
+validation accuracy = 0.101		average validation NDCG = 0.673
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.094		average validation NDCG = 0.659
+
+epoch 1
+average train loss = -39.700657    	average train batch reward = 0.847
+validation accuracy = 0.084		average validation NDCG = 0.675
+
+epoch 2
+average train loss = -114.412796    	average train batch reward = 0.836
+validation accuracy = 0.106		average validation NDCG = 0.673
+
+epoch 3
+average train loss = -187.377655    	average train batch reward = 0.834
+validation accuracy = 0.094		average validation NDCG = 0.670
+
+epoch 4
+average train loss = -251.520325    	average train batch reward = 0.834
+validation accuracy = 0.097		average validation NDCG = 0.670
+
+epoch 5
+average train loss = -319.324951    	average train batch reward = 0.834
+validation accuracy = 0.135		average validation NDCG = 0.670
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.127		average validation NDCG = 0.687
+
+epoch 1
+average train loss = -35.379765    	average train batch reward = 0.864
+validation accuracy = 0.104		average validation NDCG = 0.680
+
+epoch 2
+average train loss = -107.258369    	average train batch reward = 0.835
+validation accuracy = 0.097		average validation NDCG = 0.674
+
+epoch 3
+average train loss = -180.580292    	average train batch reward = 0.833
+validation accuracy = 0.104		average validation NDCG = 0.674
+
+epoch 4
+average train loss = -252.648651    	average train batch reward = 0.833
+validation accuracy = 0.105		average validation NDCG = 0.673
+
+epoch 5
+average train loss = -319.173737    	average train batch reward = 0.834
+validation accuracy = 0.093		average validation NDCG = 0.673
+
+Current setup 0.001 explored, avg = 0.684256, std = 0.013884, min = 0.675046, max = 0.721801
+========
+Currently the best setups are [0.0001, 1.0000000000000001e-05, 9.9999999999999995e-07], which got average scores of [0.92983094539221656, 0.90158185991151885, 0.76020312942889157]
+========
+Hyperparameters:
+k = 2
+Batch size = 64
+Num epochs = 5
+Learning rate = 0.010000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x1124705f0>
+Reward function = <function ndcg_full at 0x112470668>
+Greedy action = <function sample at 0x10a4a5c08>
+Explore action = <explorers.explore.Uniform instance at 0x132911680>
+Baseline = 0.0
+Weight regularization strength = 0.0
+Sample weight lower bound = 0.01
+Sample weight upper bound = 5.0
+Gradient clipping norm = 5.0
+Batch normalization = True
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.066		average validation NDCG = 0.652
+
+epoch 1
+average train loss = -503.795441    	average train batch reward = 0.845
+validation accuracy = 0.190		average validation NDCG = 0.708
+
+epoch 2
+average train loss = -1129.300293    	average train batch reward = 0.863
+validation accuracy = 0.211		average validation NDCG = 0.708
+
+epoch 3
+average train loss = -1776.885742    	average train batch reward = 0.863
+validation accuracy = 0.210		average validation NDCG = 0.708
+
+epoch 4
+average train loss = -2463.316895    	average train batch reward = 0.864
+validation accuracy = 0.211		average validation NDCG = 0.709
+
+epoch 5
+average train loss = -3203.360840    	average train batch reward = 0.864
+validation accuracy = 0.213		average validation NDCG = 0.711
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.120		average validation NDCG = 0.681
+
+epoch 1
+average train loss = -489.688873    	average train batch reward = 0.840
+validation accuracy = 0.113		average validation NDCG = 0.671
+
+epoch 2
+average train loss = -1063.764038    	average train batch reward = 0.835
+validation accuracy = 0.124		average validation NDCG = 0.669
+
+epoch 3
+average train loss = -1694.852051    	average train batch reward = 0.834
+validation accuracy = 0.147		average validation NDCG = 0.670
+
+epoch 4
+average train loss = -2328.239990    	average train batch reward = 0.833
+validation accuracy = 0.124		average validation NDCG = 0.672
+
+epoch 5
+average train loss = -2989.054199    	average train batch reward = 0.834
+validation accuracy = 0.143		average validation NDCG = 0.670
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.081		average validation NDCG = 0.666
+
+epoch 1
+average train loss = -503.532654    	average train batch reward = 0.836
+validation accuracy = 0.109		average validation NDCG = 0.672
+
+epoch 2
+average train loss = -1060.409668    	average train batch reward = 0.833
+validation accuracy = 0.096		average validation NDCG = 0.672
+
+epoch 3
+average train loss = -1698.708618    	average train batch reward = 0.834
+validation accuracy = 0.114		average validation NDCG = 0.670
+
+epoch 4
+average train loss = -2290.736084    	average train batch reward = 0.834
+validation accuracy = 0.134		average validation NDCG = 0.670
+
+epoch 5
+average train loss = -2879.615723    	average train batch reward = 0.836
+validation accuracy = 0.117		average validation NDCG = 0.671
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.127		average validation NDCG = 0.686
+
+epoch 1
+average train loss = -502.107758    	average train batch reward = 0.839
+validation accuracy = 0.085		average validation NDCG = 0.672
+
+epoch 2
+average train loss = -1074.965332    	average train batch reward = 0.833
+validation accuracy = 0.127		average validation NDCG = 0.671
+
+epoch 3
+average train loss = -1712.530029    	average train batch reward = 0.834
+validation accuracy = 0.125		average validation NDCG = 0.670
+
+epoch 4
+average train loss = -2366.271484    	average train batch reward = 0.835
+validation accuracy = 0.136		average validation NDCG = 0.669
+
+epoch 5
+average train loss = -3030.916748    	average train batch reward = 0.835
+validation accuracy = 0.125		average validation NDCG = 0.669
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.134		average validation NDCG = 0.668
+
+epoch 1
+average train loss = -495.942047    	average train batch reward = 0.847
+validation accuracy = 0.145		average validation NDCG = 0.704
+
+epoch 2
+average train loss = -1121.951660    	average train batch reward = 0.863
+validation accuracy = 0.194		average validation NDCG = 0.709
+
+epoch 3
+average train loss = -1763.876831    	average train batch reward = 0.863
+validation accuracy = 0.168		average validation NDCG = 0.709
+
+epoch 4
+average train loss = -2412.876465    	average train batch reward = 0.863
+validation accuracy = 0.189		average validation NDCG = 0.708
+
+epoch 5
+average train loss = -3117.203369    	average train batch reward = 0.863
+validation accuracy = 0.168		average validation NDCG = 0.708
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.097		average validation NDCG = 0.674
+
+epoch 1
+average train loss = -503.871826    	average train batch reward = 0.845
+validation accuracy = 0.179		average validation NDCG = 0.701
+
+epoch 2
+average train loss = -1156.522095    	average train batch reward = 0.861
+validation accuracy = 0.223		average validation NDCG = 0.710
+
+epoch 3
+average train loss = -1814.320312    	average train batch reward = 0.863
+validation accuracy = 0.206		average validation NDCG = 0.710
+
+epoch 4
+average train loss = -2433.573730    	average train batch reward = 0.863
+validation accuracy = 0.203		average validation NDCG = 0.709
+
+epoch 5
+average train loss = -3113.374756    	average train batch reward = 0.864
+validation accuracy = 0.208		average validation NDCG = 0.710
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.062		average validation NDCG = 0.645
+
+epoch 1
+average train loss = -508.075745    	average train batch reward = 0.835
+validation accuracy = 0.092		average validation NDCG = 0.672
+
+epoch 2
+average train loss = -1071.665039    	average train batch reward = 0.834
+validation accuracy = 0.121		average validation NDCG = 0.673
+
+epoch 3
+average train loss = -1669.409790    	average train batch reward = 0.834
+validation accuracy = 0.107		average validation NDCG = 0.673
+
+epoch 4
+average train loss = -2303.860840    	average train batch reward = 0.834
+validation accuracy = 0.106		average validation NDCG = 0.672
+
+epoch 5
+average train loss = -2916.942871    	average train batch reward = 0.834
+validation accuracy = 0.087		average validation NDCG = 0.673
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.157		average validation NDCG = 0.670
+
+epoch 1
+average train loss = -508.498840    	average train batch reward = 0.836
+validation accuracy = 0.092		average validation NDCG = 0.673
+
+epoch 2
+average train loss = -1031.234009    	average train batch reward = 0.835
+validation accuracy = 0.121		average validation NDCG = 0.673
+
+epoch 3
+average train loss = -1594.544067    	average train batch reward = 0.833
+validation accuracy = 0.148		average validation NDCG = 0.671
+
+epoch 4
+average train loss = -2235.777100    	average train batch reward = 0.833
+validation accuracy = 0.108		average validation NDCG = 0.671
+
+epoch 5
+average train loss = -2860.414551    	average train batch reward = 0.834
+validation accuracy = 0.121		average validation NDCG = 0.670
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.078		average validation NDCG = 0.669
+
+epoch 1
+average train loss = -511.103729    	average train batch reward = 0.836
+validation accuracy = 0.097		average validation NDCG = 0.672
+
+epoch 2
+average train loss = -1060.156616    	average train batch reward = 0.833
+validation accuracy = 0.120		average validation NDCG = 0.673
+
+epoch 3
+average train loss = -1641.220581    	average train batch reward = 0.832
+validation accuracy = 0.120		average validation NDCG = 0.673
+
+epoch 4
+average train loss = -2281.173096    	average train batch reward = 0.834
+validation accuracy = 0.115		average validation NDCG = 0.673
+
+epoch 5
+average train loss = -2941.814941    	average train batch reward = 0.833
+validation accuracy = 0.106		average validation NDCG = 0.673
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.111		average validation NDCG = 0.678
+
+epoch 1
+average train loss = -490.793396    	average train batch reward = 0.840
+validation accuracy = 0.099		average validation NDCG = 0.670
+
+epoch 2
+average train loss = -1054.792847    	average train batch reward = 0.835
+validation accuracy = 0.115		average validation NDCG = 0.669
+
+epoch 3
+average train loss = -1687.016968    	average train batch reward = 0.833
+validation accuracy = 0.119		average validation NDCG = 0.670
+
+epoch 4
+average train loss = -2313.575439    	average train batch reward = 0.833
+validation accuracy = 0.105		average validation NDCG = 0.670
+
+epoch 5
+average train loss = -2982.432129    	average train batch reward = 0.834
+validation accuracy = 0.105		average validation NDCG = 0.671
+
+Current setup 0.01 explored, avg = 0.683609, std = 0.017270, min = 0.670807, max = 0.710519
+========
+Currently the best setups are [0.0001, 1.0000000000000001e-05, 9.9999999999999995e-07], which got average scores of [0.92983094539221656, 0.90158185991151885, 0.76020312942889157]
+========
+Hyperparameters:
+k = 2
+Batch size = 64
+Num epochs = 5
+Learning rate = 0.100000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x1124705f0>
+Reward function = <function ndcg_full at 0x112470668>
+Greedy action = <function sample at 0x10a4a5c08>
+Explore action = <explorers.explore.Uniform instance at 0x1390eed40>
+Baseline = 0.0
+Weight regularization strength = 0.0
+Sample weight lower bound = 0.01
+Sample weight upper bound = 5.0
+Gradient clipping norm = 5.0
+Batch normalization = True
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.125		average validation NDCG = 0.686
+
+epoch 1
+average train loss = -4868.750977    	average train batch reward = 0.834
+validation accuracy = 0.149		average validation NDCG = 0.670
+
+epoch 2
+average train loss = -10316.379883    	average train batch reward = 0.834
+validation accuracy = 0.176		average validation NDCG = 0.669
+
+epoch 3
+average train loss = -16570.683594    	average train batch reward = 0.835
+validation accuracy = 0.177		average validation NDCG = 0.670
+
+epoch 4
+average train loss = -23188.414062    	average train batch reward = 0.835
+validation accuracy = 0.165		average validation NDCG = 0.670
+
+epoch 5
+average train loss = -29657.126953    	average train batch reward = 0.832
+validation accuracy = 0.162		average validation NDCG = 0.670
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.073		average validation NDCG = 0.667
+
+epoch 1
+average train loss = -4960.405762    	average train batch reward = 0.835
+validation accuracy = 0.138		average validation NDCG = 0.671
+
+epoch 2
+average train loss = -10002.953125    	average train batch reward = 0.834
+validation accuracy = 0.153		average validation NDCG = 0.669
+
+epoch 3
+average train loss = -15569.729492    	average train batch reward = 0.832
+validation accuracy = 0.142		average validation NDCG = 0.670
+
+epoch 4
+average train loss = -21683.240234    	average train batch reward = 0.835
+validation accuracy = 0.172		average validation NDCG = 0.669
+
+epoch 5
+average train loss = -28352.537109    	average train batch reward = 0.835
+validation accuracy = 0.163		average validation NDCG = 0.669
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.072		average validation NDCG = 0.657
+
+epoch 1
+average train loss = -4939.806641    	average train batch reward = 0.834
+validation accuracy = 0.153		average validation NDCG = 0.672
+
+epoch 2
+average train loss = -10132.125977    	average train batch reward = 0.834
+validation accuracy = 0.171		average validation NDCG = 0.670
+
+epoch 3
+average train loss = -15999.242188    	average train batch reward = 0.833
+validation accuracy = 0.134		average validation NDCG = 0.669
+
+epoch 4
+average train loss = -22210.281250    	average train batch reward = 0.834
+validation accuracy = 0.175		average validation NDCG = 0.669
+
+epoch 5
+average train loss = -28718.814453    	average train batch reward = 0.833
+validation accuracy = 0.114		average validation NDCG = 0.670
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.084		average validation NDCG = 0.672
+
+epoch 1
+average train loss = -4848.011719    	average train batch reward = 0.834
+validation accuracy = 0.104		average validation NDCG = 0.672
+
+epoch 2
+average train loss = -10118.940430    	average train batch reward = 0.834
+validation accuracy = 0.105		average validation NDCG = 0.672
+
+epoch 3
+average train loss = -16025.077148    	average train batch reward = 0.833
+validation accuracy = 0.159		average validation NDCG = 0.671
+
+epoch 4
+average train loss = -22353.667969    	average train batch reward = 0.832
+validation accuracy = 0.161		average validation NDCG = 0.670
+
+epoch 5
+average train loss = -28838.173828    	average train batch reward = 0.833
+validation accuracy = 0.170		average validation NDCG = 0.670
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.118		average validation NDCG = 0.671
+
+epoch 1
+average train loss = -4931.775391    	average train batch reward = 0.835
+validation accuracy = 0.117		average validation NDCG = 0.671
+
+epoch 2
+average train loss = -10252.139648    	average train batch reward = 0.835
+validation accuracy = 0.144		average validation NDCG = 0.672
+
+epoch 3
+average train loss = -16231.450195    	average train batch reward = 0.835
+validation accuracy = 0.151		average validation NDCG = 0.670
+
+epoch 4
+average train loss = -22562.306641    	average train batch reward = 0.832
+validation accuracy = 0.154		average validation NDCG = 0.670
+
+epoch 5
+average train loss = -28759.292969    	average train batch reward = 0.834
+validation accuracy = 0.152		average validation NDCG = 0.670
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.101		average validation NDCG = 0.676
+
+epoch 1
+average train loss = -4711.249023    	average train batch reward = 0.843
+validation accuracy = 0.190		average validation NDCG = 0.704
+
+epoch 2
+average train loss = -10734.211914    	average train batch reward = 0.860
+validation accuracy = 0.199		average validation NDCG = 0.705
+
+epoch 3
+average train loss = -17077.265625    	average train batch reward = 0.863
+validation accuracy = 0.195		average validation NDCG = 0.708
+
+epoch 4
+average train loss = -23528.283203    	average train batch reward = 0.861
+validation accuracy = 0.198		average validation NDCG = 0.708
+
+epoch 5
+average train loss = -30577.871094    	average train batch reward = 0.863
+validation accuracy = 0.194		average validation NDCG = 0.706
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.092		average validation NDCG = 0.674
+
+epoch 1
+average train loss = -4832.980957    	average train batch reward = 0.836
+validation accuracy = 0.127		average validation NDCG = 0.672
+
+epoch 2
+average train loss = -10242.341797    	average train batch reward = 0.834
+validation accuracy = 0.142		average validation NDCG = 0.671
+
+epoch 3
+average train loss = -16497.595703    	average train batch reward = 0.835
+validation accuracy = 0.113		average validation NDCG = 0.672
+
+epoch 4
+average train loss = -23070.298828    	average train batch reward = 0.834
+validation accuracy = 0.139		average validation NDCG = 0.670
+
+epoch 5
+average train loss = -29015.326172    	average train batch reward = 0.834
+validation accuracy = 0.126		average validation NDCG = 0.669
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.118		average validation NDCG = 0.668
+
+epoch 1
+average train loss = -5021.982422    	average train batch reward = 0.853
+validation accuracy = 0.181		average validation NDCG = 0.710
+
+epoch 2
+average train loss = -11611.429688    	average train batch reward = 0.869
+validation accuracy = 0.196		average validation NDCG = 0.710
+
+epoch 3
+average train loss = -18757.705078    	average train batch reward = 0.871
+validation accuracy = 0.199		average validation NDCG = 0.710
+
+epoch 4
+average train loss = -25504.882812    	average train batch reward = 0.871
+validation accuracy = 0.199		average validation NDCG = 0.710
+
+epoch 5
+average train loss = -32912.792969    	average train batch reward = 0.871
+validation accuracy = 0.195		average validation NDCG = 0.711
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.143		average validation NDCG = 0.660
+
+epoch 1
+average train loss = -4916.769531    	average train batch reward = 0.834
+validation accuracy = 0.126		average validation NDCG = 0.671
+
+epoch 2
+average train loss = -10206.105469    	average train batch reward = 0.833
+validation accuracy = 0.150		average validation NDCG = 0.671
+
+epoch 3
+average train loss = -16161.759766    	average train batch reward = 0.834
+validation accuracy = 0.137		average validation NDCG = 0.672
+
+epoch 4
+average train loss = -22350.216797    	average train batch reward = 0.834
+validation accuracy = 0.155		average validation NDCG = 0.671
+
+epoch 5
+average train loss = -28699.359375    	average train batch reward = 0.835
+validation accuracy = 0.141		average validation NDCG = 0.671
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.132		average validation NDCG = 0.679
+
+epoch 1
+average train loss = -4861.678711    	average train batch reward = 0.834
+validation accuracy = 0.149		average validation NDCG = 0.670
+
+epoch 2
+average train loss = -10138.983398    	average train batch reward = 0.833
+validation accuracy = 0.175		average validation NDCG = 0.670
+
+epoch 3
+average train loss = -16223.078125    	average train batch reward = 0.834
+validation accuracy = 0.133		average validation NDCG = 0.670
+
+epoch 4
+average train loss = -22380.669922    	average train batch reward = 0.836
+validation accuracy = 0.152		average validation NDCG = 0.670
+
+epoch 5
+average train loss = -28924.755859    	average train batch reward = 0.834
+validation accuracy = 0.151		average validation NDCG = 0.670
+
+Current setup 0.1 explored, avg = 0.679016, std = 0.015282, min = 0.670099, max = 0.711055
+========
+Currently the best setups are [0.0001, 1.0000000000000001e-05, 9.9999999999999995e-07], which got average scores of [0.92983094539221656, 0.90158185991151885, 0.76020312942889157]
+========
+Hyperparameters:
+k = 2
+Batch size = 64
+Num epochs = 5
+Learning rate = 1.000000
+Epsilon = 0.000000
+Hidden layer dimension = 256
+Query function = <function random_from_docs at 0x1124705f0>
+Reward function = <function ndcg_full at 0x112470668>
+Greedy action = <function sample at 0x10a4a5c08>
+Explore action = <explorers.explore.Uniform instance at 0x131667830>
+Baseline = 0.0
+Weight regularization strength = 0.0
+Sample weight lower bound = 0.01
+Sample weight upper bound = 5.0
+Gradient clipping norm = 5.0
+Batch normalization = True
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.103		average validation NDCG = 0.678
+
+epoch 1
+average train loss = -42655.078125    	average train batch reward = 0.834
+validation accuracy = 0.137		average validation NDCG = 0.672
+
+epoch 2
+average train loss = -87655.429688    	average train batch reward = 0.833
+validation accuracy = 0.134		average validation NDCG = 0.671
+
+epoch 3
+average train loss = -135030.828125    	average train batch reward = 0.834
+validation accuracy = 0.147		average validation NDCG = 0.671
+
+epoch 4
+average train loss = -185078.375000    	average train batch reward = 0.832
+validation accuracy = 0.133		average validation NDCG = 0.672
+
+epoch 5
+average train loss = -242499.359375    	average train batch reward = 0.834
+validation accuracy = 0.138		average validation NDCG = 0.671
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.110		average validation NDCG = 0.686
+
+epoch 1
+average train loss = -41483.652344    	average train batch reward = 0.834
+validation accuracy = 0.131		average validation NDCG = 0.672
+
+epoch 2
+average train loss = -90587.789062    	average train batch reward = 0.834
+validation accuracy = 0.136		average validation NDCG = 0.671
+
+epoch 3
+average train loss = -144159.062500    	average train batch reward = 0.834
+validation accuracy = 0.144		average validation NDCG = 0.671
+
+epoch 4
+average train loss = -198688.593750    	average train batch reward = 0.835
+validation accuracy = 0.178		average validation NDCG = 0.670
+
+epoch 5
+average train loss = -254210.015625    	average train batch reward = 0.835
+validation accuracy = 0.168		average validation NDCG = 0.670
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.126		average validation NDCG = 0.678
+
+epoch 1
+average train loss = -38925.507812    	average train batch reward = 0.834
+validation accuracy = 0.113		average validation NDCG = 0.670
+
+epoch 2
+average train loss = -81479.406250    	average train batch reward = 0.835
+validation accuracy = 0.114		average validation NDCG = 0.671
+
+epoch 3
+average train loss = -131511.218750    	average train batch reward = 0.834
+validation accuracy = 0.112		average validation NDCG = 0.671
+
+epoch 4
+average train loss = -184169.984375    	average train batch reward = 0.835
+validation accuracy = 0.109		average validation NDCG = 0.670
+
+epoch 5
+average train loss = -236812.296875    	average train batch reward = 0.834
+validation accuracy = 0.102		average validation NDCG = 0.671
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.095		average validation NDCG = 0.677
+
+epoch 1
+average train loss = -41670.398438    	average train batch reward = 0.836
+validation accuracy = 0.122		average validation NDCG = 0.671
+
+epoch 2
+average train loss = -84402.148438    	average train batch reward = 0.834
+validation accuracy = 0.160		average validation NDCG = 0.669
+
+epoch 3
+average train loss = -133504.546875    	average train batch reward = 0.834
+validation accuracy = 0.155		average validation NDCG = 0.670
+
+epoch 4
+average train loss = -186743.250000    	average train batch reward = 0.834
+validation accuracy = 0.160		average validation NDCG = 0.669
+
+epoch 5
+average train loss = -244383.296875    	average train batch reward = 0.834
+validation accuracy = 0.152		average validation NDCG = 0.670
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.108		average validation NDCG = 0.679
+
+epoch 1
+average train loss = -39347.683594    	average train batch reward = 0.834
+validation accuracy = 0.115		average validation NDCG = 0.672
+
+epoch 2
+average train loss = -82834.585938    	average train batch reward = 0.833
+validation accuracy = 0.168		average validation NDCG = 0.669
+
+epoch 3
+average train loss = -131603.125000    	average train batch reward = 0.834
+validation accuracy = 0.164		average validation NDCG = 0.669
+
+epoch 4
+average train loss = -181676.328125    	average train batch reward = 0.833
+validation accuracy = 0.168		average validation NDCG = 0.670
+
+epoch 5
+average train loss = -237652.781250    	average train batch reward = 0.834
+validation accuracy = 0.191		average validation NDCG = 0.669
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.122		average validation NDCG = 0.686
+
+epoch 1
+average train loss = -41615.898438    	average train batch reward = 0.836
+validation accuracy = 0.129		average validation NDCG = 0.671
+
+epoch 2
+average train loss = -87801.000000    	average train batch reward = 0.833
+validation accuracy = 0.136		average validation NDCG = 0.672
+
+epoch 3
+average train loss = -140092.953125    	average train batch reward = 0.833
+validation accuracy = 0.154		average validation NDCG = 0.671
+
+epoch 4
+average train loss = -190259.625000    	average train batch reward = 0.835
+validation accuracy = 0.135		average validation NDCG = 0.670
+
+epoch 5
+average train loss = -250061.109375    	average train batch reward = 0.833
+validation accuracy = 0.192		average validation NDCG = 0.669
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.087		average validation NDCG = 0.658
+
+epoch 1
+average train loss = -42010.109375    	average train batch reward = 0.834
+validation accuracy = 0.094		average validation NDCG = 0.672
+
+epoch 2
+average train loss = -87383.109375    	average train batch reward = 0.833
+validation accuracy = 0.111		average validation NDCG = 0.672
+
+epoch 3
+average train loss = -142114.687500    	average train batch reward = 0.834
+validation accuracy = 0.126		average validation NDCG = 0.671
+
+epoch 4
+average train loss = -195446.671875    	average train batch reward = 0.834
+validation accuracy = 0.126		average validation NDCG = 0.670
+
+epoch 5
+average train loss = -253735.046875    	average train batch reward = 0.834
+validation accuracy = 0.130		average validation NDCG = 0.670
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.099		average validation NDCG = 0.688
+
+epoch 1
+average train loss = -38621.406250    	average train batch reward = 0.835
+validation accuracy = 0.106		average validation NDCG = 0.671
+
+epoch 2
+average train loss = -82861.367188    	average train batch reward = 0.835
+validation accuracy = 0.129		average validation NDCG = 0.671
+
+epoch 3
+average train loss = -130524.500000    	average train batch reward = 0.834
+validation accuracy = 0.168		average validation NDCG = 0.670
+
+epoch 4
+average train loss = -184209.640625    	average train batch reward = 0.834
+validation accuracy = 0.156		average validation NDCG = 0.670
+
+epoch 5
+average train loss = -231882.687500    	average train batch reward = 0.833
+validation accuracy = 0.175		average validation NDCG = 0.670
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.057		average validation NDCG = 0.659
+
+epoch 1
+average train loss = -41612.339844    	average train batch reward = 0.833
+validation accuracy = 0.110		average validation NDCG = 0.672
+
+epoch 2
+average train loss = -88827.570312    	average train batch reward = 0.832
+validation accuracy = 0.154		average validation NDCG = 0.671
+
+epoch 3
+average train loss = -141418.078125    	average train batch reward = 0.834
+validation accuracy = 0.133		average validation NDCG = 0.671
+
+epoch 4
+average train loss = -194559.843750    	average train batch reward = 0.833
+validation accuracy = 0.136		average validation NDCG = 0.671
+
+epoch 5
+average train loss = -252123.343750    	average train batch reward = 0.835
+validation accuracy = 0.178		average validation NDCG = 0.670
+
+Loading dataset.
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+
+before training
+validation accuracy = 0.096		average validation NDCG = 0.666
+
+epoch 1
+average train loss = -40494.664062    	average train batch reward = 0.834
+validation accuracy = 0.144		average validation NDCG = 0.672
+
+epoch 2
+average train loss = -84025.390625    	average train batch reward = 0.833
+validation accuracy = 0.139		average validation NDCG = 0.673
+
+epoch 3
+average train loss = -131749.531250    	average train batch reward = 0.834
+validation accuracy = 0.150		average validation NDCG = 0.672
+
+epoch 4
+average train loss = -183704.765625    	average train batch reward = 0.834
+validation accuracy = 0.136		average validation NDCG = 0.673
+
+epoch 5
+average train loss = -234882.015625    	average train batch reward = 0.833
+validation accuracy = 0.107		average validation NDCG = 0.673
+
+Current setup 1.0 explored, avg = 0.671990, std = 0.000534, min = 0.671329, max = 0.673214
+========
+Currently the best setups are [0.0001, 1.0000000000000001e-05, 9.9999999999999995e-07], which got average scores of [0.92983094539221656, 0.90158185991151885, 0.76020312942889157]
+========
+Done at 2017-07-13 19:58:18
