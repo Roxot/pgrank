@@ -23,7 +23,7 @@ The grid search ranges are predefined in `grid_search.py`. For additional option
 Do an axis search:
 
 ```
-python axis_search --tune [param_to_run_an_axis_search_over] --k [list_length]
+python axis_search.py --tune [param_to_run_an_axis_search_over] --k [list_length]
 ```
 
 To average each setting over 10 runs use `--average_over 10` (default is 30). The tunable parameters are `learning_rate`, `weight_reg_str`, `baseline` and `epsilon` and their ranges are defined in the script. The type of exploration can be set using `--exploration_type` which can take the values `uniform` and `oracle`. For parameters over which no axis search is done, they can be set to a value as desired as `--[param_name] param_value`. For additional options use the `--help` command.
